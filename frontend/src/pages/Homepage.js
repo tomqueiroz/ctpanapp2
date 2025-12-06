@@ -121,6 +121,14 @@ function Homepage() {
               <button onClick={handleLogin} className="block w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium">
                 Cursos e Certificações
               </button>
+              <a 
+                href="https://www.anapp.org.br/revistas" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium"
+              >
+                Revistas
+              </a>
               <button onClick={handleLogin} className="block w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium">
                 Área do Aluno
               </button>
