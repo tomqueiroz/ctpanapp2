@@ -259,7 +259,7 @@ async def logout(request: Request, response: Response):
 async def get_courses(request: Request):
     user = await get_current_user(request)
     query = {"status": "published"} if not user or user.role != "admin" else {}
-    courses = await db.courses.find(query, {"_id": 0}).to_list(1000)
+    courses = await db.courses.find(query, {"_id": 0}).limit(100).to_list(None)
     return [Course(**course) for course in courses]
 
 @api_router.get("/courses/{course_id}", response_model=Course)
