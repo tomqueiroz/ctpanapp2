@@ -56,9 +56,9 @@ function AdminMagazines({ user = null }) {
           ))}
         </div>
       </div>
+      <Footer user={user} />
     </div>
   );
 }
 
-      <Footer user={user} />
 export default AdminMagazines;
