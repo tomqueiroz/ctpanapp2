@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Star, Phone, Mail, MapPin, MessageCircle, DollarSign, Shield, Store, Laptop, Tool, Users as UsersIcon, Award, Video, FileText, ChevronDown, ChevronUp } from 'lucide-react';
+import { Menu, X, Star, Phone, Mail, MapPin, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench } from 'lucide-react';
 
 function Homepage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
