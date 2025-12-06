@@ -189,6 +189,12 @@ function Login() {
                     Professores especialistas do setor
                   </li>
                 </ul>
+                <button
+                  onClick={() => navigate('/dashboard/chapter/1')}
+                  className="bg-white text-[#0072BC] px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all w-full"
+                >
+                  Acessar Plataforma
+                </button>
               </div>
 
               <div className="bg-gradient-to-br from-[#FF6B00] to-[#e55a00] text-white rounded-xl p-6">
