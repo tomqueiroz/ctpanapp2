@@ -13,8 +13,9 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implementar lógica de login
-    alert('Login em desenvolvimento. Sistema de autenticação será implementado.');
+    // TODO: Implementar lógica de autenticação completa com backend
+    // Por enquanto, redireciona direto para área logada
+    navigate('/dashboard/chapter/1');
   };
 
   return (
