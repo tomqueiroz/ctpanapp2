@@ -100,4 +100,5 @@ function AdminUsers({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default AdminUsers;

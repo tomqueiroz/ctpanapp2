@@ -60,4 +60,5 @@ function AdminMagazines({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default AdminMagazines;

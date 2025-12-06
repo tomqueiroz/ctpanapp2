@@ -83,4 +83,5 @@ function MagazineLibrary({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default MagazineLibrary;

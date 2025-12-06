@@ -128,4 +128,5 @@ function AdminDashboard({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default AdminDashboard;

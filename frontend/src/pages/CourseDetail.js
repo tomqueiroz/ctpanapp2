@@ -173,4 +173,5 @@ function CourseDetail({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default CourseDetail;

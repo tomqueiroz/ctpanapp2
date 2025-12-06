@@ -189,4 +189,5 @@ function AdminCourses({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default AdminCourses;

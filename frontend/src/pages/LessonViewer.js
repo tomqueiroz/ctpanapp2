@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import React from 'react';
 import Navbar from '../components/Navbar';
 import { useParams } from 'react-router-dom';
@@ -42,4 +43,5 @@ function LessonViewer({ user }) {
   );
 }
 
+      <Footer user={user} />
 export default LessonViewer;
