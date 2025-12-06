@@ -62,7 +62,7 @@ function Homepage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <Header user={null} />
 
       {/* Hero Section */}
       <section className="pt-20 relative min-h-[600px] flex items-center" style={{
