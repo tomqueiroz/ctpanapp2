@@ -213,6 +213,7 @@ function Dashboard({ user }) {
           </div>
         )}
       </div>
+      <Footer user={user} />
     </div>
   );
 }
