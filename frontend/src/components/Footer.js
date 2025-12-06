@@ -2,7 +2,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-function Footer({ user }) {
+function Footer({ user = null }) {
   const navigate = useNavigate();
 
   const handleLogin = () => {
