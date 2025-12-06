@@ -34,6 +34,7 @@ function AppRouter() {
       <Route path="/sobre-anapp" element={<SobreAnapp />} />
       <Route path="/sobre-ctp" element={<SobreCTP />} />
       <Route path="/cursos" element={<CursosECertificacoes />} />
+      <Route path="/conheca-ctp" element={<ConhecaCTP />} />
       <Route path="/contato" element={<Contato />} />
       {/* Páginas protegidas */}
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
