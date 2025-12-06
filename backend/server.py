@@ -413,7 +413,7 @@ async def get_my_enrollments(request: Request):
     enrollments = await db.enrollments.find(
         {"user_id": user.user_id},
         {"_id": 0}
-    ).to_list(1000)
+    ).limit(50).to_list(None)
     return [Enrollment(**enrollment) for enrollment in enrollments]
 
 @api_router.put("/enrollments/{enrollment_id}/progress")
