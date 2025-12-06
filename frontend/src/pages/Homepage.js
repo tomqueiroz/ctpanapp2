@@ -4,7 +4,8 @@ import { ArrowRight, BookOpen, Award, Users, Video, FileText, CheckCircle2 } fro
 function Homepage() {
   const handleLogin = () => {
     const redirectUrl = window.location.origin + '/dashboard';
-    window.location.href = `https://auth.emergentagent.com/?redirect=${encodeURIComponent(redirectUrl)}`;
+    const authUrl = process.env.REACT_APP_AUTH_URL || 'https://auth.emergentagent.com';
+    window.location.href = `${authUrl}/?redirect=${encodeURIComponent(redirectUrl)}`;
   };
 
   return (
