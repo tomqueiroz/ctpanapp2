@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Star, Phone, Mail, MapPin, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench } from 'lucide-react';
+import { Star, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench, CheckCircle2 } from 'lucide-react';
 
 function Homepage() {
   const [openFaq, setOpenFaq] = useState(null);
