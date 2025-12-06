@@ -344,7 +344,7 @@ async def get_lessons(module_id: str):
     lessons = await db.lessons.find(
         {"module_id": module_id},
         {"_id": 0}
-    ).sort("order", 1).to_list(1000)
+    ).sort("order", 1).limit(100).to_list(None)
     return [Lesson(**lesson) for lesson in lessons]
 
 @api_router.get("/lessons/{lesson_id}", response_model=Lesson)
