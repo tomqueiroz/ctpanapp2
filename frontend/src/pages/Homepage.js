@@ -84,40 +84,42 @@ function Homepage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0072BC] to-[#004a7c] text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1759753919650-ce5adaec8dd7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHN3aW1taW5nJTIwcG9vbCUyMGx1eHVyeXxlbnwwfHx8fDE3NjUwNDc4MDR8MA&ixlib=rb-4.1.0&q=85)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="max-w-3xl">
-            <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm font-medium">Certificação Profissional CTP</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Curso Técnico de Piscinas
+      <section className="pt-20 relative min-h-[600px] flex items-center" style={{
+        backgroundImage: 'url(https://readdy.ai/api/search-image?query=Beautiful%20swimming%20pool%20with%20crystal%20clear%20blue%20water%2C%20sun%20reflection%2C%20modern%20design%2C%20clean%20edges%2C%20professional%20maintenance%2C%20bright%20sunny%20day%2C%20no%20people%2C%20high%20quality%20professional%20photography%2C%20perfect%20for%20swimming%20pool%20maintenance%20course&width=1920&height=1080&seq=1&orientation=landscape)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0072BC] mb-6">
+              Dê o próximo passo na sua carreira de piscineiro
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90">
-              Torne-se um profissional certificado em manutenção e tratamento de piscinas com a ANAPP
+            <p className="text-xl text-gray-700 mb-8">
+              Com o certificado CTP da ANAPP, você aumenta sua renda, conquista clientes mais exigentes e se destaca no mercado. Junte-se aos mais de 5.000 profissionais que já mudaram de vida!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleLogin}
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-[#FF7B00] text-white font-semibold rounded-lg hover:bg-[#e66f00] transition-all shadow-lg active:scale-95"
-                data-testid="hero-cta-button"
+                className="bg-[#0072BC] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
               >
-                <span>Começar Agora</span>
-                <ArrowRight size={20} />
+                Conheça o Curso
               </button>
               <button
-                onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 bg-white text-[#0072BC] font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-lg active:scale-95"
+                onClick={handleLogin}
+                className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
+                data-testid="hero-cta-button"
               >
-                Saiba Mais
+                Inscreva-se Agora
               </button>
+            </div>
+            <div className="mt-8 flex items-center">
+              <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md">
+                <Users className="text-[#0072BC]" size={24} />
+              </div>
+              <p className="ml-4 text-gray-700">
+                <span className="font-bold text-[#0072BC]">+5.000</span> profissionais já certificados em todo o Brasil
+              </p>
             </div>
           </div>
         </div>
