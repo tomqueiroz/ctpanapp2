@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Menu, X, Star, Phone, Mail, MapPin, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Star, Phone, Mail, MapPin, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench } from 'lucide-react';
 
 function Homepage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
   const handleLogin = () => {
