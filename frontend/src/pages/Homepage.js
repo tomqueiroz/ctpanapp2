@@ -43,20 +43,17 @@ function Homepage() {
     {
       name: "Roberto Oliveira",
       location: "São Paulo, SP",
-      text: "Antes do CTP, eu cobrava R$ 150 por piscina. Hoje cobro R$ 350 e tenho mais clientes do que consigo atender. O curso me ensinou a trabalhar direito e dar valor ao meu serviço.",
-      rating: 5
+      text: "Antes do CTP, eu cobrava R$ 150 por piscina. Hoje cobro R$ 350 e tenho mais clientes do que consigo atender. O curso me ensinou a trabalhar direito e dar valor ao meu serviço."
     },
     {
       name: "Carlos Eduardo Santos",
       location: "Fortaleza, CE",
-      text: "A plataforma de estudos é muito fácil de usar. Consegui fazer todo o curso pelo celular nos intervalos do trabalho. Os vídeos são curtos e diretos ao ponto.",
-      rating: 5
+      text: "A plataforma de estudos é muito fácil de usar. Consegui fazer todo o curso pelo celular nos intervalos do trabalho. Os vídeos são curtos e diretos ao ponto."
     },
     {
       name: "Fernanda Almeida",
       location: "Florianópolis, SC",
-      text: "Abri minha própria empresa de manutenção de piscinas depois do curso. O módulo de gestão de negócios foi fundamental para eu entender como precificar meus serviços.",
-      rating: 4.5
+      text: "Abri minha própria empresa de manutenção de piscinas depois do curso. O módulo de gestão de negócios foi fundamental para eu entender como precificar meus serviços."
     }
   ];
 
