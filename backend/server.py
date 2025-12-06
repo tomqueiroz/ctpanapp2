@@ -318,7 +318,7 @@ async def get_modules(course_id: str):
     modules = await db.modules.find(
         {"course_id": course_id},
         {"_id": 0}
-    ).sort("order", 1).to_list(1000)
+    ).sort("order", 1).limit(50).to_list(None)
     return [Module(**module) for module in modules]
 
 @api_router.post("/modules", response_model=Module)
