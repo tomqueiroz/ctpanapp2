@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { BookOpen, Award, TrendingUp, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
