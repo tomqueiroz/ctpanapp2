@@ -14,6 +14,7 @@ import AdminUsers from './pages/admin/AdminUsers';
 import SobreAnapp from './pages/public/SobreAnapp';
 import SobreCTP from './pages/public/SobreCTP';
 import Contato from './pages/public/Contato';
+import CursosECertificacoes from './pages/public/CursosECertificacoes';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
