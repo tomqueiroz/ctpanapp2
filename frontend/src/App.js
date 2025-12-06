@@ -28,6 +28,12 @@ function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
+      {/* Páginas públicas */}
+      <Route path="/sobre-anapp" element={<SobreAnapp />} />
+      <Route path="/sobre-ctp" element={<SobreCTP />} />
+      <Route path="/cursos" element={<CourseCatalog />} />
+      <Route path="/contato" element={<Contato />} />
+      {/* Páginas protegidas */}
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/courses" element={<ProtectedRoute><CourseCatalog /></ProtectedRoute>} />
       <Route path="/courses/:courseId" element={<ProtectedRoute><CourseDetail /></ProtectedRoute>} />
