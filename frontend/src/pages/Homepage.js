@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Star, Phone, Mail, MapPin, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench } from 'lucide-react';
 
 function Homepage() {
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    const redirectUrl = window.location.origin + '/dashboard';
-    const authUrl = process.env.REACT_APP_AUTH_URL || 'https://auth.emergentagent.com';
-    window.location.href = `${authUrl}/?redirect=${encodeURIComponent(redirectUrl)}`;
+  const handleCTAClick = () => {
+    navigate('/contato');
   };
 
   const toggleFaq = (index) => {
@@ -81,13 +81,13 @@ function Homepage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={handleLogin}
+                onClick={() => navigate('/cursos')}
                 className="bg-[#0072BC] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
               >
                 Conheça o Curso
               </button>
               <button
-                onClick={handleLogin}
+                onClick={handleCTAClick}
                 className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
                 data-testid="hero-cta-button"
               >
@@ -193,14 +193,14 @@ function Homepage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button
-                onClick={handleLogin}
+                onClick={() => navigate('/cursos')}
                 className="inline-flex items-center justify-center bg-white text-[#0072BC] py-4 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg active:scale-95"
               >
                 <Video className="mr-2" size={20} />
                 Ver apresentação do curso
               </button>
               <button
-                onClick={handleLogin}
+                onClick={handleCTAClick}
                 className="inline-flex items-center justify-center bg-[#FF6B00] text-white py-4 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg active:scale-95"
               >
                 Quero me inscrever agora
@@ -271,7 +271,7 @@ function Homepage() {
                     <p className="text-gray-500 text-xs">*Valor mensal no plano anual</p>
                   </div>
                   <button
-                    onClick={handleLogin}
+                    onClick={() => navigate('/cursos')}
                     className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
                   >
                     Saiba Mais
@@ -333,13 +333,13 @@ function Homepage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={handleLogin}
+                onClick={() => navigate('/cursos')}
                 className="bg-white text-[#0072BC] py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
               >
                 Conhecer Planos
               </button>
               <button
-                onClick={handleLogin}
+                onClick={handleCTAClick}
                 className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
               >
                 Inscreva-se Agora

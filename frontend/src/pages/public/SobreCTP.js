@@ -2,8 +2,15 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { BookOpen, Award, Users, Video, FileText, CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 function SobreCTP() {
+  const navigate = useNavigate();
+
+  const handleInscricao = () => {
+    navigate('/contato');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header user={null} />
@@ -30,7 +37,7 @@ function SobreCTP() {
                 Ao concluir o CTP, você estará preparado para atender os clientes mais exigentes e cobrar valores justos pelo seu trabalho profissional.
               </p>
               <button
-                onClick={handleLogin}
+                onClick={handleInscricao}
                 className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
               >
                 Fazer Matrícula Agora
@@ -80,7 +87,7 @@ function SobreCTP() {
             <h2 className="text-3xl font-bold mb-4">Invista no seu futuro profissional</h2>
             <p className="text-xl mb-6">Associados ANAPP: R$ 299,00 | Não associados: R$ 600,00</p>
             <button
-              onClick={handleLogin}
+              onClick={handleInscricao}
               className="bg-[#FF6B00] text-white py-4 px-12 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg active:scale-95"
             >
               Inscrever-se no CTP
