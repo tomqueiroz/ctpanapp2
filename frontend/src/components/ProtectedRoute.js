@@ -20,8 +20,10 @@ function ProtectedRoute({ children, requireAdmin = false }) {
   }, []);
 
   useEffect(() => {
-    // If user data was passed from AuthCallback, skip auth check
+    // If user data was passed from AuthCallback, set authenticated and skip check
     if (location.state?.user) {
+      setIsAuthenticated(true);
+      setUser(location.state.user);
       return;
     }
 
