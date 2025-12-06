@@ -463,7 +463,7 @@ function Homepage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer user={null} />
     </div>
   );
 }
