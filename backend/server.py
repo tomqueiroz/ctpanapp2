@@ -446,7 +446,7 @@ async def get_my_certificates(request: Request):
     certificates = await db.certificates.find(
         {"user_id": user.user_id},
         {"_id": 0}
-    ).to_list(1000)
+    ).limit(50).to_list(None)
     return [Certificate(**cert) for cert in certificates]
 
 @api_router.get("/certificates/{certificate_id}", response_model=Certificate)
