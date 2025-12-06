@@ -5,6 +5,7 @@ import AuthCallback from './pages/AuthCallback';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import CourseCatalog from './pages/CourseCatalog';
+import ChapterView from './pages/ChapterView';
 import CourseDetail from './pages/CourseDetail';
 import LessonViewer from './pages/LessonViewer';
 import MagazineLibrary from './pages/MagazineLibrary';
