@@ -7,9 +7,7 @@ function Header({ user = null }) {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    const redirectUrl = window.location.origin + '/dashboard';
-    const authUrl = process.env.REACT_APP_AUTH_URL || 'https://auth.emergentagent.com';
-    window.location.href = `${authUrl}/?redirect=${encodeURIComponent(redirectUrl)}`;
+    navigate('/login');
   };
 
   const handleNavigation = (path) => {
