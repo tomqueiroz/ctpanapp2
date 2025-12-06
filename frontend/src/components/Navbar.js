@@ -75,8 +75,8 @@ function Navbar({ user }) {
             <div className="flex items-center space-x-3">
               {user?.picture ? (
                 <img 
-                  src={user.picture} 
-                  alt={user.name} 
+                  src={user?.picture} 
+                  alt={user?.name || 'User'} 
                   className="w-8 h-8 rounded-full border-2 border-[#0072BC]"
                 />
               ) : (
