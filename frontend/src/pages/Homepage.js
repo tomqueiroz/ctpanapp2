@@ -159,7 +159,7 @@ function Homepage() {
             </div>
             <div className="mt-8 flex items-center">
               <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md">
-                <UsersIcon className="text-[#0072BC]" size={24} />
+                <Users className="text-[#0072BC]" size={24} />
               </div>
               <p className="ml-4 text-gray-700">
                 <span className="font-bold text-[#0072BC]">+5.000</span> profissionais já certificados em todo o Brasil
@@ -240,7 +240,7 @@ function Homepage() {
 
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
               <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <UsersIcon className="text-[#0072BC]" size={24} />
+                <Users className="text-[#0072BC]" size={24} />
               </div>
               <h4 className="text-lg font-semibold text-[#0072BC] mb-2">Comunidade VIP</h4>
               <p className="text-gray-600">Networking com profissionais de todo o Brasil</p>
@@ -363,7 +363,7 @@ function Homepage() {
               <div key={index} className="bg-gray-50 p-8 rounded-lg shadow-sm">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
-                    <UsersIcon className="text-[#0072BC]" size={24} />
+                    <Users className="text-[#0072BC]" size={24} />
                   </div>
                   <div className="ml-4">
                     <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
