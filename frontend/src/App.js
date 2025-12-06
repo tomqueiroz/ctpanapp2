@@ -40,8 +40,8 @@ function AppRouter() {
       <Route path="/contato" element={<Contato />} />
       <Route path="/login" element={<Login />} />
       {/* Páginas protegidas */}
-      <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-      <Route path="/dashboard/chapter/:chapterId" element={<ProtectedRoute><ChapterView /></ProtectedRoute>} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard/chapter/:chapterId" element={<ChapterView />} />
       <Route path="/courses" element={<ProtectedRoute><CourseCatalog /></ProtectedRoute>} />
       <Route path="/courses/:courseId" element={<ProtectedRoute><CourseDetail /></ProtectedRoute>} />
       <Route path="/courses/:courseId/learn/:lessonId" element={<ProtectedRoute><LessonViewer /></ProtectedRoute>} />
