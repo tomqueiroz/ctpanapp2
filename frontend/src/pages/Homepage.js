@@ -304,10 +304,10 @@ function Homepage() {
                     <p className="text-gray-600 text-sm">{testimonial.location}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 mb-4">{testimonial.text}</p>
+                <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
                 <div className="flex text-[#FF6B00]">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill={i < Math.floor(testimonial.rating) ? "#FF6B00" : "none"} />
+                    <Star key={i} size={16} fill="#FF6B00" />
                   ))}
                 </div>
               </div>
