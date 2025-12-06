@@ -37,6 +37,12 @@ function ProtectedRoute({ children, requireAdmin = false }) {
         sessionStorage.removeItem('just_authenticated');
       }
 
+      // Check if still mounted before making request
+      if (!isMounted.current) {
+        console.log('ProtectedRoute: Component unmounted before auth request');
+        return;
+      }
+
       try {
         console.log('ProtectedRoute: Making auth request to', `${API}/auth/me`);
         const response = await axios.get(`${API}/auth/me`, {
@@ -59,7 +65,10 @@ function ProtectedRoute({ children, requireAdmin = false }) {
       }
     };
 
-    checkAuth();
+    // Only run checkAuth if not coming from AuthCallback
+    if (!location.state?.user) {
+      checkAuth();
+    }
   }, [location.state]);
 
   // Loading state
