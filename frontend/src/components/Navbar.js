@@ -6,7 +6,7 @@ import axios from 'axios';
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-function Navbar({ user }) {
+function Navbar({ user = null }) {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
