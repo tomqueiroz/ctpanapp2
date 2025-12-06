@@ -11,6 +11,9 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminCourses from './pages/admin/AdminCourses';
 import AdminMagazines from './pages/admin/AdminMagazines';
 import AdminUsers from './pages/admin/AdminUsers';
+import SobreAnapp from './pages/public/SobreAnapp';
+import SobreCTP from './pages/public/SobreCTP';
+import Contato from './pages/public/Contato';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
