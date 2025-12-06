@@ -516,7 +516,7 @@ async def get_all_users(request: Request):
     if not user or user.role != "admin":
         raise HTTPException(status_code=403, detail="Not authorized")
     
-    users = await db.users.find({}, {"_id": 0}).to_list(1000)
+    users = await db.users.find({}, {"_id": 0}).limit(100).to_list(None)
     return users
 
 @api_router.put("/admin/users/{user_id}/role")
