@@ -374,10 +374,10 @@ function Homepage() {
                 { icon: Award, title: "Certificação digital", description: "Receba seu certificado digital ao concluir o curso e compartilhe nas redes sociais." }
               ].map((feature, index) => (
                 <div key={index} className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full shrink-0">
+                  <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full shrink-0 mr-4">
                     <feature.icon className="text-[#0072BC]" size={24} />
                   </div>
-                  <div className="ml-4">
+                  <div>
                     <h3 className="text-xl font-bold text-[#0072BC] mb-2">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
