@@ -86,19 +86,19 @@ function Header({ user = null }) {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-3">
             <button 
-              onClick={() => { handleNavigation('/courses'); setMobileMenuOpen(false); }} 
+              onClick={() => { navigate('/sobre-ctp'); setMobileMenuOpen(false); }} 
               className="block w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium"
             >
               Conheça o CTP
             </button>
             <button 
-              onClick={() => { navigate('/#sobre'); setMobileMenuOpen(false); }} 
+              onClick={() => { navigate('/sobre-anapp'); setMobileMenuOpen(false); }} 
               className="block w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium"
             >
               Sobre a ANAPP
             </button>
             <button 
-              onClick={() => { handleNavigation('/courses'); setMobileMenuOpen(false); }} 
+              onClick={() => { navigate('/cursos'); setMobileMenuOpen(false); }} 
               className="block w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium"
             >
               Cursos e Certificações
