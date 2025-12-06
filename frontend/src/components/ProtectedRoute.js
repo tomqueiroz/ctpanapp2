@@ -44,21 +44,14 @@ function ProtectedRoute({ children, requireAdmin = false }) {
       }
 
       try {
-        console.log('ProtectedRoute: Making auth request to', `${API}/auth/me`);
         const response = await axios.get(`${API}/auth/me`, {
           withCredentials: true
         });
-        console.log('ProtectedRoute: Auth response received', response.status, response.data);
-        console.log('ProtectedRoute: isMounted.current =', isMounted.current);
         if (isMounted.current) {
-          console.log('ProtectedRoute: Setting user and authenticated state');
           setUser(response.data);
           setIsAuthenticated(true);
-        } else {
-          console.log('ProtectedRoute: Component unmounted, skipping state update');
         }
       } catch (error) {
-        console.log('ProtectedRoute: Auth request failed', error);
         if (isMounted.current) {
           setIsAuthenticated(false);
         }
