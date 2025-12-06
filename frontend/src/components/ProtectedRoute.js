@@ -14,6 +14,7 @@ function ProtectedRoute({ children, requireAdmin = false }) {
   const isMounted = useRef(true);
 
   useEffect(() => {
+    isMounted.current = true;
     return () => {
       isMounted.current = false;
     };
