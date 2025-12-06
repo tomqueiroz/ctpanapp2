@@ -1,0 +1,151 @@
+{
+  "brand_identity": {
+    "name": "CTP Learning Platform",
+    "tone": "Professional, Clean, Modern, Educational, Trustworthy",
+    "archetype": "Swiss & High-Contrast (Authority, Clarity)",
+    "colors": {
+      "primary": "#0072BC",
+      "secondary": "#FF7B00",
+      "accent": "#FFD100",
+      "background": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "text_primary": "#0F172A",
+      "text_secondary": "#64748B",
+      "border": "#E2E8F0",
+      "success": "#10B981",
+      "error": "#EF4444",
+      "warning": "#F59E0B"
+    },
+    "typography": {
+      "headings": {
+        "family": "Outfit, sans-serif",
+        "weights": ["500", "700"],
+        "tracking": "-0.02em"
+      },
+      "body": {
+        "family": "Inter, sans-serif",
+        "weights": ["400", "500"],
+        "line_height": "1.6"
+      },
+      "mono": {
+        "family": "JetBrains Mono, monospace"
+      }
+    }
+  },
+  "design_system": {
+    "spacing": {
+      "base": "0.25rem",
+      "container_padding": "p-6 md:p-12 lg:p-16",
+      "section_gap": "gap-12 md:gap-24",
+      "component_gap": "gap-4 md:gap-6"
+    },
+    "radius": {
+      "default": "0.5rem",
+      "card": "0.75rem",
+      "button": "0.5rem",
+      "input": "0.5rem"
+    },
+    "shadows": {
+      "card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+      "card_hover": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+      "dropdown": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+    },
+    "glassmorphism": {
+      "background": "bg-white/80",
+      "backdrop_blur": "backdrop-blur-md",
+      "border": "border-white/20"
+    }
+  },
+  "layouts": {
+    "dashboard": {
+      "type": "Control Room Grid",
+      "grid_cols": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+      "gap": "gap-6",
+      "widgets": {
+        "summary": "col-span-1",
+        "chart": "col-span-2 row-span-2",
+        "list": "col-span-1 row-span-2"
+      }
+    },
+    "magazine_library": {
+      "type": "Tetris Grid",
+      "grid_cols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+      "gap": "gap-8",
+      "card_style": "aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+    },
+    "course_catalog": {
+      "type": "Grid",
+      "grid_cols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+      "gap": "gap-8",
+      "card_style": "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-colors"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#0072BC] text-white hover:bg-[#005a9e] shadow-sm font-medium px-6 py-2.5 rounded-lg transition-all active:scale-95",
+      "secondary": "bg-white text-[#0F172A] border border-border hover:bg-slate-50 font-medium px-6 py-2.5 rounded-lg transition-all active:scale-95",
+      "accent": "bg-[#FF7B00] text-white hover:bg-[#e66f00] shadow-sm font-medium px-6 py-2.5 rounded-lg transition-all active:scale-95"
+    },
+    "cards": {
+      "base": "bg-white border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow",
+      "interactive": "group cursor-pointer hover:border-primary/30 hover:ring-1 hover:ring-primary/30 transition-all duration-300"
+    },
+    "inputs": {
+      "base": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "assets": {
+    "hero_images": [
+      {
+        "url": "https://images.unsplash.com/photo-1759753919650-ce5adaec8dd7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHN3aW1taW5nJTIwcG9vbCUyMGx1eHVyeXxlbnwwfHx8fDE3NjUwNDc4MDR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Clean modern pool edge, good for hero background with overlay"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758530273367-fcf1aff76d85?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxjbGVhbiUyMHN3aW1taW5nJTIwcG9vbCUyMGx1eHVyeXxlbnwwfHx8fDE3NjUwNDc4MDR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimal backyard pool, good for course cards"
+      }
+    ],
+    "learning_images": [
+      {
+        "url": "https://images.unsplash.com/photo-1758626052247-79003b45f802?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkaWdpdGFsJTIwbGVhcm5pbmclMjB0YWJsZXR8ZW58MHx8fHwxNzY1MDQ3ODA2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "User with tablet, good for 'Digital Learning' feature section"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1763991345257-a1f4313be3dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBkaWdpdGFsJTIwbGVhcm5pbmclMjB0YWJsZXR8ZW58MHx8fHwxNzY1MDQ3ODA2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Devices on desk, good for 'Anywhere Access' feature"
+      }
+    ],
+    "professional_images": [
+      {
+        "url": "https://images.unsplash.com/photo-1627669915725-d0c8a0002fce?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxwb29sJTIwbWFpbnRlbmFuY2UlMjBwcm9mZXNzaW9uYWwlMjB3b3JraW5nfGVufDB8fHx8MTc2NTA0NzgwMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Professional working, good for 'Become a Pro' section"
+      }
+    ]
+  },
+  "instructions_to_main_agent": {
+    "general": "You are building a high-end LMS. Do not use default Bootstrap/Material styles. Follow the 'Swiss & High-Contrast' archetype. Use whitespace aggressively.",
+    "layout_rules": [
+      "Avoid center-aligning everything. Use left alignment for text to create a strong reading line.",
+      "Use the 'Control Room' grid for the dashboard - dense but organized.",
+      "Use the 'Tetris' grid for the magazine library - make it look like a curated newsstand.",
+      "Ensure all containers with borders have internal padding (p-6 or p-8)."
+    ],
+    "component_rules": [
+      "Customize shadcn components to match the 'Swiss' aesthetic - sharper corners (rounded-lg), lighter borders.",
+      "Use 'Outfit' font for all headings. Use 'Inter' for body text.",
+      "Buttons should have a subtle shadow and active scale effect.",
+      "Cards should have a hover lift effect (-translate-y-1)."
+    ],
+    "color_usage": [
+      "Use the Primary Blue (#0072BC) for primary actions and active states.",
+      "Use the Secondary Orange (#FF7B00) sparingly for high-priority alerts or 'New' badges.",
+      "Keep the background White (#FFFFFF) or very light gray (#F8FAFC).",
+      "Text should be Dark Slate (#0F172A), never pure black."
+    ]
+  },
+  "universal_guidelines": {
+    "transitions": "transition-all duration-200 ease-in-out",
+    "focus_states": "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+    "accessibility": "Ensure all text meets WCAG AA contrast ratios. Use aria-labels for icon-only buttons."
+  }
+}
