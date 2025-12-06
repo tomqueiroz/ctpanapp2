@@ -39,7 +39,6 @@ function ProtectedRoute({ children, requireAdmin = false }) {
 
       // Check if still mounted before making request
       if (!isMounted.current) {
-        console.log('ProtectedRoute: Component unmounted before auth request');
         return;
       }
 
