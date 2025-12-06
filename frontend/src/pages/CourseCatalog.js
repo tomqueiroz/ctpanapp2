@@ -101,6 +101,7 @@ function CourseCatalog({ user }) {
           </div>
         )}
       </div>
+      <Footer user={user} />
     </div>
   );
 }
