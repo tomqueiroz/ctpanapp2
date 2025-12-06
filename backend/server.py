@@ -26,6 +26,17 @@ app = FastAPI()
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
+# Health check endpoint for Kubernetes
+@api_router.get("/")
+async def health_check():
+    """Health check endpoint for deployment"""
+    try:
+        # Test database connection
+        await db.command("ping")
+        return {"status": "healthy", "database": "connected"}
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Database connection failed: {str(e)}")
+
 # Models
 class User(BaseModel):
     model_config = ConfigDict(extra="ignore")
