@@ -4,12 +4,6 @@ import Footer from '../../components/Footer';
 import { BookOpen, Award, Users, Video, FileText, CheckCircle2 } from 'lucide-react';
 
 function SobreCTP() {
-  const handleLogin = () => {
-    const redirectUrl = window.location.origin + '/dashboard';
-    const authUrl = process.env.REACT_APP_AUTH_URL || 'https://auth.emergentagent.com';
-    window.location.href = `${authUrl}/?redirect=${encodeURIComponent(redirectUrl)}`;
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Header user={null} />
