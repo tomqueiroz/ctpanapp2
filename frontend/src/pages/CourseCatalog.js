@@ -8,7 +8,7 @@ import axios from 'axios';
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-function CourseCatalog({ user }) {
+function CourseCatalog({ user = null }) {
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
