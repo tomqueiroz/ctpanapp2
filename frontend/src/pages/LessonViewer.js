@@ -1,47 +1,58 @@
-import Footer from "../components/Footer";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import { useParams } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
+import { useParams, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-function LessonViewer({ user }) {
+function LessonViewer({ user = null }) {
   const { courseId, lessonId } = useParams();
+  const navigate = useNavigate();
+  const [lesson, setLesson] = useState(null);
+
+  useEffect(() => {
+    const fetchLesson = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/lessons/${lessonId}`, { withCredentials: true });
+        setLesson(response.data);
+      } catch (error) {
+        console.error('Error fetching lesson:', error);
+      }
+    };
+    fetchLesson();
+  }, [lessonId]);
+
+  if (!lesson) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <Navbar user={user} />
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-center">
+            <div className="inline-block w-12 h-12 border-4 border-[#0072BC] border-t-transparent rounded-full animate-spin"></div>
+            <p className="mt-4 text-gray-600">Carregando aula...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar user={user} />
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-          {/* Video/Content Area */}
-          <div className="aspect-video bg-black">
-            <div className="flex items-center justify-center h-full text-white">
-              Player de V\u00eddeo ou Conte\u00fado
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">{lesson.title}</h1>
+        <div className="bg-white border border-gray-200 rounded-xl p-8">
+          {lesson.content_type === 'video' && lesson.content_url && (
+            <div className="aspect-video">
+              <iframe src={lesson.content_url} className="w-full h-full rounded-lg" allowFullScreen />
             </div>
-          </div>
-
-          {/* Lesson Info */}
-          <div className="p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">T\u00edtulo da Li\u00e7\u00e3o</h1>
-            <p className="text-gray-600 mb-8">Descri\u00e7\u00e3o da li\u00e7\u00e3o e conte\u00fado adicional.</p>
-
-            {/* Navigation */}
-            <div className="flex items-center justify-between">
-              <button className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-[#0072BC] transition-colors">
-                <ArrowLeft size={18} />
-                <span>Li\u00e7\u00e3o Anterior</span>
-              </button>
-              <button className="flex items-center space-x-2 px-6 py-2.5 bg-[#0072BC] text-white font-medium rounded-lg hover:bg-[#005a9e] transition-all active:scale-95">
-                <span>Pr\u00f3xima Li\u00e7\u00e3o</span>
-                <ArrowRight size={18} />
-              </button>
-            </div>
-          </div>
+          )}
+          {lesson.content_text && <div className="mt-6 prose max-w-none" dangerouslySetInnerHTML={{ __html: lesson.content_text }} />}
         </div>
+        <button onClick={() => navigate(`/courses/${courseId}`)} className="mt-6 text-[#0072BC] hover:underline">Voltar ao curso</button>
       </div>
+      <Footer user={user} />
     </div>
   );
 }
 
-      <Footer user={user} />
 export default LessonViewer;
