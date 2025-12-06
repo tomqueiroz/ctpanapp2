@@ -462,7 +462,7 @@ async def get_magazines():
     magazines = await db.magazines.find(
         {},
         {"_id": 0}
-    ).sort("published_date", -1).to_list(1000)
+    ).sort("published_date", -1).limit(50).to_list(None)
     return [Magazine(**mag) for mag in magazines]
 
 @api_router.get("/magazines/{magazine_id}", response_model=Magazine)
