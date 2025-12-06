@@ -124,9 +124,9 @@ function AdminDashboard({ user = null }) {
           </div>
         </div>
       </div>
+      <Footer user={user} />
     </div>
   );
 }
 
-      <Footer user={user} />
 export default AdminDashboard;
