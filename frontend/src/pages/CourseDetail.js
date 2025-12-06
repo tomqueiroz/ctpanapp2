@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { useParams, Link, useNavigate } from 'react-router-dom';
