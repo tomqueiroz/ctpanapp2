@@ -224,7 +224,7 @@ function Homepage() {
 
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
               <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <Tool className="text-[#0072BC]" size={24} />
+                <Wrench className="text-[#0072BC]" size={24} />
               </div>
               <h4 className="text-lg font-semibold text-[#0072BC] mb-2">Aulas práticas</h4>
               <p className="text-gray-600">Aprenda fazendo com exemplos reais do dia a dia</p>
