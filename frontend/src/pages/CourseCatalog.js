@@ -39,8 +39,8 @@ function CourseCatalog({ user = null }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Cat\u00e1logo de Cursos</h1>
-          <p className="text-lg text-gray-600">Explore todos os cursos dispon\u00edveis na plataforma CTP</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Catálogo de Cursos</h1>
+          <p className="text-lg text-gray-600">Explore todos os cursos disponíveis na plataforma CTP</p>
         </div>
 
         {/* Search */}
