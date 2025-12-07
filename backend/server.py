@@ -491,6 +491,32 @@ async def create_magazine(request: Request, magazine_data: dict):
     await db.magazines.insert_one(magazine_doc)
     return Magazine(**magazine_doc)
 
+# Image proxy endpoint to solve CORS issues
+@api_router.get("/proxy-image")
+async def proxy_image(url: str):
+    """
+    Proxy endpoint to fetch images from external domains and serve them
+    This solves CORS issues when loading images from customer-assets domain
+    """
+    try:
+        async with httpx.AsyncClient() as http_client:
+            image_response = await http_client.get(url, timeout=30.0)
+            image_response.raise_for_status()
+            
+            # Get content type from response headers
+            content_type = image_response.headers.get("content-type", "image/png")
+            
+            return Response(
+                content=image_response.content,
+                media_type=content_type,
+                headers={
+                    "Cache-Control": "public, max-age=86400",  # Cache for 1 day
+                }
+            )
+    except Exception as e:
+        logging.error(f"Failed to proxy image {url}: {e}")
+        raise HTTPException(status_code=404, detail=f"Failed to load image: {str(e)}")
+
 # Admin endpoints
 @api_router.get("/admin/stats")
 async def get_admin_stats(request: Request):
