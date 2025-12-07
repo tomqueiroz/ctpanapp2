@@ -7,12 +7,18 @@ import { Award, BookOpen, CheckCircle2, Clock, Users, Video, FileText, TrendingU
 function ConhecaCTP() {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Helper function to get proxied image URL
+  const getProxiedImageUrl = (originalUrl) => {
+    return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
+  };
 
   const modulos = [
     { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png" },
