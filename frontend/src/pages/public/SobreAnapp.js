@@ -66,7 +66,7 @@ function SobreAnapp() {
               Sobre a <span className="font-medium">ANAPP</span>
             </h1>
             <p className="text-xl text-blue-100 font-light mb-8 leading-relaxed">
-              Desde 1990, a ANAPP é a principal associação do setor de piscinas, spas e bem-estar do Brasil, promovendo excelência, inovação e desenvolvimento profissional.
+              Fundada em 1990, a ANAPP – Associação Nacional das Empresas e Profissionais de Piscinas promove o desenvolvimento do setor através da união de empresários e profissionais de todo o Brasil.
             </p>
           </div>
         </div>
