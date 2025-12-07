@@ -15,10 +15,11 @@ function SobreAnapp() {
   }, []);
 
   const valores = [
-    { icon: Award, title: "Excelência", description: "Compromisso com os mais altos padrões de qualidade" },
-    { icon: Heart, title: "Integridade", description: "Ética e transparência em todas as relações" },
-    { icon: Users, title: "Colaboração", description: "Fortalecimento do setor através da união" },
-    { icon: TrendingUp, title: "Inovação", description: "Estímulo ao desenvolvimento e novas tecnologias" }
+    { icon: Award, title: "Ética", description: "Compromisso com práticas transparentes e justas" },
+    { icon: Heart, title: "Profissionalismo", description: "Excelência em todos os serviços prestados" },
+    { icon: Users, title: "Criatividade", description: "Inovação constante para o desenvolvimento do setor" },
+    { icon: TrendingUp, title: "Responsabilidade", description: "Compromisso com associados e o mercado" },
+    { icon: Target, title: "Respeito", description: "Valorização de todos os profissionais do setor" }
   ];
 
   const setores = [
