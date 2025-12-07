@@ -15,15 +15,15 @@ function ConhecaCTP() {
   }, []);
 
   const modulos = [
-    { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png" },
-    { numero: 2, titulo: "Segurança no Manuseio de Produtos", descricao: "Protocolos de segurança e EPIs obrigatórios", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png" },
-    { numero: 3, titulo: "Tipos de Tratamentos", descricao: "Tratamento físico, químico e sistemas de filtração", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png" },
-    { numero: 4, titulo: "Controle e Análise da Água", descricao: "Parâmetros químicos e instrumentos de medição", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png" },
-    { numero: 5, titulo: "Tratamentos Alternativos", descricao: "Ozônio, UV e tecnologias emergentes", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png" },
-    { numero: 6, titulo: "Manutenção e Resolução", descricao: "Manutenção preventiva e diagnóstico", carga: "14h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png" },
-    { numero: 7, titulo: "Solução de Problemas", descricao: "Problemas comuns e soluções específicas", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png" },
-    { numero: 8, titulo: "Relatórios e Documentação", descricao: "Elaboração de relatórios técnicos", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png" },
-    { numero: 9, titulo: "Atendimento ao Cliente", descricao: "Comunicação efetiva e gestão de expectativas", carga: "13h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png" },
+    { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%2001.png" },
+    { numero: 2, titulo: "Segurança no Manuseio de Produtos", descricao: "Protocolos de segurança e EPIs obrigatórios", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%2002.png" },
+    { numero: 3, titulo: "Tipos de Tratamentos", descricao: "Tratamento físico, químico e sistemas de filtração", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%2003.png" },
+    { numero: 4, titulo: "Controle e Análise da Água", descricao: "Parâmetros químicos e instrumentos de medição", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%2004.png" },
+    { numero: 5, titulo: "Tratamentos Alternativos", descricao: "Ozônio, UV e tecnologias emergentes", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%2005.png" },
+    { numero: 6, titulo: "Manutenção e Resolução", descricao: "Manutenção preventiva e diagnóstico", carga: "14h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%2006.png" },
+    { numero: 7, titulo: "Solução de Problemas", descricao: "Problemas comuns e soluções específicas", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%2007.png" },
+    { numero: 8, titulo: "Relatórios e Documentação", descricao: "Elaboração de relatórios técnicos", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%2008.png" },
+    { numero: 9, titulo: "Atendimento ao Cliente", descricao: "Comunicação efetiva e gestão de expectativas", carga: "13h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%2009.png" },
     { numero: 10, titulo: "Gestão de Projetos", descricao: "Planejamento e cronograma de serviços", carga: "10h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png" },
     { numero: 11, titulo: "Sustentabilidade", descricao: "Economia de recursos e práticas sustentáveis", carga: "10h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png" },
     { numero: 12, titulo: "Certificação Final", descricao: "Revisão geral e avaliação completa", carga: "10h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png" }
