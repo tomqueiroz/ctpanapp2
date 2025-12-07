@@ -172,21 +172,46 @@ function SobreAnapp() {
               Nossa <span className="font-medium">Trajetória</span>
             </h2>
             <p className="text-lg text-blue-100 font-light max-w-2xl mx-auto">
-              Mais de 30 anos de história fortalecendo o setor
+              Mais de 35 anos de história fortalecendo o setor de piscinas no Brasil
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {milestones.map((milestone, index) => (
-              <div 
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-              >
-                <div className="text-[#FF6B00] text-4xl font-light mb-4">{milestone.year}</div>
-                <h3 className="text-lg font-medium text-white mb-2">{milestone.title}</h3>
-                <p className="text-sm text-blue-100 font-light">{milestone.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {milestones.map((milestone, index) => {
+              const Icon = milestone.icon;
+              return (
+                <div 
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20 hover:border-[#FF6B00] transition-all hover:bg-white/20"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="text-[#FF6B00] text-5xl font-light">{milestone.year}</div>
+                    <div className="w-12 h-12 bg-[#FF6B00] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Icon className="text-white" size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-medium text-white mb-3">{milestone.title}</h3>
+                  <p className="text-base text-blue-100 font-light leading-relaxed">{milestone.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-light text-white mb-4">Próxima Edição</h3>
+              <div className="flex items-center justify-center gap-8">
+                <div>
+                  <p className="text-[#FF6B00] text-5xl font-light mb-2">25ª</p>
+                  <p className="text-white font-medium">EXPOLAZER</p>
+                </div>
+                <div className="h-16 w-px bg-white/20"></div>
+                <div className="text-left">
+                  <p className="text-white font-medium text-lg mb-1">11 a 14 de agosto de 2026</p>
+                  <p className="text-blue-100 font-light">Distrito Anhembi, São Paulo</p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
