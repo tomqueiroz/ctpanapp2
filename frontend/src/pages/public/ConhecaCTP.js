@@ -150,7 +150,7 @@ function ConhecaCTP() {
               >
                 <div className="relative h-48 bg-gray-200 overflow-hidden">
                   <img
-                    src={modulo.imagem}
+                    src={getProxiedImageUrl(modulo.imagem)}
                     alt={modulo.titulo}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => {
