@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
 import CourseSidebar from '../components/CourseSidebar';
+import Footer from '../components/Footer';
 import { FileText, Video, Headphones, PenTool, Clock, BookOpen, Calendar, Award, ChevronRight, Menu, X, Info, MessageCircle, TrendingUp } from 'lucide-react';
 
 function ChapterView({ user = { name: 'Aluno' } }) {
@@ -323,6 +324,8 @@ function ChapterView({ user = { name: 'Aluno' } }) {
           </div>
         </div>
       </div>
+
+      <Footer user={user} />
     </div>
   );
 }
