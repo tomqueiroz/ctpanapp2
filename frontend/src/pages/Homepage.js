@@ -414,28 +414,31 @@ function Homepage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <img
-                src="https://readdy.ai/api/search-image?query=Modern%20e-learning%20platform%20interface%20on%20tablet%20showing%20course%20with%20video%20player&width=800&height=600&seq=2"
-                alt="Plataforma CTP"
-                className="w-full rounded-2xl shadow-lg"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=Plataforma+CTP';
-                }}
-              />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <img
+                  src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/2wicsnmf_Vinheta%20Cap%201.png"
+                  alt="Aula CTP - Capítulo 1"
+                  className="w-full rounded-2xl shadow-2xl"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#0072BC] to-[#005a9e] text-white p-6 rounded-2xl shadow-xl hidden lg:block">
+                  <p className="text-sm font-light mb-1">Capítulo em destaque</p>
+                  <p className="text-2xl font-medium">Módulo 1</p>
+                </div>
+              </div>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-8 order-1 lg:order-2">
               {platformFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                      <Icon className="text-white" size={24} />
+                  <div key={index} className="flex items-start group">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mr-5 flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                      <Icon className="text-white" size={26} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-[#1f2937] mb-2">{feature.title}</h3>
-                      <p className="text-sm text-gray-600 font-light leading-relaxed">{feature.description}</p>
+                      <h3 className="text-xl font-medium text-[#1f2937] mb-2 group-hover:text-[#0072BC] transition-colors">{feature.title}</h3>
+                      <p className="text-base text-gray-600 font-light leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 );
