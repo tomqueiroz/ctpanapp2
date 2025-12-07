@@ -96,7 +96,7 @@ function Homepage() {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://readdy.ai/api/search-image?query=crystal%20clear%20swimming%20pool%20blue%20water%20sunny%20day%20professional%20maintenance&width=1920&height=1080&seq=1&orientation=landscape)',
+            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_poolcurso/artifacts/pyzkl4dd_f6c1a415-6ee1-48c2-a323-f2a1bca78dd8.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: `translateY(${scrollY * 0.5}px)`
