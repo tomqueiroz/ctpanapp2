@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     // TODO: Implementar lógica de autenticação completa com backend
     // Por enquanto, redireciona direto para área logada
-    navigate('/dashboard/chapter/1');
+    navigate('/dashboard');
   };
 
   return (
