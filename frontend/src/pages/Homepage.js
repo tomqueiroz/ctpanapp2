@@ -285,7 +285,7 @@ function Homepage() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative h-64 lg:h-auto bg-gradient-to-br from-[#0072BC] to-[#005a9e] p-8 flex items-center justify-center">
                 <img
-                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/tz4ovqtf_logo ctp fdo transp.png')}`}
+                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/i7j10xxc_logo ctp branco.png')}`}
                   alt="Logo CTP"
                   className="w-full h-auto object-contain max-w-md"
                   onError={(e) => {
