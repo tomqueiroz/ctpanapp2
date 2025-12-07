@@ -75,19 +75,19 @@ function Homepage() {
       name: 'Roberto Oliveira',
       location: 'São Paulo, SP',
       text: 'Antes do CTP, cobrava R$ 150 por piscina. Hoje cobro R$ 350 e tenho mais clientes do que consigo atender. O curso me ensinou a trabalhar direito e dar valor ao meu serviço.',
-      image: 'https://readdy.ai/api/search-image?query=Professional%20male%20pool%20technician%20portrait%2C%20smiling%2C%20uniform&width=100&height=100&seq=1'
+      image: 'https://images.unsplash.com/photo-1738750908048-14200459c3c9?w=100&h=100&fit=crop&crop=faces'
     },
     {
       name: 'Carlos Eduardo Santos',
       location: 'Fortaleza, CE',
       text: 'A plataforma de estudos é muito fácil de usar. Consegui fazer todo o curso pelo celular nos intervalos do trabalho. Os vídeos são curtos e diretos ao ponto.',
-      image: 'https://readdy.ai/api/search-image?query=Professional%20male%20technician%20portrait%2C%20friendly&width=100&height=100&seq=2'
+      image: 'https://images.unsplash.com/photo-1686838328311-d0c2bdf02512?w=100&h=100&fit=crop&crop=faces'
     },
     {
       name: 'Fernanda Almeida',
       location: 'Florianópolis, SC',
       text: 'Abri minha própria empresa de manutenção de piscinas depois do curso. O módulo de gestão de negócios foi fundamental para eu entender como precificar meus serviços.',
-      image: 'https://readdy.ai/api/search-image?query=Professional%20female%20business%20owner%20portrait%2C%20confident&width=100&height=100&seq=3'
+      image: 'https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?w=100&h=100&fit=crop&crop=faces'
     }
   ];
 
