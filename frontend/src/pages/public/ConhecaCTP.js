@@ -1,148 +1,122 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Award, BookOpen, CheckCircle2, Clock, Users, Video, FileText, TrendingUp, Shield, MessageCircle, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { Award, BookOpen, CheckCircle2, Clock, Users, Video, FileText, TrendingUp, Shield, Target, ChevronRight, Star } from 'lucide-react';
 
 function ConhecaCTP() {
   const navigate = useNavigate();
-  const [openFaq, setOpenFaq] = useState(null);
+  const [scrollY, setScrollY] = useState(0);
 
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const modulos = [
-    { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", itens: ["Conceitos básicos de manutenção", "Fundamentos de limpeza", "Segurança dos usuários"], carga: "12 horas" },
-    { numero: 2, titulo: "Segurança no Manuseio de Produtos", itens: ["Protocolos de segurança", "EPIs obrigatórios", "Armazenamento correto"], carga: "12 horas" },
-    { numero: 3, titulo: "Tipos de Tratamentos", itens: ["Tratamento físico", "Tratamento químico", "Sistemas de filtração"], carga: "15 horas" },
-    { numero: 4, titulo: "Controle e Análise da Água", itens: ["Parâmetros químicos", "Instrumentos de medição", "Ajustes e correções"], carga: "15 horas" },
-    { numero: 5, titulo: "Tratamentos Alternativos", itens: ["Sistemas de ozônio", "Tratamento UV", "Tecnologias emergentes"], carga: "12 horas" },
-    { numero: 6, titulo: "Manutenção e Resolução", itens: ["Manutenção preventiva", "Diagnóstico de problemas", "Soluções práticas"], carga: "14 horas" },
-    { numero: 7, titulo: "Solução de Problemas", itens: ["Problemas comuns em piscinas", "Diagnóstico avançado", "Soluções específicas"], carga: "15 horas" },
-    { numero: 8, titulo: "Relatórios e Documentação", itens: ["Elaboração de relatórios", "Registro de ocorrências", "Documentação técnica"], carga: "12 horas" },
-    { numero: 9, titulo: "Atendimento ao Cliente", itens: ["Comunicação efetiva", "Gestão de expectativas", "Resolução de conflitos"], carga: "13 horas" },
-    { numero: 10, titulo: "Gestão de Projetos", itens: ["Planejamento de serviços", "Cronograma de manutenção", "Gestão de recursos"], carga: "10 horas" },
-    { numero: 11, titulo: "Sustentabilidade", itens: ["Economia de recursos", "Práticas sustentáveis", "Gestão ambiental"], carga: "10 horas" },
-    { numero: 12, titulo: "Certificação Final", itens: ["Revisão geral", "Avaliação teórica", "Projeto prático"], carga: "10 horas" }
+    { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://readdy.ai/api/search-image?query=pool%20water%20testing%20equipment%20professional&width=400&height=300&seq=1" },
+    { numero: 2, titulo: "Segurança no Manuseio de Produtos", descricao: "Protocolos de segurança e EPIs obrigatórios", carga: "12h", imagem: "https://readdy.ai/api/search-image?query=safety%20equipment%20PPE%20pool%20maintenance&width=400&height=300&seq=2" },
+    { numero: 3, titulo: "Tipos de Tratamentos", descricao: "Tratamento físico, químico e sistemas de filtração", carga: "15h", imagem: "https://readdy.ai/api/search-image?query=pool%20treatment%20chemicals%20filtration&width=400&height=300&seq=3" },
+    { numero: 4, titulo: "Controle e Análise da Água", descricao: "Parâmetros químicos e instrumentos de medição", carga: "15h", imagem: "https://readdy.ai/api/search-image?query=water%20quality%20testing%20pH%20analysis&width=400&height=300&seq=4" },
+    { numero: 5, titulo: "Tratamentos Alternativos", descricao: "Ozônio, UV e tecnologias emergentes", carga: "12h", imagem: "https://readdy.ai/api/search-image?query=ozone%20UV%20pool%20treatment%20system&width=400&height=300&seq=5" },
+    { numero: 6, titulo: "Manutenção e Resolução", descricao: "Manutenção preventiva e diagnóstico", carga: "14h", imagem: "https://readdy.ai/api/search-image?query=pool%20maintenance%20equipment%20repair&width=400&height=300&seq=6" },
+    { numero: 7, titulo: "Solução de Problemas", descricao: "Problemas comuns e soluções específicas", carga: "15h", imagem: "https://readdy.ai/api/search-image?query=troubleshooting%20pool%20problems%20diagnosis&width=400&height=300&seq=7" },
+    { numero: 8, titulo: "Relatórios e Documentação", descricao: "Elaboração de relatórios técnicos", carga: "12h", imagem: "https://readdy.ai/api/search-image?query=professional%20documentation%20reports%20clipboard&width=400&height=300&seq=8" },
+    { numero: 9, titulo: "Atendimento ao Cliente", descricao: "Comunicação efetiva e gestão de expectativas", carga: "13h", imagem: "https://readdy.ai/api/search-image?query=customer%20service%20professional%20communication&width=400&height=300&seq=9" },
+    { numero: 10, titulo: "Gestão de Projetos", descricao: "Planejamento e cronograma de serviços", carga: "10h", imagem: "https://readdy.ai/api/search-image?query=project%20management%20planning%20business&width=400&height=300&seq=10" },
+    { numero: 11, titulo: "Sustentabilidade", descricao: "Economia de recursos e práticas sustentáveis", carga: "10h", imagem: "https://readdy.ai/api/search-image?query=sustainability%20eco%20friendly%20green%20practices&width=400&height=300&seq=11" },
+    { numero: 12, titulo: "Certificação Final", descricao: "Revisão geral e avaliação completa", carga: "10h", imagem: "https://readdy.ai/api/search-image?query=graduation%20certificate%20achievement%20success&width=400&height=300&seq=12" }
   ];
 
-  const depoimentos = [
-    {
-      nome: "Roberto Almeida",
-      cidade: "São Paulo, SP",
-      texto: "O CTP mudou completamente minha carreira. Antes eu trabalhava como auxiliar de manutenção, e agora tenho minha própria empresa de tratamento de piscinas com mais de 30 clientes fixos. O investimento valeu cada centavo.",
-      foto: "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20Brazilian%20male%20in%20his%2040s%2C%20wearing%20blue%20work%20shirt%2C%20friendly%20smile%2C%20neutral%20background%2C%20professional%20portrait&width=100&height=100&seq=8&orientation=squarish"
-    },
-    {
-      nome: "Fernanda Costa",
-      cidade: "Florianópolis, SC",
-      texto: "A metodologia do curso é excelente! Mesmo sem experiência prévia, consegui aprender tudo de forma clara e objetiva. Os vídeos práticos e o suporte dos instrutores fizeram toda a diferença no meu aprendizado.",
-      foto: "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20Brazilian%20female%20in%20her%2030s%2C%20wearing%20professional%20attire%2C%20friendly%20smile%2C%20neutral%20background%2C%20professional%20portrait&width=100&height=100&seq=9&orientation=squarish"
-    },
-    {
-      nome: "Carlos Eduardo Santos",
-      cidade: "Belo Horizonte, MG",
-      texto: "Como proprietário de uma empresa de manutenção, certificar toda a minha equipe foi a melhor decisão que tomei. A qualidade do serviço melhorou significativamente e conseguimos aumentar nossos preços em 30%.",
-      foto: "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20Brazilian%20male%20in%20his%2050s%2C%20wearing%20casual%20business%20attire%2C%20confident%20expression%2C%20neutral%20background%2C%20professional%20portrait&width=100&height=100&seq=10&orientation=squarish"
-    }
+  const benefits = [
+    { icon: Award, title: "Certificação ANAPP", description: "Reconhecida em todo o Brasil" },
+    { icon: Clock, title: "160 Horas", description: "De conteúdo prático" },
+    { icon: Video, title: "100% Online", description: "Estude no seu ritmo" },
+    { icon: Users, title: "+5.000 Alunos", description: "Já certificados" }
   ];
 
-  const faqs = [
+  const testimonials = [
     {
-      pergunta: "Preciso ter conhecimento prévio sobre piscinas?",
-      resposta: "Não é necessário conhecimento prévio. O curso começa do básico e avança gradualmente. Temos alunos que nunca trabalharam com piscinas antes e hoje são profissionais de sucesso no mercado."
+      name: "Roberto Almeida",
+      location: "São Paulo, SP",
+      text: "O CTP mudou completamente minha carreira. Agora tenho minha própria empresa com mais de 30 clientes fixos.",
+      image: "https://readdy.ai/api/search-image?query=professional%20male%20portrait%20smiling&width=100&height=100&seq=1"
     },
     {
-      pergunta: "Quanto tempo tenho para concluir o curso?",
-      resposta: "O tempo de acesso varia conforme o plano escolhido: 12 meses para o Plano Básico, 18 meses para o Plano Premium e acesso vitalício para o Plano Master. Esse prazo é mais que suficiente para concluir todos os módulos, mesmo estudando poucas horas por semana."
+      name: "Fernanda Costa",
+      location: "Florianópolis, SC",
+      text: "A metodologia é excelente! Mesmo sem experiência prévia, consegui aprender tudo de forma clara.",
+      image: "https://readdy.ai/api/search-image?query=professional%20female%20portrait%20confident&width=100&height=100&seq=2"
     },
     {
-      pergunta: "O certificado é reconhecido pelo mercado?",
-      resposta: "Sim! A ANAPP é a principal associação do setor de piscinas no Brasil. Nosso certificado é reconhecido pelas principais empresas, lojas de produtos e condomínios em todo o país, sendo um diferencial competitivo importante no mercado."
-    },
-    {
-      pergunta: "Como funciona o curso? É totalmente online?",
-      resposta: "O curso é predominantemente online, com aulas teóricas em vídeo, materiais complementares e exercícios práticos que podem ser realizados em casa. Dependendo da sua região, também oferecemos encontros presenciais opcionais para práticas supervisionadas, mas não são obrigatórios para a certificação."
-    },
-    {
-      pergunta: "Posso parcelar o valor do curso?",
-      resposta: "Sim, aceitamos cartão de crédito em até 12x. Também oferecemos opções de pagamento à vista com desconto via boleto bancário (5% de desconto) ou PIX (10% de desconto). Para empresas, temos condições especiais de pagamento."
-    },
-    {
-      pergunta: "Recebo algum material físico?",
-      resposta: "Nos planos Premium e Master, você recebe o certificado impresso via correio. Todo o material didático é digital, permitindo acesso de qualquer dispositivo e atualizações constantes. No Plano Master, você também recebe um kit de teste de água profissional para as atividades práticas."
+      name: "Carlos Eduardo Santos",
+      location: "Belo Horizonte, MG",
+      text: "Certificar toda a minha equipe foi a melhor decisão. Aumentamos nossos preços em 30%.",
+      image: "https://readdy.ai/api/search-image?query=professional%20male%20business%20owner&width=100&height=100&seq=3"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Header user={null} />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-lg font-semibold mb-4">Formação Profissional ANAPP</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Programa CTP: Curso Técnico em Piscinas</h1>
-            <p className="text-xl max-w-3xl mx-auto mb-8">
-              Torne-se um especialista certificado em tratamento e manutenção de piscinas com o curso mais reconhecido do mercado brasileiro.
+      {/* Hero Section with Parallax */}
+      <section className="relative min-h-[600px] flex items-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(https://readdy.ai/api/search-image?query=professional%20pool%20maintenance%20training%20certification%20modern&width=1920&height=1080&seq=1&orientation=landscape)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            transform: `translateY(${scrollY * 0.5}px)`
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0072BC]/95 to-[#0072BC]/80"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-3xl">
+            <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Programa de Certificação Profissional
+            </div>
+            <h1 className="text-5xl md:text-6xl font-light text-white mb-6 leading-tight">
+              Conheça o <span className="font-medium">Curso CTP</span>
+            </h1>
+            <p className="text-xl text-blue-100 font-light mb-8 leading-relaxed">
+              O Curso Técnico em Piscinas mais completo do Brasil. 12 módulos práticos, 160 horas de conteúdo e certificação ANAPP reconhecida nacionalmente.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#estrutura" className="bg-white text-[#0072BC] py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg">
-                Conheça o Programa
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => navigate('/contato')}
-                className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg"
+                onClick={() => navigate('/login')}
+                className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl"
               >
                 Inscreva-se Agora
               </button>
+              <button
+                onClick={() => navigate('/cursos')}
+                className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
+              >
+                Ver Outros Cursos
+              </button>
             </div>
-            <p className="mt-6 text-sm">Certificação Oficial ANAPP - Reconhecida em todo o Brasil</p>
           </div>
         </div>
       </section>
 
-      {/* Sobre o Programa */}
-      <section className="py-16 bg-white">
+      {/* Benefits Section - White */}
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">SOBRE O PROGRAMA</p>
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-6">O que é o Curso Técnico em Piscinas?</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <p className="text-lg text-gray-700 mb-4">
-                O Programa CTP (Curso Técnico em Piscinas) é a formação mais completa e reconhecida do Brasil para profissionais que desejam atuar no mercado de tratamento, manutenção e instalação de piscinas.
-              </p>
-              <p className="text-lg text-gray-700">
-                Desenvolvido pela ANAPP (Associação Nacional dos Fabricantes e Construtores de Piscinas e Produtos Afins), o curso combina conhecimentos teóricos e práticos essenciais para formar técnicos qualificados e certificados.
-              </p>
-            </div>
-            <div>
-              <img 
-                src="https://static.readdy.ai/image/0649c8a07031c7fbee62019c841ca404/a4d26979d4f2baeaf6154ed789b0120b.jfif" 
-                alt="Técnico CTP em ação" 
-                className="w-full h-auto rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { icone: Sparkles, titulo: "Metodologia Prática", descricao: "Aprenda fazendo com exercícios reais" },
-              { icone: Users, titulo: "Instrutores Especialistas", descricao: "Aprenda com os melhores do mercado" },
-              { icone: Award, titulo: "Certificação Oficial", descricao: "Reconhecida em todo o Brasil" },
-              { icone: MessageCircle, titulo: "Suporte Contínuo", descricao: "Tire dúvidas durante todo o curso" }
-            ].map((item, index) => {
-              const Icone = item.icone;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
               return (
-                <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">
-                  <Icone className="mx-auto mb-4 text-[#0072BC]" size={40} />
-                  <h4 className="font-bold text-gray-900 mb-2">{item.titulo}</h4>
-                  <p className="text-sm text-gray-600">{item.descricao}</p>
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="text-white" size={28} />
+                  </div>
+                  <h3 className="text-lg font-medium text-[#1f2937] mb-1">{benefit.title}</h3>
+                  <p className="text-sm text-gray-600 font-light">{benefit.description}</p>
                 </div>
               );
             })}
@@ -150,289 +124,108 @@ function ConhecaCTP() {
         </div>
       </section>
 
-      {/* Estrutura Curricular */}
-      <section id="estrutura" className="py-16 bg-gray-50">
+      {/* Program Overview - Gray Background */}
+      <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">ESTRUTURA CURRICULAR</p>
-            <h2 className="text-3xl font-bold text-[#0072BC]">Programa Completo de Formação</h2>
-            <p className="text-lg text-gray-600 mt-4">Um currículo abrangente dividido em 12 módulos principais para garantir uma formação completa e de qualidade</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {modulos.map((modulo, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <div className="flex items-start mb-4">
-                  <div className="w-12 h-12 bg-[#0072BC] text-white rounded-lg flex items-center justify-center font-bold text-lg mr-4 shrink-0">
-                    {modulo.numero}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{modulo.titulo}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 mb-4">
-                  {modulo.itens.map((item, i) => (
-                    <li key={i} className="flex items-start text-sm text-gray-600">
-                      <CheckCircle2 className="text-[#0072BC] mr-2 shrink-0" size={16} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Clock className="mr-2" size={16} />
-                  {modulo.carga}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-md">
-            <h3 className="text-2xl font-bold text-[#0072BC] mb-6 text-center">Carga Horária Total: 160 horas</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-bold text-gray-900 mb-4">Distribuição das Atividades:</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start text-gray-700">
-                    <span className="text-[#0072BC] mr-2">•</span>
-                    Aulas teóricas online: 90 horas
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <span className="text-[#0072BC] mr-2">•</span>
-                    Exercícios práticos: 40 horas
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <span className="text-[#0072BC] mr-2">•</span>
-                    Atividades supervisionadas: 20 horas
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <span className="text-[#0072BC] mr-2">•</span>
-                    Avaliação final: 10 horas
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-4">Pré-requisitos:</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start text-gray-700">
-                    <CheckCircle2 className="text-[#0072BC] mr-2 shrink-0" size={18} />
-                    Ensino médio completo
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <CheckCircle2 className="text-[#0072BC] mr-2 shrink-0" size={18} />
-                    Conhecimentos básicos de matemática
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <CheckCircle2 className="text-[#0072BC] mr-2 shrink-0" size={18} />
-                    Acesso a computador ou smartphone com internet
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <CheckCircle2 className="text-[#0072BC] mr-2 shrink-0" size={18} />
-                    Disponibilidade para atividades práticas
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Metodologia */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">METODOLOGIA</p>
-            <h2 className="text-3xl font-bold text-[#0072BC]">Experiência de Aprendizagem</h2>
-            <p className="text-lg text-gray-600 mt-4">Como garantimos a melhor experiência de aprendizagem para nossos alunos</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Metodologia de Ensino</h3>
-              <div className="space-y-4">
-                {[
-                  { titulo: "Aulas teóricas interativas", desc: "Vídeos dinâmicos com animações e exemplos práticos para facilitar a compreensão." },
-                  { titulo: "Conteúdos embasados nas normas ABNT", desc: "O melhor conteúdo disponível, atualizado e revisado por profissionais atuantes no mercado." },
-                  { titulo: "Estudos de caso reais", desc: "Análise de situações do dia a dia para desenvolver habilidades de resolução de problemas." },
-                  { titulo: "Simulações virtuais das melhores práticas", desc: "Priorizando as melhores práticas, um conteúdo revisado para treinar procedimentos técnicos com segurança." }
-                ].map((item, index) => (
-                  <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-gray-900 mb-2">{item.titulo}</h4>
-                    <p className="text-sm text-gray-600">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recursos Didáticos</h3>
-              <div className="space-y-4">
-                {[
-                  { titulo: "Material digital atualizado", desc: "E-books, apostilas e infográficos com as informações mais recentes do setor." },
-                  { titulo: "Vídeos demonstrativos", desc: "Tutoriais passo a passo para visualizar procedimentos técnicos na prática." },
-                  { titulo: "Apostilas técnicas", desc: "Material de referência completo para consulta durante e após o curso." },
-                  { titulo: "Exercícios práticos", desc: "Atividades para fixação do conteúdo e desenvolvimento de habilidades técnicas." }
-                ].map((item, index) => (
-                  <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-gray-900 mb-2">{item.titulo}</h4>
-                    <p className="text-sm text-gray-600">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-8 text-white">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Plataforma de Ensino Exclusiva</h3>
-                <p className="mb-6">Nossa plataforma de ensino foi desenvolvida especialmente para o Programa CTP, com recursos que facilitam o aprendizado e acompanhamento do seu progresso.</p>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-start">
-                    <CheckCircle2 className="mr-2 shrink-0" size={18} />
-                    Acesso 24 horas por dia
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle2 className="mr-2 shrink-0" size={18} />
-                    Compatível com todos dispositivos
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle2 className="mr-2 shrink-0" size={18} />
-                    Fórum de discussão
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle2 className="mr-2 shrink-0" size={18} />
-                    Suporte técnico
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle2 className="mr-2 shrink-0" size={18} />
-                    Acompanhamento de progresso
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle2 className="mr-2 shrink-0" size={18} />
-                    Certificado digital
-                  </div>
-                </div>
-              </div>
-              <div>
-                <img 
-                  src="https://readdy.ai/api/search-image?query=Modern%20e-learning%20platform%20interface%20on%20tablet%20showing%20swimming%20pool%20maintenance%20course%2C%20with%20video%20player%2C%20progress%20bar%2C%20and%20interactive%20elements%2C%20clean%20blue%20interface%2C%20professional%20design&width=400&height=400&seq=3&orientation=squarish" 
-                  alt="Plataforma de Ensino CTP" 
-                  className="w-full h-auto rounded-lg shadow-xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certificação */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">CERTIFICAÇÃO</p>
-            <h2 className="text-3xl font-bold text-[#0072BC]">Processo de Certificação</h2>
-            <p className="text-lg text-gray-600 mt-4 max-w-4xl mx-auto">
-              A certificação CTP da ANAPP é reconhecida como padrão de excelência no mercado de piscinas em todo o Brasil. Ao concluir o curso, você receberá um certificado oficial que atesta sua competência técnica.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Programa Completo do <span className="text-[#0072BC] font-medium">CTP</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+              12 módulos estruturados para transformar você em um profissional completo
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            {[
-              { numero: "1", titulo: "Conclusão dos Módulos", desc: "Finalize todos os módulos do curso com aproveitamento mínimo de 70% nas avaliações." },
-              { numero: "2", titulo: "Avaliação Final", desc: "Realize a prova final teórica e prática para demonstrar seus conhecimentos adquiridos." },
-              { numero: "3", titulo: "Emissão do Certificado", desc: "Receba seu certificado digital com validação online e código de autenticidade." },
-              { numero: "4", titulo: "Registro no Cadastro Nacional", desc: "Seu nome será incluído no cadastro nacional de profissionais certificados pela ANAPP." }
-            ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <div className="w-16 h-16 bg-[#0072BC] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {item.numero}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {modulos.map((modulo) => (
+              <div 
+                key={modulo.numero}
+                className="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#0072BC] hover:shadow-xl transition-all"
+              >
+                <div className="relative h-48 bg-gray-200 overflow-hidden">
+                  <img
+                    src={modulo.imagem}
+                    alt={modulo.titulo}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      e.target.src = `https://via.placeholder.com/400x300/0072BC/FFFFFF?text=Módulo+${modulo.numero}`;
+                    }}
+                  />
+                  <div className="absolute top-4 left-4 w-12 h-12 bg-[#FF6B00] rounded-xl flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">{modulo.numero}</span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <div className="flex items-center text-white text-sm">
+                      <Clock size={16} className="mr-1" />
+                      {modulo.carga}
+                    </div>
+                  </div>
                 </div>
-                <h4 className="font-bold text-gray-900 mb-2">{item.titulo}</h4>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-[#1f2937] mb-2 group-hover:text-[#0072BC] transition-colors">
+                    {modulo.titulo}
+                  </h3>
+                  <p className="text-sm text-gray-600 font-light leading-relaxed">
+                    {modulo.descricao}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* Why CTP Section - Blue with Parallax */}
+      <section className="relative py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(https://readdy.ai/api/search-image?query=swimming%20pool%20clear%20water%20professional&width=1920&height=1080&seq=2&orientation=landscape)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-[#0072BC]/95"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
-                src="https://static.readdy.ai/image/0649c8a07031c7fbee62019c841ca404/b12d352e47d49e2f7c7af37fc7f1d2b3.png" 
-                alt="Certificado CTP" 
-                className="w-full h-auto rounded-xl shadow-lg"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Benefícios da Certificação ANAPP</h3>
-              <div className="space-y-3">
+              <h2 className="text-4xl font-light text-white mb-6">
+                Por que escolher o <span className="font-medium">CTP ANAPP?</span>
+              </h2>
+              <div className="space-y-4">
                 {[
-                  "Reconhecimento profissional no mercado",
-                  "Diferencial competitivo para clientes",
-                  "Acesso a oportunidades exclusivas",
-                  "Credibilidade e confiança no mercado",
-                  "Atualização constante de conhecimentos",
-                  "Participação na comunidade ANAPP"
+                  "Certificação reconhecida nacionalmente pela ANAPP",
+                  "Metodologia prática e focada no mercado",
+                  "Professores com experiência de mais de 20 anos",
+                  "Conteúdo atualizado com as últimas tecnologias",
+                  "Suporte completo durante e após o curso",
+                  "Acesso vitalício ao material didático"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle2 className="text-[#0072BC] mr-3 shrink-0" size={20} />
-                    <span className="text-gray-700">{item}</span>
+                    <CheckCircle2 className="text-[#FF6B00] mr-3 flex-shrink-0 mt-1" size={24} />
+                    <p className="text-lg text-blue-100 font-light">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Investimento */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">INVESTIMENTO</p>
-            <h2 className="text-3xl font-bold text-[#0072BC]">Seja um especialista em tratamento de água de piscina</h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-8 text-white text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4">Associe-se grátis* e ganhe 50% de desconto</h3>
-            <div className="text-5xl font-bold text-[#FF6B00] mb-2">R$ 299,00</div>
-            <p className="text-lg mb-6">Não associado: R$ 600,00</p>
-            <p className="text-sm mb-8">(*) Promoção válida para categoria: Tratador de Piscinas.</p>
-            <button
-              onClick={() => navigate('/contato')}
-              className="bg-[#FF6B00] text-white py-4 px-12 rounded-lg font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg"
-            >
-              Inscreva-se Agora
-            </button>
-          </div>
-
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Planos Corporativos</h3>
-            <p className="text-center text-gray-700 mb-6 max-w-3xl mx-auto">
-              Oferecemos condições especiais para empresas que desejam capacitar suas equipes. Entre em contato conosco para uma proposta personalizada.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div>
-                <h4 className="font-bold text-gray-900 mb-4">Vantagens para Empresas:</h4>
-                <ul className="space-y-2">
-                  {[
-                    "Descontos progressivos de acordo com o número de colaboradores",
-                    "Relatórios de acompanhamento de desempenho",
-                    "Treinamentos personalizados para necessidades específicas",
-                    "Possibilidade de aulas presenciais in company"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start text-gray-700">
-                      <CheckCircle2 className="text-[#0072BC] mr-2 shrink-0" size={18} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-xl">
-                <h4 className="font-bold text-gray-900 mb-4">Solicite uma proposta:</h4>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/wlsjloh6_logo%20ctp%20fdo%20transp.png"
+                alt="CTP Logo"
+                className="w-full max-w-sm mx-auto mb-6"
+              />
+              <div className="text-center">
+                <p className="text-white font-light text-lg mb-6">
+                  Junte-se aos mais de 5.000 profissionais certificados
+                </p>
                 <button
-                  onClick={() => navigate('/contato')}
-                  className="w-full bg-[#0072BC] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
+                  onClick={() => navigate('/login')}
+                  className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg w-full"
                 >
-                  Falar com Consultor
+                  Comece Agora
                 </button>
               </div>
             </div>
@@ -440,108 +233,74 @@ function ConhecaCTP() {
         </div>
       </section>
 
-      {/* Depoimentos */}
-      <section className="py-16 bg-gray-50">
+      {/* Testimonials - Light Blue Background */}
+      <section className="bg-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">DEPOIMENTOS</p>
-            <h2 className="text-3xl font-bold text-[#0072BC]">O que dizem nossos alunos</h2>
-            <p className="text-lg text-gray-600 mt-4">Histórias reais de profissionais que transformaram suas carreiras com o CTP</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Histórias de <span className="text-[#0072BC] font-medium">Sucesso</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              Veja como o CTP transformou a vida de nossos alunos
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {depoimentos.map((depoimento, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border-l-4 border-[#0072BC]"
+              >
                 <div className="flex items-center mb-6">
-                  <img src={depoimento.foto} alt={depoimento.nome} className="w-16 h-16 rounded-full mr-4" />
+                  <img 
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4"
+                    onError={(e) => {
+                      e.target.src = 'https://via.placeholder.com/100/0072BC/FFFFFF?text=' + testimonial.name.charAt(0);
+                    }}
+                  />
                   <div>
-                    <h4 className="font-bold text-gray-900">{depoimento.nome}</h4>
-                    <p className="text-sm text-gray-600">{depoimento.cidade}</p>
+                    <h4 className="font-medium text-[#1f2937]">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-500 font-light">{testimonial.location}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{depoimento.texto}"</p>
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map(i => (
+                    <Star key={i} className="text-[#FF6B00] fill-current" size={16} />
+                  ))}
+                </div>
+                <p className="text-gray-600 font-light leading-relaxed">"{testimonial.text}"</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#FF6B00] font-semibold mb-2">DÚVIDAS FREQUENTES</p>
-            <h2 className="text-3xl font-bold text-[#0072BC]">Perguntas Frequentes</h2>
-            <p className="text-lg text-gray-600 mt-4">Tire suas dúvidas sobre o Programa CTP</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full text-left p-6 focus:outline-none flex justify-between items-center hover:bg-gray-100 transition"
-                >
-                  <h3 className="text-lg font-semibold text-[#0072BC] pr-8">{faq.pergunta}</h3>
-                  {openFaq === index ? <ChevronUp className="text-[#0072BC] shrink-0" /> : <ChevronDown className="text-[#0072BC] shrink-0" />}
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-600">{faq.resposta}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Ainda tem dúvidas? Fale com nossa equipe</p>
-            <a
-              href="https://wa.me/5511990001750"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[#0072BC] font-medium hover:underline"
+      {/* CTA Final - Gradient Blue */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0072BC] to-[#005a9e]"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Award className="text-[#FF6B00] mx-auto mb-6" size={64} />
+          <h2 className="text-4xl font-light text-white mb-6">
+            Pronto para se tornar um profissional certificado?
+          </h2>
+          <p className="text-lg text-blue-100 font-light mb-8 max-w-2xl mx-auto">
+            Inscreva-se agora e comece sua jornada rumo à certificação CTP ANAPP. Vagas limitadas!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => navigate('/login')}
+              className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl"
             >
-              <MessageCircle className="mr-2" size={20} />
-              Conversar pelo WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Pronto para transformar sua carreira?</h2>
-              <p className="text-xl mb-8">
-                Inscreva-se agora no Programa CTP e dê o primeiro passo para se tornar um profissional certificado e valorizado no mercado de piscinas.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="bg-[#FF6B00] text-white py-4 px-8 rounded-lg font-bold hover:bg-opacity-90 transition-all shadow-lg"
-                >
-                  Inscreva-se Agora
-                </button>
-                <a
-                  href="https://wa.me/5511990001750"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-[#0072BC] py-4 px-8 rounded-lg font-bold hover:bg-opacity-90 transition-all shadow-lg text-center"
-                >
-                  Falar com Consultor
-                </a>
-              </div>
-            </div>
-            <div>
-              <img 
-                src="https://readdy.ai/api/search-image?query=Professional%20swimming%20pool%20technician%20smiling%20at%20camera%2C%20holding%20water%20testing%20kit%2C%20wearing%20blue%20uniform%20with%20logo%2C%20standing%20next%20to%20clean%20blue%20pool%2C%20sunny%20day%2C%20professional%20environment&width=400&height=600&seq=11&orientation=portrait" 
-                alt="Técnico CTP Certificado" 
-                className="w-full h-auto rounded-xl shadow-2xl"
-              />
-            </div>
+              Inscreva-se Agora
+            </button>
+            <button
+              onClick={() => navigate('/contato')}
+              className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
+            >
+              Falar com Consultor
+            </button>
           </div>
         </div>
       </section>
