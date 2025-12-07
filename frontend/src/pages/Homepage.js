@@ -1,462 +1,377 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Star, MessageCircle, DollarSign, Shield, Store, Award, Video, FileText, ChevronDown, ChevronUp, Users, Laptop, Wrench, CheckCircle2 } from 'lucide-react';
+import { Star, Users, Award, TrendingUp, CheckCircle2, ChevronRight, Video, FileText, Laptop, DollarSign, Shield, Clock } from 'lucide-react';
 
 function Homepage() {
+  const [scrollY, setScrollY] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
   const navigate = useNavigate();
 
-  const handleCTAClick = () => {
-    navigate('/contato');
-  };
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const faqs = [
+  const benefits = [
     {
-      question: "Quanto tempo tenho para concluir o curso?",
-      answer: "Você tem acesso ao curso por 12 meses a partir da data de inscrição. Esse prazo é mais que suficiente para concluir todos os módulos, mesmo estudando poucas horas por semana."
+      icon: DollarSign,
+      title: 'Aumente sua renda',
+      description: 'Nossos alunos relatam aumento de 50% a 200% na renda após a certificação',
+      color: 'from-green-500 to-green-600'
     },
     {
-      question: "Preciso ter conhecimento prévio sobre piscinas?",
-      answer: "Não é necessário conhecimento prévio. O curso começa do básico e avança gradualmente. Temos alunos que nunca trabalharam com piscinas antes e hoje são profissionais de sucesso no mercado."
+      icon: Shield,
+      title: 'Credibilidade profissional',
+      description: 'Certificado reconhecido pela ANAPP abre portas para clientes e empresas',
+      color: 'from-blue-500 to-blue-600'
     },
     {
-      question: "O certificado é reconhecido pelo mercado?",
-      answer: "Sim! A ANAPP é a principal associação do setor de piscinas no Brasil. Nosso certificado é reconhecido pelas principais empresas, lojas de produtos e condomínios em todo o país."
-    },
-    {
-      question: "Posso assistir as aulas pelo celular?",
-      answer: "Com certeza! Nossa plataforma é 100% responsiva e otimizada para dispositivos móveis. Você pode estudar pelo celular, tablet ou computador, de acordo com sua preferência."
-    },
-    {
-      question: "Como funciona o pagamento?",
-      answer: "Aceitamos cartão de crédito em até 12x, boleto bancário e PIX. Oferecemos também condições especiais para grupos de 3 ou mais pessoas da mesma empresa."
+      icon: TrendingUp,
+      title: 'Destaque no mercado',
+      description: 'Profissionais certificados são os mais procurados e melhor remunerados',
+      color: 'from-[#FF6B00] to-[#e55d00]'
     }
+  ];
+
+  const features = [
+    { icon: Video, title: 'Videoaulas HD', description: 'Conteúdo visual de alta qualidade' },
+    { icon: FileText, title: 'Material Completo', description: 'Apostilas e PDFs para download' },
+    { icon: Laptop, title: 'Estude Anywhere', description: '100% online e mobile-friendly' },
+    { icon: Award, title: 'Certificado ANAPP', description: 'Reconhecido em todo Brasil' }
   ];
 
   const testimonials = [
     {
-      name: "Roberto Oliveira",
-      location: "São Paulo, SP",
-      text: "Antes do CTP, eu cobrava R$ 150 por piscina. Hoje cobro R$ 350 e tenho mais clientes do que consigo atender. O curso me ensinou a trabalhar direito e dar valor ao meu serviço."
+      name: 'Roberto Oliveira',
+      location: 'São Paulo, SP',
+      text: 'Antes do CTP, cobrava R$ 150 por piscina. Hoje cobro R$ 350 e tenho mais clientes do que consigo atender.',
+      image: 'https://readdy.ai/api/search-image?query=Professional%20male%20pool%20technician%20portrait%2C%20smiling%2C%20uniform&width=100&height=100&seq=1'
     },
     {
-      name: "Carlos Eduardo Santos",
-      location: "Fortaleza, CE",
-      text: "A plataforma de estudos é muito fácil de usar. Consegui fazer todo o curso pelo celular nos intervalos do trabalho. Os vídeos são curtos e diretos ao ponto."
+      name: 'Fernanda Almeida',
+      location: 'Florianópolis, SC',
+      text: 'Abri minha própria empresa de manutenção de piscinas. O módulo de gestão foi fundamental.',
+      image: 'https://readdy.ai/api/search-image?query=Professional%20female%20business%20owner%20portrait%2C%20confident&width=100&height=100&seq=2'
     },
     {
-      name: "Fernanda Almeida",
-      location: "Florianópolis, SC",
-      text: "Abri minha própria empresa de manutenção de piscinas depois do curso. O módulo de gestão de negócios foi fundamental para eu entender como precificar meus serviços."
+      name: 'Carlos Santos',
+      location: 'Fortaleza, CE',
+      text: 'A plataforma é muito fácil de usar. Consegui fazer todo o curso pelo celular nos intervalos do trabalho.',
+      image: 'https://readdy.ai/api/search-image?query=Professional%20male%20technician%20portrait%2C%20friendly&width=100&height=100&seq=3'
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'Quanto tempo tenho para concluir o curso?',
+      answer: 'Você tem acesso ao curso por 12 meses a partir da data de inscrição. Esse prazo é mais que suficiente para concluir todos os módulos.'
+    },
+    {
+      question: 'Preciso ter conhecimento prévio sobre piscinas?',
+      answer: 'Não é necessário conhecimento prévio. O curso começa do básico e avança gradualmente.'
+    },
+    {
+      question: 'O certificado é reconhecido pelo mercado?',
+      answer: 'Sim! A ANAPP é a principal associação do setor de piscinas no Brasil. Nosso certificado é reconhecido em todo o país.'
+    },
+    {
+      question: 'Posso assistir as aulas pelo celular?',
+      answer: 'Com certeza! Nossa plataforma é 100% responsiva e otimizada para dispositivos móveis.'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Header user={null} />
 
-      {/* Hero Section */}
-      <section className="pt-20 relative min-h-[600px] flex items-center" style={{
-        backgroundImage: 'url(https://readdy.ai/api/search-image?query=Beautiful%20swimming%20pool%20with%20crystal%20clear%20blue%20water%2C%20sun%20reflection%2C%20modern%20design%2C%20clean%20edges%2C%20professional%20maintenance%2C%20bright%20sunny%20day%2C%20no%20people%2C%20high%20quality%20professional%20photography%2C%20perfect%20for%20swimming%20pool%20maintenance%20course&width=1920&height=1080&seq=1&orientation=landscape)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0072BC] mb-6">
-              Dê o próximo passo na sua carreira de piscineiro
-            </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Com o certificado CTP da ANAPP, você aumenta sua renda, conquista clientes mais exigentes e se destaca no mercado. Junte-se aos mais de 5.000 profissionais que já mudaram de vida!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => navigate('/cursos')}
-                className="bg-[#0072BC] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
-              >
-                Conheça o Curso
-              </button>
-              <button
-                onClick={handleCTAClick}
-                className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
-                data-testid="hero-cta-button"
-              >
-                Inscreva-se Agora
-              </button>
-            </div>
-            <div className="mt-8 flex items-center">
-              <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md">
-                <Users className="text-[#0072BC]" size={24} />
+      {/* Hero Section with Parallax */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(https://readdy.ai/api/search-image?query=crystal%20clear%20swimming%20pool%20blue%20water%20sunny%20day%20professional%20maintenance&width=1920&height=1080&seq=1&orientation=landscape)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            transform: `translateY(${scrollY * 0.5}px)`
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block bg-[#FF6B00]/10 text-[#FF6B00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+                Certificação Profissional ANAPP
               </div>
-              <p className="ml-4 text-gray-700">
-                <span className="font-bold text-[#0072BC]">+5.000</span> profissionais já certificados em todo o Brasil
+              <h1 className="text-5xl md:text-6xl font-light text-[#1f2937] mb-6 leading-tight">
+                Dê o próximo passo na sua 
+                <span className="block text-[#0072BC] font-medium">carreira de piscineiro</span>
+              </h1>
+              <p className="text-lg text-gray-600 font-light mb-8 leading-relaxed">
+                Com o certificado CTP da ANAPP, você aumenta sua renda, conquista clientes mais exigentes e se destaca no mercado. Junte-se aos mais de 5.000 profissionais que já mudaram de vida!
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <button
+                  onClick={() => navigate('/conheca-ctp')}
+                  className="bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg hover:shadow-xl active:scale-95"
+                >
+                  Conheça o Curso
+                </button>
+                <button
+                  onClick={() => navigate('/login')}
+                  className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl active:scale-95"
+                >
+                  Inscreva-se Agora
+                </button>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="flex -space-x-3">
+                  {[1, 2, 3, 4].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-[#0072BC] to-[#005a9e]"></div>
+                  ))}
+                </div>
+                <div>
+                  <p className="text-sm font-light text-gray-600">
+                    <span className="font-semibold text-[#0072BC]">+5.000</span> profissionais já certificados
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/wlsjloh6_logo%20ctp%20fdo%20transp.png"
+                alt="CTP Logo"
+                className="w-full max-w-md mx-auto drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="features" className="py-16 bg-white">
+      {/* Benefits Section - Gray Background */}
+      <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">
-              Transforme Sua Carreira com o CTP
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Transforme Sua Carreira com o <span className="text-[#0072BC] font-medium">CTP</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
               Curso online completo que vai mudar sua vida profissional. Estude quando e onde quiser!
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
-                <DollarSign className="text-[#0072BC]" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-[#0072BC] mb-3">Aumente sua renda</h3>
-              <p className="text-gray-600">
-                Nossos alunos relatam aumento de 50% a 200% na renda após a certificação. Atenda clientes premium e cobre mais pelo seu trabalho.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
-                <Shield className="text-[#0072BC]" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-[#0072BC] mb-3">Credibilidade profissional</h3>
-              <p className="text-gray-600">
-                Certificado reconhecido pela ANAPP abre portas para condomínios, clubes e clientes especiais que exigem profissionais qualificados.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
-                <Store className="text-[#0072BC]" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-[#0072BC] mb-3">Seja dono do seu negócio</h3>
-              <p className="text-gray-600">
-                Aprenda a montar e gerenciar sua empresa. Curso completo com módulos de precificação, gestão e marketing digital.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <Laptop className="text-[#0072BC]" size={24} />
-              </div>
-              <h4 className="text-lg font-semibold text-[#0072BC] mb-2">100% Online</h4>
-              <p className="text-gray-600">Estude no seu ritmo, pelo celular ou computador, 24h por dia</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <Wrench className="text-[#0072BC]" size={24} />
-              </div>
-              <h4 className="text-lg font-semibold text-[#0072BC] mb-2">Aulas práticas</h4>
-              <p className="text-gray-600">Aprenda fazendo com exemplos reais do dia a dia</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <MessageCircle className="text-[#0072BC]" size={24} />
-              </div>
-              <h4 className="text-lg font-semibold text-[#0072BC] mb-2">Suporte direto</h4>
-              <p className="text-gray-600">Tire dúvidas pelo WhatsApp com professores especialistas</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <Users className="text-[#0072BC]" size={24} />
-              </div>
-              <h4 className="text-lg font-semibold text-[#0072BC] mb-2">Comunidade VIP</h4>
-              <p className="text-gray-600">Networking com profissionais de todo o Brasil</p>
-            </div>
-          </div>
-
-          <div className="bg-[#0072BC] rounded-2xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Realize seu sonho de ser um profissional certificado
-            </h3>
-            <p className="text-xl text-blue-100 mb-8">
-              Comece agora mesmo e garante seu futuro na profissão que mais cresce no Brasil
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button
-                onClick={() => navigate('/cursos')}
-                className="inline-flex items-center justify-center bg-white text-[#0072BC] py-4 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg active:scale-95"
-              >
-                <Video className="mr-2" size={20} />
-                Ver apresentação do curso
-              </button>
-              <button
-                onClick={handleCTAClick}
-                className="inline-flex items-center justify-center bg-[#FF6B00] text-white py-4 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg active:scale-95"
-              >
-                Quero me inscrever agora
-                <ChevronDown className="ml-2" size={20} />
-              </button>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <div 
+                  key={index}
+                  className="group bg-white rounded-2xl p-8 border-l-4 border-[#0072BC] hover:shadow-xl transition-all hover:-translate-y-2"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <Icon className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-xl font-medium text-[#1f2937] mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600 font-light leading-relaxed">{benefit.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Course Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">
-              Nossos Cursos e Certificações
+      {/* Features Section - Blue Background with Parallax */}
+      <section className="relative py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(https://readdy.ai/api/search-image?query=swimming%20pool%20equipment%20maintenance%20professional%20tools&width=1920&height=1080&seq=2&orientation=landscape)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
+            transform: `translateY(${scrollY * 0.3}px)`
+          }}
+        >
+          <div className="absolute inset-0 bg-[#0072BC]/95"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-white mb-4">
+              Como Funciona o <span className="font-medium">Curso CTP</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A melhor formação técnica para profissionais de piscinas
+            <p className="text-lg text-blue-100 font-light max-w-2xl mx-auto">
+              Método de ensino aprovado por milhares de profissionais
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Professional%20swimming%20pool%20technician%20working%2C%20modern%20pool%20environment%2C%20high-end%20equipment%2C%20water%20testing%2C%20professional%20certification%20training%20scene%2C%20clean%20and%20professional%20setting&width=800&height=500&seq=6&orientation=landscape"
-                  alt="Curso Técnico de Piscinas"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <div className="flex justify-between items-center mb-4">
-                  <div className="flex gap-2">
-                    <span className="bg-blue-100 text-[#0072BC] text-sm font-medium py-1 px-3 rounded-full">
-                      Certificação Oficial
-                    </span>
-                    <span className="bg-orange-100 text-[#FF6B00] text-sm font-medium py-1 px-3 rounded-full">
-                      2025
-                    </span>
-                  </div>
-                  <span className="text-gray-600 text-sm">Curso Completo</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div 
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+                >
+                  <Icon className="text-[#FF6B00] mb-4" size={40} />
+                  <h3 className="text-lg font-medium text-white mb-2">{feature.title}</h3>
+                  <p className="text-sm text-blue-100 font-light">{feature.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-[#0072BC] mb-4">
-                  Curso Técnico de Piscinas
-                </h3>
-                <div className="space-y-3 mb-6">
-                  {[
-                    "Aulas práticas e fáceis de entender, com exemplos do dia a dia do piscineiro",
-                    "Aprenda a resolver problemas comuns e evite erros que custam dinheiro",
-                    "Grupo exclusivo no WhatsApp com professores e colegas para tirar dúvidas",
-                    "Material de apoio com passo a passo das manutenções mais importantes",
-                    "Certificado digital reconhecido em todo Brasil",
-                    "Certificação reconhecida pela ANAPP - Associação Nacional dos Fabricantes de Piscinas",
-                    "Aulas práticas e teóricas com os melhores especialistas do mercado",
-                    "Suporte técnico especializado e material didático completo"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="text-[#FF6B00] mr-3 mt-1">✓</div>
-                      <p className="text-gray-600">{item}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col sm:flex-row justify-between items-center pt-6 border-t border-gray-200">
-                  <div className="mb-4 sm:mb-0">
-                    <p className="text-gray-500 text-sm mb-1">Investimento a partir de</p>
-                    <p className="text-[#FF6B00] font-bold text-2xl">R$ 299,00*</p>
-                    <p className="text-gray-500 text-xs">*Valor mensal no plano anual</p>
-                  </div>
-                  <button
-                    onClick={() => navigate('/cursos')}
-                    className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
-                  >
-                    Saiba Mais
-                  </button>
-                </div>
-              </div>
-            </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => navigate('/conheca-ctp')}
+              className="inline-flex items-center gap-2 bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl"
+            >
+              Ver Programa Completo
+              <ChevronRight size={20} />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
+      {/* Stats Section - White Background */}
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">
-              Histórias de sucesso
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: '+5.000', label: 'Alunos Certificados' },
+              { number: '160h', label: 'De Conteúdo' },
+              { number: '12', label: 'Módulos Práticos' },
+              { number: '4.9/5', label: 'Avaliação Média' }
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-light text-[#0072BC] mb-2">{stat.number}</div>
+                <div className="text-sm text-gray-600 font-light">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section - Light Blue Background */}
+      <section className="bg-blue-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              O que dizem nossos <span className="text-[#0072BC] font-medium">alunos</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Veja como o CTP mudou a vida desses piscineiros
+            <p className="text-lg text-gray-600 font-light">
+              Histórias reais de profissionais que transformaram suas carreiras
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-lg shadow-sm">
+              <div 
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border-t-4 border-[#FF6B00]"
+              >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full">
-                    <Users className="text-[#0072BC]" size={24} />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                  <img 
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4"
+                    onError={(e) => {
+                      e.target.src = 'https://via.placeholder.com/100/0072BC/FFFFFF?text=' + testimonial.name.charAt(0);
+                    }}
+                  />
+                  <div>
+                    <h4 className="font-medium text-[#1f2937]">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-500 font-light">{testimonial.location}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
-                <div className="flex text-[#FF6B00]">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill="#FF6B00" />
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map(i => (
+                    <Star key={i} className="text-[#FF6B00] fill-current" size={16} />
                   ))}
                 </div>
+                <p className="text-gray-600 font-light leading-relaxed">"{testimonial.text}"</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-[#0072BC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Quer ganhar mais como piscineiro?
-              </h2>
-              <p className="text-blue-100 text-lg">
-                Comece agora mesmo! Temos condições especiais e pagamento facilitado em até 12x no cartão.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => navigate('/cursos')}
-                className="bg-white text-[#0072BC] py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
-              >
-                Conhecer Planos
-              </button>
-              <button
-                onClick={handleCTAClick}
-                className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
-              >
-                Inscreva-se Agora
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Platform Features */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">
-              Uma plataforma completa para seu aprendizado
+      {/* FAQ Section - White Background */}
+      <section className="bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Perguntas <span className="text-[#0072BC] font-medium">Frequentes</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tudo o que você precisa para estudar do seu jeito, no seu tempo
+            <p className="text-lg text-gray-600 font-light">
+              Tire suas dúvidas sobre o curso
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="https://readdy.ai/api/search-image?query=Modern%20e-learning%20platform%20interface%20on%20tablet%20and%20smartphone%2C%20showing%20swimming%20pool%20maintenance%20course%20with%20video%20player%2C%20progress%20bar%2C%20and%20interactive%20elements%2C%20clean%20design%2C%20blue%20accents%2C%20user-friendly%20interface&width=800&height=600&seq=5&orientation=landscape"
-                alt="Plataforma CTP"
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="space-y-6">
-              {[
-                { icon: Video, title: "Vídeo-aulas de alta qualidade", description: "Conteúdo gravado por especialistas do setor, com demonstrações práticas e explicações detalhadas." },
-                { icon: FileText, title: "Material complementar", description: "PDFs, planilhas e guias práticos para download e consulta rápida durante seu trabalho." },
-                { icon: MessageCircle, title: "Suporte via WhatsApp", description: "Tire suas dúvidas diretamente com os instrutores através do nosso canal exclusivo de WhatsApp." },
-                { icon: Award, title: "Certificação digital", description: "Receba seu certificado digital ao concluir o curso e compartilhe nas redes sociais." }
-              ].map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full shrink-0 mr-4">
-                    <feature.icon className="text-[#0072BC]" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0072BC] mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">
-              Perguntas Frequentes
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tire suas dúvidas sobre o Curso Técnico em Piscinas
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div 
+                key={index}
+                className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:border-[#0072BC] transition-all"
+              >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full text-left p-6 focus:outline-none flex justify-between items-center hover:bg-gray-50 transition"
+                  className="w-full text-left p-6 flex items-center justify-between"
                 >
-                  <h3 className="text-lg font-semibold text-[#0072BC] pr-8">{faq.question}</h3>
-                  {openFaq === index ? <ChevronUp className="text-[#0072BC] shrink-0" /> : <ChevronDown className="text-[#0072BC] shrink-0" />}
+                  <h3 className="text-lg font-medium text-[#1f2937] pr-4">{faq.question}</h3>
+                  <ChevronRight 
+                    className={`text-[#0072BC] transition-transform flex-shrink-0 ${openFaq === index ? 'rotate-90' : ''}`}
+                    size={24}
+                  />
                 </button>
                 {openFaq === index && (
                   <div className="px-6 pb-6">
-                    <p className="text-gray-600">{faq.answer}</p>
+                    <p className="text-gray-600 font-light leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Ainda tem dúvidas? Fale com nossa equipe</p>
-            <a
-              href="https://wa.me/5511990001750"
-              className="inline-flex items-center text-[#0072BC] font-medium hover:underline"
-            >
-              <MessageCircle className="mr-2" size={20} />
-              Conversar pelo WhatsApp
-            </a>
-          </div>
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="py-16 bg-[#0072BC]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Receba dicas e novidades sobre o mundo das piscinas
+      {/* CTA Final Section - Blue Gradient */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0072BC] to-[#005a9e]"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/1t3erzmd_logo%20ctp%20branco.png"
+            alt="CTP Logo"
+            className="w-48 mx-auto mb-8"
+          />
+          <h2 className="text-4xl font-light text-white mb-6">
+            Pronto para transformar sua carreira?
           </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Inscreva-se em nossa newsletter e fique por dentro das tendências do setor
+          <p className="text-lg text-blue-100 font-light mb-8 max-w-2xl mx-auto">
+            Inscreva-se agora no Programa CTP e dê o primeiro passo para se tornar um profissional certificado e valorizado no mercado.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-            <input
-              type="email"
-              placeholder="Seu melhor e-mail"
-              className="flex-1 py-3 px-4 rounded-lg border-none focus:ring-2 focus:ring-[#FF6B00] focus:outline-none"
-            />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              type="submit"
-              className="bg-[#FF6B00] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all shadow-sm active:scale-95"
+              onClick={() => navigate('/login')}
+              className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl"
             >
-              Inscrever-se
+              Inscreva-se Agora
             </button>
-          </form>
-          <p className="text-blue-100 text-sm mt-4">
-            Prometemos não enviar spam. Você pode cancelar a inscrição a qualquer momento.
-          </p>
+            <button
+              onClick={() => navigate('/contato')}
+              className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
+            >
+              Falar com Consultor
+            </button>
+          </div>
         </div>
       </section>
 
