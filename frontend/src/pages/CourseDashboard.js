@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
+import Footer from '../components/Footer';
 import { CheckCircle2, Lock, PlayCircle, Calendar, Award, TrendingUp } from 'lucide-react';
 
 function CourseDashboard({ user = { name: 'Aluno' } }) {
@@ -259,6 +260,8 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
           ))}
         </div>
       </div>
+
+      <Footer user={user} />
     </div>
   );
 }
