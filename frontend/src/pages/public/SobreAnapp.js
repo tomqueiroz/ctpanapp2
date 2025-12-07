@@ -81,14 +81,14 @@ function SobreAnapp() {
               <Target className="text-[#FF6B00] mb-6" size={48} />
               <h2 className="text-3xl font-light mb-4">Nossa Missão</h2>
               <p className="text-lg font-light text-blue-100 leading-relaxed">
-                Fortalecer e desenvolver o setor de piscinas, spas e bem-estar no Brasil, promovendo a capacitação profissional, estabelecendo padrões de qualidade e representando os interesses de nossos associados.
+                Contribuir para o fortalecimento e a ascensão do mercado, priorizando o desenvolvimento empresarial, a qualificação profissional e o suporte contínuo aos empresários, lojistas e profissionais, como os tratadores de piscinas.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-10 border-l-4 border-[#FF6B00]">
               <Heart className="text-[#0072BC] mb-6" size={48} />
               <h2 className="text-3xl font-light text-[#1f2937] mb-4">Nossa Visão</h2>
               <p className="text-lg font-light text-gray-600 leading-relaxed">
-                Ser a principal referência em excelência e inovação no setor de piscinas e bem-estar na América Latina, reconhecida pela qualidade de seus serviços e pela formação de profissionais qualificados.
+                Tornar-se referência mundial para os setores envolvidos por meio dos serviços prestados e excelência no atendimento aos associados e a todos que procuram a ANAPP.
               </p>
             </div>
           </div>
