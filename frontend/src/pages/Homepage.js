@@ -92,37 +92,52 @@ function Homepage() {
       <Header user={null} />
 
       {/* Hero Section with Parallax */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image with Parallax */}
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_poolcurso/artifacts/pyzkl4dd_f6c1a415-6ee1-48c2-a323-f2a1bca78dd8.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: `translateY(${scrollY * 0.5}px)`
-          }}
-        >
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
+        {/* Background Image with Gradient Fade - Desktop */}
+        <div className="hidden lg:block absolute inset-0 z-0">
+          <div 
+            className="absolute right-0 top-0 bottom-0 w-1/2"
+            style={{
+              backgroundImage: 'url(https://customer-assets.emergentagent.com/job_poolcurso/artifacts/pyzkl4dd_f6c1a415-6ee1-48c2-a323-f2a1bca78dd8.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              transform: `translateY(${scrollY * 0.5}px)`
+            }}
+          />
+          {/* Gradient Fade from Image to White */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white to-transparent"></div>
+        </div>
+
+        {/* Background Image for Mobile - Top */}
+        <div className="lg:hidden absolute top-0 left-0 right-0 h-64">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'url(https://customer-assets.emergentagent.com/job_poolcurso/artifacts/pyzkl4dd_f6c1a415-6ee1-48c2-a323-f2a1bca78dd8.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          {/* Gradient Fade from Image to White - Mobile */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="max-w-3xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 mt-48 lg:mt-0">
+          <div className="lg:w-1/2 lg:pr-12">
             <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg">
               Certificação Profissional ANAPP
             </div>
-            <h1 className="text-5xl md:text-6xl font-light text-white mb-6 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl md:text-6xl font-light text-[#1f2937] mb-6 leading-tight">
               Dê o próximo passo na sua 
-              <span className="block text-[#FF6B00] font-medium">carreira de piscineiro</span>
+              <span className="block text-[#0072BC] font-medium">carreira de piscineiro</span>
             </h1>
-            <p className="text-xl text-white font-light mb-8 leading-relaxed drop-shadow-lg">
+            <p className="text-xl text-gray-600 font-light mb-8 leading-relaxed">
               Com o certificado CTP da ANAPP, você aumenta sua renda, conquista clientes mais exigentes e se destaca no mercado. Junte-se aos mais de 5.000 profissionais que já mudaram de vida!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 onClick={() => navigate('/conheca-ctp')}
-                className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl active:scale-95"
+                className="bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
                 Conheça o Curso
               </button>
@@ -136,12 +151,12 @@ function Homepage() {
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-12 h-12 rounded-full border-3 border-white bg-gradient-to-br from-[#0072BC] to-[#005a9e] shadow-lg"></div>
+                  <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-br from-[#0072BC] to-[#005a9e] shadow-lg"></div>
                 ))}
               </div>
               <div>
-                <p className="text-sm font-light text-white drop-shadow-lg">
-                  <span className="font-semibold text-[#FF6B00]">+5.000</span> profissionais já certificados
+                <p className="text-sm font-light text-gray-600">
+                  <span className="font-semibold text-[#0072BC]">+5.000</span> profissionais já certificados
                 </p>
               </div>
             </div>
