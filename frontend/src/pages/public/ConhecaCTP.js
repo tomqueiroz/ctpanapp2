@@ -17,7 +17,7 @@ function ConhecaCTP() {
   const modulos = [
     { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png" },
     { numero: 2, titulo: "Segurança no Manuseio de Produtos", descricao: "Protocolos de segurança e EPIs obrigatórios", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png" },
-    { numero: 3, titulo: "Tipos de Tratamentos", descricao: "Tratamento físico, químico e sistemas de filtração", carga: "15h", imagem: "https://readdy.ai/api/search-image?query=pool%20treatment%20chemicals%20filtration&width=400&height=300&seq=3" },
+    { numero: 3, titulo: "Tipos de Tratamentos", descricao: "Tratamento físico, químico e sistemas de filtração", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png" },
     { numero: 4, titulo: "Controle e Análise da Água", descricao: "Parâmetros químicos e instrumentos de medição", carga: "15h", imagem: "https://readdy.ai/api/search-image?query=water%20quality%20testing%20pH%20analysis&width=400&height=300&seq=4" },
     { numero: 5, titulo: "Tratamentos Alternativos", descricao: "Ozônio, UV e tecnologias emergentes", carga: "12h", imagem: "https://readdy.ai/api/search-image?query=ozone%20UV%20pool%20treatment%20system&width=400&height=300&seq=5" },
     { numero: 6, titulo: "Manutenção e Resolução", descricao: "Manutenção preventiva e diagnóstico", carga: "14h", imagem: "https://readdy.ai/api/search-image?query=pool%20maintenance%20equipment%20repair&width=400&height=300&seq=6" },
