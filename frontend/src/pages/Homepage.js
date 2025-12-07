@@ -448,6 +448,77 @@ function Homepage() {
         </div>
       </section>
 
+      {/* Certificate Section - Light Blue */}
+      <section className="bg-blue-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+                Certificação Reconhecida
+              </div>
+              <h2 className="text-4xl font-light text-[#1f2937] mb-6">
+                Certificado <span className="text-[#0072BC] font-medium">Oficial ANAPP</span>
+              </h2>
+              <p className="text-lg text-gray-600 font-light mb-8 leading-relaxed">
+                Ao concluir o Curso Técnico em Piscinas, você receberá o certificado oficial da ANAPP, reconhecido em todo o Brasil como o padrão de excelência na área de tratamento e manutenção de piscinas.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  {
+                    icon: Award,
+                    text: 'Certificado digital e impresso com validade nacional'
+                  },
+                  {
+                    icon: CheckCircle2,
+                    text: 'Reconhecido por condomínios, clubes e empresas'
+                  },
+                  {
+                    icon: TrendingUp,
+                    text: 'Diferencial competitivo no mercado de trabalho'
+                  },
+                  {
+                    icon: Users,
+                    text: 'Faça parte da rede de +5.000 profissionais certificados'
+                  }
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="flex items-start">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <Icon className="text-white" size={20} />
+                      </div>
+                      <p className="text-base text-gray-700 font-light pt-2">{item.text}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <button
+                onClick={() => navigate('/conheca-ctp')}
+                className="bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg"
+              >
+                Quero Meu Certificado
+              </button>
+            </div>
+            <div className="relative">
+              <div className="bg-white rounded-2xl p-6 shadow-2xl">
+                <img
+                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_poolcurso/artifacts/pzde6eel_CERTIFICADO CTP ANAPP V10.png')}`}
+                  alt="Certificado CTP ANAPP"
+                  className="w-full rounded-xl"
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=Certificado+CTP+ANAPP';
+                  }}
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-[#FF6B00] to-[#e55d00] text-white p-6 rounded-2xl shadow-xl hidden lg:block">
+                <p className="text-sm font-light mb-1">Validade</p>
+                <p className="text-2xl font-medium">Nacional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section - Gray */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
