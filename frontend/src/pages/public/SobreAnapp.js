@@ -75,6 +75,49 @@ function SobreAnapp() {
         </div>
       </section>
 
+      {/* About ANAPP - Gray Background */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+                Quem <span className="text-[#0072BC] font-medium">Somos</span>
+              </h2>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm mb-8">
+              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
+                Fundada em <span className="font-medium text-[#0072BC]">20 de novembro de 1990</span> por empresários do segmento de lazer, a <span className="font-medium text-[#0072BC]">ANAPP – Associação Nacional das Empresas e Profissionais de Piscinas</span> tem como propósito promover o desenvolvimento e o fortalecimento do setor por meio da união de empresários e profissionais envolvidos no universo das piscinas.
+              </p>
+              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
+                A entidade atua na defesa dos interesses do segmento, que engloba <span className="font-medium">fabricantes, lojistas, construtores, engenheiros, arquitetos, paisagistas, tratadores de piscina (piscineiros)</span> e outros agentes fundamentais da cadeia produtiva.
+              </p>
+              <p className="text-lg text-gray-700 font-light leading-relaxed">
+                A ANAPP representa todos os setores ligados à área, como piscinas de vinil, fibra e alvenaria, além de acessórios, Spas, saunas, aquecedores, bombas, filtros, iluminação, tratamento de água, entre outros.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border-l-4 border-[#0072BC]">
+                <BookOpen className="text-[#0072BC] mb-4" size={32} />
+                <h3 className="text-xl font-medium text-[#1f2937] mb-3">Revista Digital ANAPP</h3>
+                <p className="text-base text-gray-600 font-light leading-relaxed">
+                  Veículo oficial direcionado a empresas e profissionais de todo o país. A publicação reúne conteúdo técnico, institucional e de mercado, com foco em informação de qualidade e fortalecimento do setor.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-6 border-l-4 border-[#FF6B00]">
+                <Calendar className="text-[#FF6B00] mb-4" size={32} />
+                <h3 className="text-xl font-medium text-[#1f2937] mb-3">EXPOLAZER</h3>
+                <p className="text-base text-gray-600 font-light leading-relaxed">
+                  Em parceria com a FRANCAL, a ANAPP idealizou a Feira Internacional de Piscinas, Spas, Decoração e Wellness, que chegou à sua 24ª edição em 2024 com recorde de público.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Values - White */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
