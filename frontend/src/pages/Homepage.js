@@ -93,6 +93,7 @@ function Homepage() {
 
       {/* Hero Section with Parallax */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image with Parallax */}
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -102,55 +103,61 @@ function Homepage() {
             transform: `translateY(${scrollY * 0.5}px)`
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80"></div>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block bg-[#FF6B00]/10 text-[#FF6B00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+            {/* Content Box with Dark Mask */}
+            <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl">
+              <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg">
                 Certificação Profissional ANAPP
               </div>
-              <h1 className="text-5xl md:text-6xl font-light text-[#1f2937] mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-light text-white mb-6 leading-tight">
                 Dê o próximo passo na sua 
-                <span className="block text-[#0072BC] font-medium">carreira de piscineiro</span>
+                <span className="block text-[#FF6B00] font-medium">carreira de piscineiro</span>
               </h1>
-              <p className="text-lg text-gray-600 font-light mb-8 leading-relaxed">
+              <p className="text-lg text-white/90 font-light mb-8 leading-relaxed">
                 Com o certificado CTP da ANAPP, você aumenta sua renda, conquista clientes mais exigentes e se destaca no mercado. Junte-se aos mais de 5.000 profissionais que já mudaram de vida!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                   onClick={() => navigate('/conheca-ctp')}
-                  className="bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg hover:shadow-xl active:scale-95"
+                  className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl active:scale-95"
                 >
                   Conheça o Curso
                 </button>
                 <button
                   onClick={() => navigate('/login')}
-                  className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl active:scale-95"
+                  className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl active:scale-95 border-2 border-[#FF6B00]"
                 >
                   Inscreva-se Agora
                 </button>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 pt-6 border-t border-white/20">
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-[#0072BC] to-[#005a9e]"></div>
+                    <div key={i} className="w-12 h-12 rounded-full border-3 border-white bg-gradient-to-br from-[#0072BC] to-[#005a9e] shadow-lg"></div>
                   ))}
                 </div>
                 <div>
-                  <p className="text-sm font-light text-gray-600">
-                    <span className="font-semibold text-[#0072BC]">+5.000</span> profissionais já certificados
+                  <p className="text-sm font-light text-white/90">
+                    <span className="font-semibold text-[#FF6B00]">+5.000</span> profissionais já certificados
                   </p>
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/wlsjloh6_logo%20ctp%20fdo%20transp.png"
-                alt="CTP Logo"
-                className="w-full max-w-md mx-auto drop-shadow-2xl"
-              />
+            
+            {/* Logo Box with Dark Mask */}
+            <div className="hidden lg:flex items-center justify-center">
+              <div className="bg-black/40 backdrop-blur-md rounded-3xl p-12 border border-white/10 shadow-2xl">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/wlsjloh6_logo%20ctp%20fdo%20transp.png"
+                  alt="CTP Logo"
+                  className="w-full max-w-md mx-auto drop-shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
