@@ -25,8 +25,8 @@ function ConhecaCTP() {
     { numero: 8, titulo: "Relatórios e Documentação", descricao: "Elaboração de relatórios técnicos", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png" },
     { numero: 9, titulo: "Atendimento ao Cliente", descricao: "Comunicação efetiva e gestão de expectativas", carga: "13h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png" },
     { numero: 10, titulo: "Gestão de Projetos", descricao: "Planejamento e cronograma de serviços", carga: "10h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png" },
-    { numero: 11, titulo: "Sustentabilidade", descricao: "Economia de recursos e práticas sustentáveis", carga: "10h", imagem: "https://readdy.ai/api/search-image?query=sustainability%20eco%20friendly%20green%20practices&width=400&height=300&seq=11" },
-    { numero: 12, titulo: "Certificação Final", descricao: "Revisão geral e avaliação completa", carga: "10h", imagem: "https://readdy.ai/api/search-image?query=graduation%20certificate%20achievement%20success&width=400&height=300&seq=12" }
+    { numero: 11, titulo: "Sustentabilidade", descricao: "Economia de recursos e práticas sustentáveis", carga: "10h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png" },
+    { numero: 12, titulo: "Certificação Final", descricao: "Revisão geral e avaliação completa", carga: "10h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png" }
   ];
 
   const benefits = [
