@@ -283,13 +283,13 @@ function Homepage() {
 
           <div className="max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative h-64 lg:h-auto bg-gradient-to-br from-blue-50 to-white p-6 flex items-center justify-center">
+              <div className="relative h-64 lg:h-auto bg-gradient-to-br from-[#0072BC] to-[#005a9e] p-8 flex items-center justify-center">
                 <img
-                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/prey5ow8_CERTIFICADO CTP ANAPP V10.png')}`}
-                  alt="Certificado CTP ANAPP"
-                  className="w-full h-auto object-contain"
+                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/tz4ovqtf_logo ctp fdo transp.png')}`}
+                  alt="Logo CTP"
+                  className="w-full h-auto object-contain max-w-md"
                   onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=Certificado+CTP';
+                    e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=CTP';
                   }}
                 />
                 <div className="absolute top-4 left-4 bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium">
