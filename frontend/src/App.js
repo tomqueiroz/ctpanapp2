@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage';
 import AuthCallback from './pages/AuthCallback';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import CourseDashboard from './pages/CourseDashboard';
 import CourseCatalog from './pages/CourseCatalog';
 import ChapterView from './pages/ChapterView';
 import CourseDetail from './pages/CourseDetail';
@@ -40,7 +41,7 @@ function AppRouter() {
       <Route path="/contato" element={<Contato />} />
       <Route path="/login" element={<Login />} />
       {/* Páginas protegidas */}
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard" element={<CourseDashboard />} />
       <Route path="/dashboard/chapter/:chapterId" element={<ChapterView />} />
       <Route path="/courses" element={<ProtectedRoute><CourseCatalog /></ProtectedRoute>} />
       <Route path="/courses/:courseId" element={<ProtectedRoute><CourseDetail /></ProtectedRoute>} />
