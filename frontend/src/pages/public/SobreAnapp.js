@@ -32,10 +32,12 @@ function SobreAnapp() {
   ];
 
   const milestones = [
-    { year: "1990", title: "Fundação da ANAPP", description: "Início da nossa jornada para fortalecer o setor" },
-    { year: "2000", title: "Revista ANAPP", description: "Primeira publicação especializada do setor" },
-    { year: "2010", title: "Programa CTP", description: "Lançamento do curso de capacitação profissional" },
-    { year: "2024", title: "24ª EXPOLAZER", description: "Consolidação como maior evento da América Latina" }
+    { year: "1990", title: "Fundação da ANAPP", description: "Empresários do segmento de lazer fundam a ANAPP em 20 de novembro", icon: Building2 },
+    { year: "2000", title: "Revista Digital ANAPP", description: "Lançamento do veículo oficial com conteúdo técnico e de mercado", icon: BookOpen },
+    { year: "2001", title: "EXPOLAZER", description: "Primeira edição da feira em parceria com a FRANCAL", icon: Calendar },
+    { year: "2010", title: "Programa CTP", description: "Lançamento do curso de capacitação para tratadores de piscinas", icon: Award },
+    { year: "2018", title: "Norma ABNT", description: "Participação ativa na atualização da NBR 10339:2018", icon: Target },
+    { year: "2024", title: "24ª EXPOLAZER", description: "Recorde de público com 25ª edição agendada para 2026", icon: TrendingUp }
   ];
 
   return (
