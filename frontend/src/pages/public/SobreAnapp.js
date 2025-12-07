@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Award, Target, Heart, Users, Building2, Wrench, Droplet, Sparkles, Home, TrendingUp, BookOpen, Calendar, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Award, Target, Heart, Users, Building2, Wrench, Droplet, Sparkles, Home, TrendingUp, BookOpen, Calendar, Phone, Mail, MapPin, MessageCircle, CheckCircle2, Star, Factory, Store, HardHat, Ruler, Briefcase, Shield, FileText, GraduationCap, Handshake, DollarSign, ArrowRight, ExternalLink } from 'lucide-react';
 
 function SobreAnapp() {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
+  const [activeTab, setActiveTab] = useState('fabricante');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -15,30 +16,147 @@ function SobreAnapp() {
   }, []);
 
   const valores = [
-    { icon: Award, title: "Ética", description: "Compromisso com práticas transparentes e justas" },
-    { icon: Heart, title: "Profissionalismo", description: "Excelência em todos os serviços prestados" },
-    { icon: Users, title: "Criatividade", description: "Inovação constante para o desenvolvimento do setor" },
-    { icon: TrendingUp, title: "Responsabilidade", description: "Compromisso com associados e o mercado" },
-    { icon: Target, title: "Respeito", description: "Valorização de todos os profissionais do setor" }
+    { icon: Shield, title: "Ética", description: "Compromisso com práticas transparentes e justas em todas as relações" },
+    { icon: Award, title: "Profissionalismo", description: "Excelência e qualidade em todos os serviços prestados" },
+    { icon: Sparkles, title: "Criatividade", description: "Inovação constante para o desenvolvimento do setor" },
+    { icon: Target, title: "Responsabilidade", description: "Compromisso sério com associados e mercado" },
+    { icon: Heart, title: "Respeito", description: "Valorização de todos os profissionais do setor" }
+  ];
+
+  const timeline = [
+    { 
+      year: "1990", 
+      title: "Fundação da ANAPP", 
+      description: "Empresários do setor de piscinas se unem para criar a associação e fortalecer o mercado", 
+      icon: Building2 
+    },
+    { 
+      year: "1995", 
+      title: "Primeira Feira do Setor", 
+      description: "Realização da primeira feira especializada reunindo fabricantes e profissionais", 
+      icon: Calendar 
+    },
+    { 
+      year: "2000", 
+      title: "Revista ANAPP", 
+      description: "Criação da primeira publicação especializada com conteúdo técnico", 
+      icon: BookOpen 
+    },
+    { 
+      year: "2010", 
+      title: "Programa CTP", 
+      description: "Lançamento do Curso Técnico de Piscinas estabelecendo padrão de qualidade", 
+      icon: GraduationCap 
+    },
+    { 
+      year: "2015", 
+      title: "Parceria FRANCAL", 
+      description: "Criação da EXPOLAZER, maior evento do setor na América Latina", 
+      icon: Handshake 
+    },
+    { 
+      year: "2024", 
+      title: "24ª EXPOLAZER", 
+      description: "Recorde de público consolidando o evento como referência", 
+      icon: TrendingUp 
+    }
   ];
 
   const setores = [
-    { icon: Droplet, title: "Piscinas", color: "from-blue-500 to-blue-600" },
-    { icon: Sparkles, title: "Bem-Estar", color: "from-purple-500 to-purple-600" },
-    { icon: Wrench, title: "Equipamentos", color: "from-gray-500 to-gray-600" },
-    { icon: Building2, title: "Tratamento", color: "from-green-500 to-green-600" },
-    { icon: Users, title: "Serviços", color: "from-[#FF6B00] to-[#e55d00]" },
-    { icon: Home, title: "Paisagismo", color: "from-emerald-500 to-emerald-600" }
+    { icon: Droplet, title: "Piscinas", items: ["Vinil", "Fibra", "Alvenaria", "Naturais"], color: "from-blue-500 to-blue-600" },
+    { icon: Sparkles, title: "Bem-Estar", items: ["Spas", "Saunas", "Ofurôs", "Hidromassagem"], color: "from-purple-500 to-purple-600" },
+    { icon: Wrench, title: "Equipamentos", items: ["Bombas", "Filtros", "Aquecedores", "Automação"], color: "from-gray-500 to-gray-600" },
+    { icon: Building2, title: "Tratamento", items: ["Químicos", "Testes", "Dosagem", "Alternativos"], color: "from-green-500 to-green-600" },
+    { icon: Users, title: "Serviços", items: ["Construção", "Manutenção", "Reforma", "Consultoria"], color: "from-[#FF6B00] to-[#e55d00]" },
+    { icon: Home, title: "Paisagismo", items: ["Deck", "Mobiliário", "Acessórios", "Projetos"], color: "from-emerald-500 to-emerald-600" }
   ];
 
-  const milestones = [
-    { year: "1990", title: "Fundação da ANAPP", description: "Empresários do segmento de lazer fundam a ANAPP em 20 de novembro", icon: Building2 },
-    { year: "2000", title: "Revista Digital ANAPP", description: "Lançamento do veículo oficial com conteúdo técnico e de mercado", icon: BookOpen },
-    { year: "2001", title: "EXPOLAZER", description: "Primeira edição da feira em parceria com a FRANCAL", icon: Calendar },
-    { year: "2010", title: "Programa CTP", description: "Lançamento do curso de capacitação para tratadores de piscinas", icon: Award },
-    { year: "2018", title: "Norma ABNT", description: "Participação ativa na atualização da NBR 10339:2018", icon: Target },
-    { year: "2024", title: "24ª EXPOLAZER", description: "Recorde de público com 25ª edição agendada para 2026", icon: TrendingUp }
+  const publico = [
+    { icon: Factory, title: "Fabricantes", description: "Indústrias de piscinas e equipamentos" },
+    { icon: Store, title: "Lojistas", description: "Revendedores de produtos e equipamentos" },
+    { icon: HardHat, title: "Construtores", description: "Empresas especializadas em construção" },
+    { icon: Ruler, title: "Engenheiros", description: "Profissionais de engenharia hidráulica" },
+    { icon: Briefcase, title: "Arquitetos", description: "Projetistas de espaços com piscinas" },
+    { icon: Users, title: "Piscineiros", description: "Técnicos em tratamento de piscinas" }
   ];
+
+  const servicos = [
+    { 
+      icon: FileText, 
+      title: "Orientações Técnicas", 
+      description: "Suporte técnico especializado com orientações sobre normas, procedimentos e melhores práticas do setor",
+      link: "#"
+    },
+    { 
+      icon: BookOpen, 
+      title: "Revista Digital ANAPP", 
+      description: "Publicação com conteúdo sobre mercado, normas, lançamentos, legislações e tratamento da água",
+      link: "https://www.anapp.org.br/revistas"
+    },
+    { 
+      icon: TrendingUp, 
+      title: "Apoio ao Marketing", 
+      description: "Suporte comercial com informações estratégicas para auxiliar empresas nas estratégias de marketing",
+      link: "#"
+    },
+    { 
+      icon: Calendar, 
+      title: "Eventos e Feiras", 
+      description: "Organização da EXPOLAZER, a maior feira de piscinas e bem-estar da América Latina",
+      link: "#"
+    },
+    { 
+      icon: GraduationCap, 
+      title: "Cursos e Palestras", 
+      description: "Realização de cursos, palestras e seminários para capacitação de profissionais e empresários",
+      link: "#"
+    },
+    { 
+      icon: Award, 
+      title: "Curso Técnico de Piscina", 
+      description: "Programa de capacitação com foco em boas práticas, segurança e excelência no tratamento",
+      link: "/conheca-ctp"
+    }
+  ];
+
+  const associacaoPlanos = {
+    fabricante: {
+      title: "Associado Fabricante",
+      description: "Para indústrias e fabricantes de piscinas, equipamentos e produtos químicos",
+      preco: "R$ 3.912,00",
+      periodo: "/ano",
+      beneficios: [
+        "Representatividade em discussões setoriais",
+        "Participação em eventos com desconto",
+        "Divulgação nos canais da ANAPP",
+        "Networking qualificado"
+      ]
+    },
+    lojista: {
+      title: "Associado Lojista",
+      description: "Para lojas e revendedores de produtos e equipamentos para piscinas",
+      preco: "R$ 216,00",
+      periodo: "/ano",
+      beneficios: [
+        "Acesso a informações exclusivas",
+        "Descontos em cursos e eventos",
+        "Visibilidade no mercado",
+        "Suporte técnico especializado"
+      ]
+    },
+    profissional: {
+      title: "Associado Profissional",
+      description: "Para piscineiros, técnicos, engenheiros, arquitetos e outros profissionais",
+      preco: "Grátis",
+      periodo: "",
+      beneficios: [
+        "Sem pagamento de anuidade",
+        "Certificação reconhecida",
+        "Capacitação exclusiva",
+        "Rede de contatos"
+      ]
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -60,137 +178,67 @@ function SobreAnapp() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-3xl">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/un0adg8b_logo.png"
-              alt="ANAPP Logo"
-              className="w-48 mb-8"
-            />
+            <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Institucional
+            </div>
             <h1 className="text-5xl md:text-6xl font-light text-white mb-6 leading-tight">
               Sobre a <span className="font-medium">ANAPP</span>
             </h1>
             <p className="text-xl text-blue-100 font-light mb-8 leading-relaxed">
-              Fundada em 1990, a ANAPP – Associação Nacional das Empresas e Profissionais de Piscinas promove o desenvolvimento do setor através da união de empresários e profissionais de todo o Brasil.
+              Conheça a história e a missão da Associação Nacional das Empresas e Profissionais de Piscinas, referência no setor desde 1990.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About ANAPP - Gray Background */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-light text-[#1f2937] mb-4">
-                Quem <span className="text-[#0072BC] font-medium">Somos</span>
-              </h2>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-sm mb-8">
-              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
-                Fundada em <span className="font-medium text-[#0072BC]">20 de novembro de 1990</span> por empresários do segmento de lazer, a <span className="font-medium text-[#0072BC]">ANAPP – Associação Nacional das Empresas e Profissionais de Piscinas</span> tem como propósito promover o desenvolvimento e o fortalecimento do setor por meio da união de empresários e profissionais envolvidos no universo das piscinas.
-              </p>
-              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
-                A entidade atua na defesa dos interesses do segmento, que engloba <span className="font-medium">fabricantes, lojistas, construtores, engenheiros, arquitetos, paisagistas, tratadores de piscina (piscineiros)</span> e outros agentes fundamentais da cadeia produtiva.
-              </p>
-              <p className="text-lg text-gray-700 font-light leading-relaxed">
-                A ANAPP representa todos os setores ligados à área, como piscinas de vinil, fibra e alvenaria, além de acessórios, Spas, saunas, aquecedores, bombas, filtros, iluminação, tratamento de água, entre outros.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border-l-4 border-[#0072BC]">
-                <BookOpen className="text-[#0072BC] mb-4" size={32} />
-                <h3 className="text-xl font-medium text-[#1f2937] mb-3">Revista Digital ANAPP</h3>
-                <p className="text-base text-gray-600 font-light leading-relaxed">
-                  Veículo oficial direcionado a empresas e profissionais de todo o país. A publicação reúne conteúdo técnico, institucional e de mercado, com foco em informação de qualidade e fortalecimento do setor.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-6 border-l-4 border-[#FF6B00]">
-                <Calendar className="text-[#FF6B00] mb-4" size={32} />
-                <h3 className="text-xl font-medium text-[#1f2937] mb-3">EXPOLAZER</h3>
-                <p className="text-base text-gray-600 font-light leading-relaxed">
-                  Em parceria com a FRANCAL, a ANAPP idealizou a Feira Internacional de Piscinas, Spas, Decoração e Wellness, que chegou à sua 24ª edição em 2024 com recorde de público.
-                </p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#historia"
+                className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg text-center"
+              >
+                Nossa História
+              </a>
+              <a
+                href="#associe-se"
+                className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg text-center"
+              >
+                Associe-se
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Values - White */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-            <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-10 text-white">
-              <Target className="text-[#FF6B00] mb-6" size={48} />
-              <h2 className="text-3xl font-light mb-4">Nossa Missão</h2>
-              <p className="text-lg font-light text-blue-100 leading-relaxed">
-                Contribuir para o fortalecimento e a ascensão do mercado, priorizando o desenvolvimento empresarial, a qualificação profissional e o suporte contínuo aos empresários, lojistas e profissionais, como os tratadores de piscinas.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-10 border-l-4 border-[#FF6B00]">
-              <Heart className="text-[#0072BC] mb-6" size={48} />
-              <h2 className="text-3xl font-light text-[#1f2937] mb-4">Nossa Visão</h2>
-              <p className="text-lg font-light text-gray-600 leading-relaxed">
-                Tornar-se referência mundial para os setores envolvidos por meio dos serviços prestados e excelência no atendimento aos associados e a todos que procuram a ANAPP.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
-              Nossos <span className="text-[#0072BC] font-medium">Valores</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {valores.map((valor, index) => {
-              const Icon = valor.icon;
-              return (
-                <div 
-                  key={index}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-xl transition-all text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="text-white" size={28} />
-                  </div>
-                  <h3 className="text-lg font-medium text-[#1f2937] mb-2">{valor.title}</h3>
-                  <p className="text-sm text-gray-600 font-light">{valor.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Sectors - Gray Background */}
-      <section className="bg-gray-50 py-20">
+      {/* Nossa História - Gray Background */}
+      <section id="historia" className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              NOSSA HISTÓRIA
+            </div>
             <h2 className="text-4xl font-light text-[#1f2937] mb-4">
-              Setores que <span className="text-[#0072BC] font-medium">Representamos</span>
+              Fundação e <span className="text-[#0072BC] font-medium">Trajetória</span>
             </h2>
-            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-              A ANAPP atua em diversos segmentos do mercado de piscinas e bem-estar
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {setores.map((setor, index) => {
-              const Icon = setor.icon;
-              return (
-                <div 
-                  key={index}
-                  className="group bg-white rounded-2xl p-6 text-center hover:shadow-xl transition-all cursor-pointer"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${setor.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                    <Icon className="text-white" size={28} />
-                  </div>
-                  <h3 className="text-sm font-medium text-[#1f2937] group-hover:text-[#0072BC] transition-colors">{setor.title}</h3>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
+                Fundada em <span className="font-medium text-[#0072BC]">20 de novembro de 1990</span> por empresários visionários do segmento de lazer, a ANAPP nasceu com o propósito de promover o desenvolvimento e o fortalecimento do setor através da união de empresários e profissionais envolvidos no universo das piscinas.
+              </p>
+              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
+                Ao longo de mais de três décadas, a ANAPP tem sido a voz do setor, representando <span className="font-medium">fabricantes, lojistas, construtores, engenheiros, arquitetos, paisagistas e tratadores de piscina</span>, além de todos os agentes fundamentais da cadeia produtiva.
+              </p>
+              <p className="text-lg text-gray-700 font-light leading-relaxed">
+                A associação representa todos os setores ligados à área, como piscinas de vinil, fibra e alvenaria, além de acessórios, Spas, saunas, aquecedores, bombas, filtros, iluminação e tratamento de água.
+              </p>
+            </div>
+            <div className="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20swimming%20pool%20industry%20association%20meeting%20business%20professionals&width=800&height=600&seq=2"
+                alt="Fundação da ANAPP"
+                className="w-full rounded-2xl shadow-2xl"
+                onError={(e) => {
+                  e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=ANAPP';
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -211,16 +259,19 @@ function SobreAnapp() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              NOSSA TRAJETÓRIA
+            </div>
             <h2 className="text-4xl font-light text-white mb-4">
-              Nossa <span className="font-medium">Trajetória</span>
+              Marcos <span className="font-medium">Históricos</span>
             </h2>
             <p className="text-lg text-blue-100 font-light max-w-2xl mx-auto">
-              Mais de 35 anos de história fortalecendo o setor de piscinas no Brasil
+              Conheça os principais acontecimentos que marcaram a história da ANAPP
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {milestones.map((milestone, index) => {
+            {timeline.map((milestone, index) => {
               const Icon = milestone.icon;
               return (
                 <div 
@@ -243,12 +294,12 @@ function SobreAnapp() {
           <div className="mt-16 text-center">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-light text-white mb-4">Próxima Edição</h3>
-              <div className="flex items-center justify-center gap-8">
+              <div className="flex items-center justify-center gap-8 flex-wrap">
                 <div>
                   <p className="text-[#FF6B00] text-5xl font-light mb-2">25ª</p>
                   <p className="text-white font-medium">EXPOLAZER</p>
                 </div>
-                <div className="h-16 w-px bg-white/20"></div>
+                <div className="h-16 w-px bg-white/20 hidden sm:block"></div>
                 <div className="text-left">
                   <p className="text-white font-medium text-lg mb-1">11 a 14 de agosto de 2026</p>
                   <p className="text-blue-100 font-light">Distrito Anhembi, São Paulo</p>
@@ -259,36 +310,57 @@ function SobreAnapp() {
         </div>
       </section>
 
-      {/* Services - White */}
+      {/* Mission & Values - White */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              NOSSOS PRINCÍPIOS
+            </div>
             <h2 className="text-4xl font-light text-[#1f2937] mb-4">
-              Nossos <span className="text-[#0072BC] font-medium">Serviços</span>
+              Missão, Visão e <span className="text-[#0072BC] font-medium">Valores</span>
             </h2>
-            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-              Apoio completo para profissionais e empresas do setor
+            <p className="text-lg text-gray-600 font-light">
+              Os pilares que orientam nossas ações e decisões
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: BookOpen, title: "Orientações Técnicas", description: "Suporte especializado sobre normas e melhores práticas" },
-              { icon: Calendar, title: "Eventos e Feiras", description: "EXPOLAZER e outros eventos do setor" },
-              { icon: TrendingUp, title: "Apoio ao Marketing", description: "Estratégias e informações para associados" },
-              { icon: Award, title: "Curso CTP", description: "Capacitação profissional reconhecida" },
-              { icon: MessageCircle, title: "Revista Digital", description: "Conteúdo especializado para o mercado" },
-              { icon: Users, title: "Networking", description: "Conexão entre profissionais do setor" }
-            ].map((service, index) => {
-              const Icon = service.icon;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-10 text-white">
+              <Target className="text-[#FF6B00] mb-6" size={48} />
+              <h3 className="text-2xl font-medium mb-4">Missão</h3>
+              <p className="text-lg font-light text-blue-100 leading-relaxed">
+                Contribuir para o fortalecimento e a ascensão do mercado, priorizando o desenvolvimento empresarial, a qualificação profissional e o suporte contínuo aos empresários, lojistas e profissionais, como os tratadores de piscinas.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-10 border-l-4 border-[#FF6B00]">
+              <Heart className="text-[#0072BC] mb-6" size={48} />
+              <h3 className="text-2xl font-medium text-[#1f2937] mb-4">Visão</h3>
+              <p className="text-lg font-light text-gray-600 leading-relaxed">
+                Tornar-se referência mundial para os setores envolvidos por meio dos serviços prestados e excelência no atendimento aos associados e a todos que procuram a ANAPP.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-light text-[#1f2937] mb-4">
+              Nossos <span className="text-[#0072BC] font-medium">Valores</span>
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {valores.map((valor, index) => {
+              const Icon = valor.icon;
               return (
                 <div 
                   key={index}
-                  className="group bg-gray-50 rounded-2xl p-6 border-l-4 border-[#0072BC] hover:shadow-xl hover:bg-white transition-all"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-xl transition-all text-center group"
                 >
-                  <Icon className="text-[#0072BC] mb-4 group-hover:text-[#FF6B00] transition-colors" size={32} />
-                  <h3 className="text-lg font-medium text-[#1f2937] mb-2">{service.title}</h3>
-                  <p className="text-sm text-gray-600 font-light leading-relaxed">{service.description}</p>
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icon className="text-white" size={28} />
+                  </div>
+                  <h4 className="text-lg font-medium text-[#1f2937] mb-2">{valor.title}</h4>
+                  <p className="text-sm text-gray-600 font-light leading-relaxed">{valor.description}</p>
                 </div>
               );
             })}
@@ -296,63 +368,299 @@ function SobreAnapp() {
         </div>
       </section>
 
-      {/* Contact CTA - Blue Gradient */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0072BC] to-[#005a9e]"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Users className="text-[#FF6B00] mx-auto mb-6" size={64} />
-            <h2 className="text-4xl font-light text-white mb-6">
-              Faça parte da ANAPP
-            </h2>
-            <p className="text-lg text-blue-100 font-light mb-8 max-w-2xl mx-auto">
-              Associe-se e tenha acesso a todos os benefícios, eventos e suporte técnico que oferecemos.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => navigate('/contato')}
-                className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl"
-              >
-                Entre em Contato
-              </button>
-              <button
-                onClick={() => navigate('/conheca-ctp')}
-                className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
-              >
-                Conheça o CTP
-              </button>
+      {/* Setores - Gray Background */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              ÁREAS DE ATUAÇÃO
             </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Setores <span className="text-[#0072BC] font-medium">Representados</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+              A ANAPP representa todos os setores ligados ao universo das piscinas e bem-estar aquático
+            </p>
+          </div>
 
-            <div className="mt-12 pt-12 border-t border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div className="flex items-start">
-                  <MapPin className="text-[#FF6B00] mr-3 flex-shrink-0" size={24} />
-                  <div>
-                    <p className="text-sm font-light text-blue-100">
-                      Av. Queiroz Filho, 1700 Sala 807 D<br/>
-                      Villa Lobos Office Park<br/>
-                      São Paulo - SP
-                    </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {setores.map((setor, index) => {
+              const Icon = setor.icon;
+              return (
+                <div 
+                  key={index}
+                  className="group bg-white rounded-2xl p-8 hover:shadow-xl transition-all cursor-pointer border-l-4 border-transparent hover:border-[#0072BC]"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${setor.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <Icon className="text-white" size={28} />
                   </div>
+                  <h3 className="text-xl font-medium text-[#1f2937] mb-4 group-hover:text-[#0072BC] transition-colors">{setor.title}</h3>
+                  <ul className="space-y-2">
+                    {setor.items.map((item, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600 font-light">
+                        <CheckCircle2 className="text-green-500 mr-2 flex-shrink-0" size={16} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="flex items-start">
-                  <Phone className="text-[#FF6B00] mr-3 flex-shrink-0" size={24} />
-                  <div>
-                    <p className="text-sm font-light text-blue-100">
-                      (11) 5687-7888
-                    </p>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Público - White */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              PÚBLICO DA ANAPP
+            </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Quem <span className="text-[#0072BC] font-medium">Representamos</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light max-w-3xl mx-auto">
+              A ANAPP representa empresários do setor de lazer e profissionais envolvidos na cadeia de valor das piscinas, cuja atuação é essencial para a segurança e qualidade dos serviços prestados
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {publico.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div 
+                  key={index}
+                  className="text-center group"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <Icon className="text-white" size={32} />
                   </div>
+                  <h4 className="text-base font-medium text-[#1f2937] mb-2 group-hover:text-[#0072BC] transition-colors">{item.title}</h4>
+                  <p className="text-xs text-gray-600 font-light">{item.description}</p>
                 </div>
-                <div className="flex items-start">
-                  <Mail className="text-[#FF6B00] mr-3 flex-shrink-0" size={24} />
-                  <div>
-                    <p className="text-sm font-light text-blue-100">
-                      contato@anapp.org.br
-                    </p>
-                  </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Serviços - Gray Background */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              NOSSOS SERVIÇOS
+            </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              O que <span className="text-[#0072BC] font-medium">Oferecemos</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+              A ANAPP atua pelo desenvolvimento contínuo do mercado de produtos e serviços ligados a piscinas
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {servicos.map((servico, index) => {
+              const Icon = servico.icon;
+              return (
+                <div 
+                  key={index}
+                  className="group bg-white rounded-2xl p-8 border-l-4 border-[#0072BC] hover:shadow-xl hover:bg-white transition-all"
+                >
+                  <Icon className="text-[#0072BC] mb-4 group-hover:text-[#FF6B00] transition-colors" size={32} />
+                  <h3 className="text-xl font-medium text-[#1f2937] mb-3">{servico.title}</h3>
+                  <p className="text-base text-gray-600 font-light leading-relaxed mb-4">{servico.description}</p>
+                  {servico.link.startsWith('http') ? (
+                    <a 
+                      href={servico.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#0072BC] font-medium hover:text-[#FF6B00] transition-colors"
+                    >
+                      Saiba mais <ExternalLink size={16} className="ml-2" />
+                    </a>
+                  ) : servico.link.startsWith('/') ? (
+                    <button
+                      onClick={() => navigate(servico.link)}
+                      className="inline-flex items-center text-[#0072BC] font-medium hover:text-[#FF6B00] transition-colors"
+                    >
+                      Saiba mais <ArrowRight size={16} className="ml-2" />
+                    </button>
+                  ) : null}
                 </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Associe-se - Blue Gradient */}
+      <section id="associe-se" className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0072BC] to-[#005a9e]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              ASSOCIE-SE
+            </div>
+            <h2 className="text-4xl font-light text-white mb-4">
+              Faça Parte da <span className="font-medium">ANAPP</span>
+            </h2>
+            <p className="text-lg text-blue-100 font-light max-w-3xl mx-auto mb-8">
+              Associe-se à ANAPP e faça parte da maior comunidade de profissionais e empresas do setor de piscinas do Brasil
+            </p>
+          </div>
+
+          {/* Tabs */}
+          <div className="flex justify-center mb-8 gap-4 flex-wrap">
+            {Object.keys(associacaoPlanos).map((key) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`px-6 py-3 rounded-full font-medium transition-all ${
+                  activeTab === key
+                    ? 'bg-[#FF6B00] text-white'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                {associacaoPlanos[key].title}
+              </button>
+            ))}
+          </div>
+
+          {/* Plan Content */}
+          <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-medium text-white mb-2">{associacaoPlanos[activeTab].title}</h3>
+              <p className="text-blue-100 font-light mb-6">{associacaoPlanos[activeTab].description}</p>
+              <div className="flex items-end justify-center gap-2">
+                <span className="text-5xl font-light text-[#FF6B00]">{associacaoPlanos[activeTab].preco}</span>
+                <span className="text-lg text-blue-100 font-light mb-2">{associacaoPlanos[activeTab].periodo}</span>
               </div>
             </div>
+            
+            <div className="space-y-3 mb-8">
+              {associacaoPlanos[activeTab].beneficios.map((beneficio, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle2 className="text-[#FF6B00] mr-3 flex-shrink-0 mt-0.5" size={20} />
+                  <p className="text-white font-light">{beneficio}</p>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="https://www.anapp.org.br/contato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg text-center"
+            >
+              Quero me Associar
+            </a>
+          </div>
+
+          <p className="text-center text-blue-100 font-light text-sm mt-8">
+            Valores sujeitos a alteração. Consulte condições especiais para empresas de grande porte.
+          </p>
+        </div>
+      </section>
+
+      {/* Contato - White */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              CONTATO
+            </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Fale <span className="text-[#0072BC] font-medium">Conosco</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              Entre em contato para tirar dúvidas, solicitar informações ou associar-se
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center bg-gray-50 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-white" size={28} />
+              </div>
+              <h4 className="font-medium text-[#1f2937] mb-2">Endereço</h4>
+              <p className="text-sm text-gray-600 font-light leading-relaxed">
+                Av. Queiroz Filho, 1700<br/>
+                Sala 807 D – Villa Lobos<br/>
+                Vila Leopoldina, São Paulo - SP
+              </p>
+            </div>
+
+            <div className="text-center bg-gray-50 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Phone className="text-white" size={28} />
+              </div>
+              <h4 className="font-medium text-[#1f2937] mb-2">Telefone</h4>
+              <p className="text-lg text-[#0072BC] font-medium">(11) 5687-7888</p>
+              <p className="text-xs text-gray-500 font-light mt-2">Seg a Sex: 9h às 18h</p>
+            </div>
+
+            <div className="text-center bg-gray-50 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="text-white" size={28} />
+              </div>
+              <h4 className="font-medium text-[#1f2937] mb-2">WhatsApp</h4>
+              <a 
+                href="https://wa.me/5511990001750"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-green-600 font-medium hover:text-green-700"
+              >
+                (11) 99000-1750
+              </a>
+              <p className="text-xs text-gray-500 font-light mt-2">Atendimento rápido</p>
+            </div>
+
+            <div className="text-center bg-gray-50 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Mail className="text-white" size={28} />
+              </div>
+              <h4 className="font-medium text-[#1f2937] mb-2">E-mail</h4>
+              <a 
+                href="mailto:contato@anapp.org.br"
+                className="text-sm text-[#0072BC] font-medium hover:text-[#005a9e]"
+              >
+                contato@anapp.org.br
+              </a>
+              <p className="text-xs text-gray-500 font-light mt-2">Resposta em 24h</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-gradient-to-r from-[#0072BC] to-[#005a9e] py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Award className="text-[#FF6B00] mx-auto mb-6" size={64} />
+          <h2 className="text-4xl font-light text-white mb-6">
+            Faça parte da maior comunidade do setor de piscinas do Brasil
+          </h2>
+          <p className="text-lg text-blue-100 font-light mb-8">
+            Associe-se à ANAPP e contribua para o fortalecimento e desenvolvimento do mercado
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.anapp.org.br/associe-se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg"
+            >
+              Associe-se Agora
+            </a>
+            <a
+              href="https://www.anapp.org.br/contato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
+            >
+              Entre em Contato
+            </a>
           </div>
         </div>
       </section>
