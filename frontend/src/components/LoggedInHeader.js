@@ -12,20 +12,20 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
   };
 
   return (
-    <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
+    <header className="bg-[#0072BC] shadow-lg fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <button onClick={() => navigate('/dashboard')} className="flex items-center">
               <img 
-                src="https://static.readdy.ai/image/0649c8a07031c7fbee62019c841ca404/5f2b6cd5aec951c80b56d6d04b505077.jfif" 
+                src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/1t3erzmd_logo%20ctp%20branco.png" 
                 alt="CTP ANAPP Logo" 
                 className="h-10 w-auto"
               />
               <div className="ml-3 hidden sm:block">
-                <h1 className="text-lg font-bold text-gray-900">Curso Técnico em Piscinas</h1>
-                <p className="text-xs text-gray-500">Formação Profissional ANAPP</p>
+                <h1 className="text-base font-light text-white">Curso Técnico em Piscinas</h1>
+                <p className="text-xs font-light text-blue-100">Formação Profissional ANAPP</p>
               </div>
             </button>
           </div>
@@ -34,14 +34,14 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
           <nav className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => navigate('/dashboard')}
-              className="flex items-center text-gray-700 hover:text-[#0072BC] font-medium transition-colors"
+              className="flex items-center text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
             >
               <Home size={18} className="mr-1" />
               Meus Cursos
             </button>
             <button
               onClick={() => navigate('/dashboard')}
-              className="flex items-center text-gray-700 hover:text-[#0072BC] font-medium transition-colors"
+              className="flex items-center text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
             >
               <TrendingUp size={18} className="mr-1" />
               Meu Progresso
@@ -51,14 +51,14 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
           {/* User Menu */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center text-sm">
-              <div className="w-9 h-9 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-full flex items-center justify-center text-white font-semibold mr-2">
+              <div className="w-9 h-9 bg-[#FF6B00] rounded-full flex items-center justify-center text-white font-medium mr-2">
                 {user?.name?.charAt(0).toUpperCase() || 'A'}
               </div>
-              <span className="text-gray-700 font-medium">{user?.name || 'Aluno'}</span>
+              <span className="text-white font-light">{user?.name || 'Aluno'}</span>
             </div>
             <button
               onClick={handleLogout}
-              className="flex items-center text-gray-600 hover:text-red-600 font-medium transition-colors"
+              className="flex items-center text-white hover:text-[#FF6B00] font-light transition-colors"
             >
               <LogOut size={18} className="mr-1" />
               Sair
@@ -77,32 +77,32 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-[#005a9e] border-t border-white/20">
           <div className="px-4 py-3 space-y-3">
             <button
               onClick={() => { navigate('/dashboard'); setMobileMenuOpen(false); }}
-              className="flex items-center w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium"
+              className="flex items-center w-full text-left py-2 text-white hover:text-[#FF6B00] font-light"
             >
               <Home size={18} className="mr-2" />
               Meus Cursos
             </button>
             <button
               onClick={() => { navigate('/dashboard'); setMobileMenuOpen(false); }}
-              className="flex items-center w-full text-left py-2 text-gray-700 hover:text-[#0072BC] font-medium"
+              className="flex items-center w-full text-left py-2 text-white hover:text-[#FF6B00] font-light"
             >
               <TrendingUp size={18} className="mr-2" />
               Meu Progresso
             </button>
-            <div className="border-t border-gray-200 pt-3">
+            <div className="border-t border-white/20 pt-3">
               <div className="flex items-center mb-3">
-                <div className="w-9 h-9 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-full flex items-center justify-center text-white font-semibold mr-2">
+                <div className="w-9 h-9 bg-[#FF6B00] rounded-full flex items-center justify-center text-white font-medium mr-2">
                   {user?.name?.charAt(0).toUpperCase() || 'A'}
                 </div>
-                <span className="text-gray-700 font-medium">{user?.name || 'Aluno'}</span>
+                <span className="text-white font-light">{user?.name || 'Aluno'}</span>
               </div>
               <button
                 onClick={() => { handleLogout(); setMobileMenuOpen(false); }}
-                className="flex items-center w-full text-left py-2 text-red-600 hover:text-red-700 font-medium"
+                className="flex items-center w-full text-left py-2 text-white hover:text-[#FF6B00] font-light"
               >
                 <LogOut size={18} className="mr-2" />
                 Sair
