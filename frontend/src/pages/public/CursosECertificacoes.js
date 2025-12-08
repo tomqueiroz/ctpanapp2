@@ -273,7 +273,7 @@ function CursosECertificacoes() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <Check className="mr-2 shrink-0" size={20} />
-                  8 semanas de capacitação intensiva
+                  12 meses de acesso para completar sua certificação
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-2 shrink-0" size={20} />
