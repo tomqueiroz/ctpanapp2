@@ -7,16 +7,16 @@ function CourseSidebar() {
   const currentChapter = chapterId ? parseInt(chapterId) : 1;
 
   const chapters = [
-    { id: 1, numero: 'I', titulo: 'Cálculos', status: 'completed' },
-    { id: 2, numero: 'II', titulo: 'Segurança no Manuseio de Produtos', status: 'completed' },
-    { id: 3, numero: 'III', titulo: 'Tipos de Tratamentos', status: 'completed' },
-    { id: 4, numero: 'IV', titulo: 'Controle e Análise da Água', status: 'in-progress' },
-    { id: 5, numero: 'V', titulo: 'Tratamentos Alternativos', status: 'locked' },
-    { id: 6, numero: 'VI', titulo: 'Manutenção e Resolução', status: 'locked' },
-    { id: 7, numero: 'VII', titulo: 'Solução de Problemas', status: 'locked' },
-    { id: 8, numero: 'VIII', titulo: 'Relatórios e Documentação', status: 'locked' },
-    { id: 9, numero: 'IX', titulo: 'Atendimento ao Cliente', status: 'locked' },
-    { id: 10, numero: 'X', titulo: 'Gestão de Projetos', status: 'locked' },
+    { id: 1, numero: 'I', titulo: 'Cálculos', status: 'completed', hasApostila: true },
+    { id: 2, numero: 'II', titulo: 'Volume e Capacidade', status: 'locked' },
+    { id: 3, numero: 'III', titulo: 'Desinfecção e Produtos Químicos', status: 'completed', hasApostila: true },
+    { id: 4, numero: 'IV', titulo: 'Equilíbrio Químico da Água', status: 'completed', hasApostila: true },
+    { id: 5, numero: 'V', titulo: 'Dosagem e Aplicação', status: 'locked' },
+    { id: 6, numero: 'VI', titulo: 'Filtração e Circulação', status: 'locked' },
+    { id: 7, numero: 'VII', titulo: 'Manutenção', status: 'locked' },
+    { id: 8, numero: 'VIII', titulo: 'Segurança e Normas', status: 'locked' },
+    { id: 9, numero: 'IX', titulo: 'Problemas e Soluções', status: 'locked' },
+    { id: 10, numero: 'X', titulo: 'Atendimento ao Cliente', status: 'locked' },
     { id: 11, numero: 'XI', titulo: 'Sustentabilidade', status: 'locked' },
     { id: 12, numero: 'XII', titulo: 'Certificação Final', status: 'locked' }
   ];
