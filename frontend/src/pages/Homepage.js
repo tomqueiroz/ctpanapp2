@@ -319,7 +319,7 @@ function Homepage() {
                 <h3 className="text-2xl font-medium text-[#1f2937] mb-4">Curso Técnico de Piscinas</h3>
                 <ul className="space-y-3 mb-6">
                   {[
-                    'Aulas práticas e fáceis de entender, com exemplos do dia a dia',
+                    'Curso com muitas dicas e as melhores práticas, fácil de entender, com exemplos do dia a dia',
                     'Aprenda a resolver problemas comuns e evite erros que custam dinheiro',
                     'Grupo exclusivo no WhatsApp com professores e colegas',
                     'Material de apoio com passo a passo das manutenções',
