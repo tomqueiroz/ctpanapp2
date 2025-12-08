@@ -32,9 +32,9 @@ function ChapterView({ user = { name: 'Aluno' } }) {
 
   const chapterData = {
     numero: 1,
-    titulo: 'Introdução ao Tratamento de Piscinas',
+    titulo: 'Cálculos',
     subtitulo: 'Fundamentos essenciais para o profissional de sucesso',
-    descricao: 'Aprenda as medidas fundamentais e o Sistema Internacional necessários para dominar o balanceamento químico da água de piscinas.',
+    descricao: 'O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.',
     duracao: '4 horas',
     recursosDisponiveis: 6,
     modulos: [
