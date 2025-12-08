@@ -14,9 +14,15 @@ function Footer({ user = null }) {
   const handleNavigation = (path) => {
     if (user) {
       navigate(path);
+      window.scrollTo(0, 0);
     } else {
       handleLogin();
     }
+  };
+
+  const navigateToPage = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
   };
 
   return (
