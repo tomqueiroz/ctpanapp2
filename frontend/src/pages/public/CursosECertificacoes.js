@@ -7,6 +7,11 @@ import { Check, TrendingUp, Users, Award, DollarSign, MessageCircle, Phone, Mail
 function CursosECertificacoes() {
   const navigate = useNavigate();
   const [openFaq, setOpenFaq] = useState(null);
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
+
+  const getProxiedImageUrl = (originalUrl) => {
+    return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
+  };
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
