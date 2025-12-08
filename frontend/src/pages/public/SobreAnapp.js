@@ -243,11 +243,11 @@ function SobreAnapp() {
               <div className="absolute -inset-4 bg-gradient-to-br from-[#0072BC]/20 to-[#FF6B00]/20 rounded-3xl blur-2xl"></div>
               <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
                 <img
-                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/joqpm6cm_anapp.png')}`}
+                  src={`${API_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/joqpm6cm_anapp.png')}`}
                   alt="Fundação da ANAPP"
                   className="w-full rounded-xl"
                   onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=ANAPP';
+                    e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%230072BC" width="800" height="600"/%3E%3Ctext fill="%23ffffff" font-family="Arial" font-size="24" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3EANAPP%3C/text%3E%3C/svg%3E';
                   }}
                 />
               </div>
