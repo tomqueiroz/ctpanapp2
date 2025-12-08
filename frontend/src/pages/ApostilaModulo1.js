@@ -843,6 +843,155 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
           </div>
         </section>
 
+        {/* Glossário Ilustrado */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-6 text-center">📖 Glossário Ilustrado</h2>
+          <p className="text-center text-gray-600 mb-8">
+            Este glossário explica todos os termos técnicos usados nesta apostila de forma simples e clara.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { termo: 'Área', def: 'O tamanho da superfície da piscina vista de cima. Medida em metros quadrados (m²).' },
+              { termo: 'Centímetro (cm)', def: 'Medida de comprimento. 100 centímetros = 1 metro.' },
+              { termo: 'Diâmetro', def: 'Em uma piscina redonda, é a medida de uma borda até a outra, passando pelo centro.' },
+              { termo: 'Grama (g)', def: 'Medida de peso. 1.000 gramas = 1 quilograma.' },
+              { termo: 'Linha d\'água', def: 'Nível ideal onde a água deve ficar na piscina, geralmente na metade do skimmer.' },
+              { termo: 'Litro (L)', def: 'Medida de volume para líquidos. 1 metro cúbico = 1.000 litros.' },
+              { termo: 'Metro (m)', def: 'Unidade básica de comprimento. 1 metro = 100 centímetros.' },
+              { termo: 'Metro Cúbico (m³)', def: 'Medida de volume. Usado para saber quanto de água cabe na piscina. 1 m³ = 1.000 litros.' },
+              { termo: 'Miligrama (mg)', def: 'Medida muito pequena de peso. 1.000 miligramas = 1 grama.' },
+              { termo: 'Mililitro (mL)', def: 'Medida pequena de volume. 1.000 mililitros = 1 litro.' },
+              { termo: 'Pi (π)', def: 'Número especial (3,14) usado para calcular círculos.' },
+              { termo: 'Profundidade', def: 'Altura da água na piscina, medida do fundo até a superfície.' },
+              { termo: 'Quilograma (kg)', def: 'Medida de peso. 1 kg = 1.000 gramas.' },
+              { termo: 'Raio', def: 'Em piscina redonda, distância do centro até a borda. É metade do diâmetro.' },
+              { termo: 'Volume', def: 'Quantidade de água que cabe na piscina. Medido em metros cúbicos (m³) ou litros (L).' }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <p className="font-semibold text-[#0072BC] mb-2">{item.termo}</p>
+                <p className="text-sm text-gray-700">{item.def}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Tabelas de Conversão Rápida */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-6 text-center">📊 Tabelas de Conversão Rápida</h2>
+          
+          <div className="space-y-6">
+            {/* Tabela 1 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-[#0072BC] to-[#005a9e] px-6 py-4">
+                <h3 className="text-lg font-semibold text-white">Tabela 1 - Conversões de Volume</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Para Converter</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Em</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Multiplique Por</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="px-6 py-4 text-sm">Metros cúbicos (m³)</td><td className="px-6 py-4 text-sm">Litros (L)</td><td className="px-6 py-4 text-sm font-semibold text-[#0072BC]">1.000</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Litros (L)</td><td className="px-6 py-4 text-sm">Metros cúbicos (m³)</td><td className="px-6 py-4 text-sm font-semibold text-[#0072BC]">0,001</td></tr>
+                    <tr><td className="px-6 py-4 text-sm">Litros (L)</td><td className="px-6 py-4 text-sm">Mililitros (mL)</td><td className="px-6 py-4 text-sm font-semibold text-[#0072BC]">1.000</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Mililitros (mL)</td><td className="px-6 py-4 text-sm">Litros (L)</td><td className="px-6 py-4 text-sm font-semibold text-[#0072BC]">0,001</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Tabela 2 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
+                <h3 className="text-lg font-semibold text-white">Tabela 2 - Conversões de Massa</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Para Converter</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Em</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Multiplique Por</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="px-6 py-4 text-sm">Quilogramas (kg)</td><td className="px-6 py-4 text-sm">Gramas (g)</td><td className="px-6 py-4 text-sm font-semibold text-green-600">1.000</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Gramas (g)</td><td className="px-6 py-4 text-sm">Quilogramas (kg)</td><td className="px-6 py-4 text-sm font-semibold text-green-600">0,001</td></tr>
+                    <tr><td className="px-6 py-4 text-sm">Gramas (g)</td><td className="px-6 py-4 text-sm">Miligramas (mg)</td><td className="px-6 py-4 text-sm font-semibold text-green-600">1.000</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Miligramas (mg)</td><td className="px-6 py-4 text-sm">Gramas (g)</td><td className="px-6 py-4 text-sm font-semibold text-green-600">0,001</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Tabela 3 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-4">
+                <h3 className="text-lg font-semibold text-white">Tabela 3 - Conversões de Comprimento</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Para Converter</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Em</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Multiplique Por</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="px-6 py-4 text-sm">Metros (m)</td><td className="px-6 py-4 text-sm">Centímetros (cm)</td><td className="px-6 py-4 text-sm font-semibold text-purple-600">100</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Centímetros (cm)</td><td className="px-6 py-4 text-sm">Metros (m)</td><td className="px-6 py-4 text-sm font-semibold text-purple-600">0,01</td></tr>
+                    <tr><td className="px-6 py-4 text-sm">Metros (m)</td><td className="px-6 py-4 text-sm">Milímetros (mm)</td><td className="px-6 py-4 text-sm font-semibold text-purple-600">1.000</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Milímetros (mm)</td><td className="px-6 py-4 text-sm">Metros (m)</td><td className="px-6 py-4 text-sm font-semibold text-purple-600">0,001</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Tabela 4 - Fórmulas Rápidas */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-[#FF6B00] to-[#e55d00] px-6 py-4">
+                <h3 className="text-lg font-semibold text-white">Tabela 4 - Fórmulas Rápidas</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Tipo de Piscina</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Fórmula do Volume</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="px-6 py-4 text-sm font-medium">Retangular</td><td className="px-6 py-4 text-sm font-mono">Comprimento × Largura × Profundidade</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm font-medium">Circular</td><td className="px-6 py-4 text-sm font-mono">3,14 × Raio × Raio × Profundidade</td></tr>
+                    <tr><td className="px-6 py-4 text-sm font-medium">Reposição de Água</td><td className="px-6 py-4 text-sm font-mono">Área × Diferença de Altura</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg p-6 mt-8">
+            <div className="flex items-start gap-3">
+              <Lightbulb className="text-yellow-600 flex-shrink-0 mt-1" size={24} />
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">💡 Como Usar Estas Tabelas</h4>
+                <p className="text-gray-700 mb-2">Estas tabelas são suas aliadas no dia a dia. Sugerimos que você:</p>
+                <ul className="space-y-1 ml-4 text-gray-700">
+                  <li>• Tire uma foto destas páginas no celular para consulta rápida</li>
+                  <li>• Imprima e plastifique para levar na maleta de trabalho</li>
+                  <li>• Cole na parede do seu local de trabalho</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Próximo Capítulo */}
         <section className="mb-8">
           <div className="bg-gradient-to-r from-[#FF6B00] to-[#e55d00] rounded-xl p-8 text-white text-center">
@@ -858,6 +1007,45 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
               Ir para Módulo 2
               <ArrowRight size={20} />
             </button>
+          </div>
+        </section>
+
+        {/* Página Final */}
+        <section className="mb-8">
+          <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-xl p-8 text-white text-center">
+            <BookOpen className="mx-auto mb-4" size={64} />
+            <h3 className="text-2xl font-semibold mb-4">Parabéns por Estudar com a Apostila CTP 3.0!</h3>
+            
+            <div className="bg-white/10 rounded-lg p-6 mb-6 text-left">
+              <h4 className="font-semibold mb-4">📚 Próximos Passos</h4>
+              <ol className="space-y-2 ml-6 list-decimal">
+                <li>Estude todos os 12 capítulos desta apostila com atenção</li>
+                <li>Faça os testes ao final de cada capítulo</li>
+                <li>Pratique os cálculos e técnicas no dia a dia</li>
+                <li>Realize a prova final para obter seu certificado</li>
+                <li>Torne-se um Profissional Certificado ANAPP!</li>
+              </ol>
+            </div>
+
+            <div className="bg-white/10 rounded-lg p-6 text-left">
+              <h4 className="font-semibold mb-3">Contato ANAPP</h4>
+              <div className="space-y-2 text-sm">
+                <p><strong>Site:</strong> www.anapp.org.br</p>
+                <p><strong>Curso Online:</strong> www.ctpanapp.online</p>
+                <p><strong>E-mail:</strong> cursos@anapp.org.br</p>
+              </div>
+            </div>
+
+            <p className="text-sm text-blue-100 mt-6">
+              © 2025 ANAPP - Associação Nacional das Empresas e Profissionais de Piscinas
+            </p>
+            <p className="text-xs text-blue-200 mt-2">
+              Todos os direitos reservados. Material Didático - CTP 3.0 - Versão para Estudo
+            </p>
+            
+            <p className="text-lg font-semibold mt-6">
+              Sucesso em sua jornada profissional! 🎓
+            </p>
           </div>
         </section>
 
