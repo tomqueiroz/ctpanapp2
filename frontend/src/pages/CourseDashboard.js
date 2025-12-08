@@ -26,19 +26,19 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 2,
       numero: 'II',
-      titulo: 'Segurança no Manuseio de Produtos',
-      subtitulo: 'Contaminação',
-      descricao: 'Protocolos de segurança, EPIs obrigatórios e armazenamento correto',
+      titulo: 'Volume e Capacidade',
+      subtitulo: 'Cálculos Avançados',
+      descricao: 'Formatos especiais: ovais, em L, formato rim, multinível',
       duracao: '12 horas',
-      status: 'completed',
+      status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png'
     },
     {
       id: 3,
       numero: 'III',
-      titulo: 'Tipos de Tratamentos',
-      subtitulo: 'Descontaminação',
-      descricao: 'Tratamento físico, tratamento químico e sistemas de filtração',
+      titulo: 'Desinfecção e Produtos Químicos',
+      subtitulo: 'Cloro e pH',
+      descricao: 'Tipos de cloro, dosagens, pH e certificações de produtos',
       duracao: '15 horas',
       status: 'completed',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png'
@@ -46,19 +46,19 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 4,
       numero: 'IV',
-      titulo: 'Controle e Análise da Água',
-      subtitulo: 'Balanceamento',
-      descricao: 'Parâmetros químicos, instrumentos de medição e ajustes',
+      titulo: 'Equilíbrio Químico da Água',
+      subtitulo: 'Alcalinidade, pH e Dureza',
+      descricao: 'O triângulo do equilíbrio: alcalinidade total, pH e dureza cálcica',
       duracao: '15 horas',
-      status: 'in-progress',
+      status: 'completed',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png'
     },
     {
       id: 5,
       numero: 'V',
-      titulo: 'Tratamentos Alternativos',
-      subtitulo: 'Testes Químicos',
-      descricao: 'Sistemas de ozônio, tratamento UV e tecnologias emergentes',
+      titulo: 'Dosagem e Aplicação',
+      subtitulo: 'Cálculos Práticos',
+      descricao: 'Como calcular e aplicar produtos corretamente',
       duracao: '12 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png'
@@ -66,9 +66,9 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 6,
       numero: 'VI',
-      titulo: 'Manutenção e Resolução',
-      subtitulo: 'Operação e Segurança',
-      descricao: 'Manutenção preventiva, diagnóstico de problemas e soluções práticas',
+      titulo: 'Filtração e Circulação',
+      subtitulo: 'Bombas e Filtros',
+      descricao: 'Sistemas de filtração, bombas, skimmers e manutenção',
       duracao: '14 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png'
@@ -76,9 +76,9 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 7,
       numero: 'VII',
-      titulo: 'Solução de Problemas',
-      subtitulo: 'Manutenção Preventiva',
-      descricao: 'Problemas comuns, diagnóstico avançado e soluções específicas',
+      titulo: 'Manutenção',
+      subtitulo: 'Rotinas Diárias',
+      descricao: 'Manutenção preventiva e corretiva, rotinas semanais e mensais',
       duracao: '15 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png'
@@ -86,9 +86,9 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 8,
       numero: 'VIII',
-      titulo: 'Relatórios e Documentação',
-      subtitulo: 'Equipamentos Avançados',
-      descricao: 'Elaboração de relatórios, registro de ocorrências e documentação técnica',
+      titulo: 'Segurança e Normas',
+      subtitulo: 'ABNT e EPIs',
+      descricao: 'Normas ABNT, equipamentos de proteção e primeiros socorros',
       duracao: '12 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png'
@@ -96,9 +96,9 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 9,
       numero: 'IX',
-      titulo: 'Atendimento ao Cliente',
-      subtitulo: 'Tratamentos Especiais',
-      descricao: 'Comunicação efetiva, gestão de expectativas e resolução de conflitos',
+      titulo: 'Problemas e Soluções',
+      subtitulo: 'Diagnóstico',
+      descricao: 'Água verde, turva, algas, manchas - diagnóstico e solução',
       duracao: '13 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png'
@@ -106,9 +106,9 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 10,
       numero: 'X',
-      titulo: 'Gestão de Projetos',
-      subtitulo: 'Diagnóstico de Problemas',
-      descricao: 'Planejamento de serviços, cronograma de manutenção e gestão de recursos',
+      titulo: 'Atendimento ao Cliente',
+      subtitulo: 'Comunicação',
+      descricao: 'Comunicação efetiva, relatórios e fidelização de clientes',
       duracao: '10 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png'
@@ -117,8 +117,8 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       id: 11,
       numero: 'XI',
       titulo: 'Sustentabilidade',
-      subtitulo: 'Gestão de Negócios',
-      descricao: 'Economia de recursos, práticas sustentáveis e gestão ambiental',
+      subtitulo: 'Práticas Ecológicas',
+      descricao: 'Economizar água, energia e práticas sustentáveis',
       duracao: '10 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png'
@@ -127,8 +127,8 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       id: 12,
       numero: 'XII',
       titulo: 'Certificação Final',
-      subtitulo: 'Tendências e Inovações',
-      descricao: 'Revisão geral, avaliação teórica e aplicação das melhores práticas',
+      subtitulo: 'Avaliação',
+      descricao: 'Revisão geral e avaliação final para certificação ANAPP',
       duracao: '10 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png'
