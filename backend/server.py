@@ -517,6 +517,40 @@ async def proxy_image(url: str):
         logging.error(f"Failed to proxy image {url}: {e}")
         raise HTTPException(status_code=404, detail=f"Failed to load image: {str(e)}")
 
+# Alias endpoints for frontend compatibility
+@api_router.get("/courses/enrollments")
+async def get_course_enrollments_alias(request: Request):
+    """Alias for /enrollments/my - for frontend compatibility"""
+    return await get_my_enrollments(request)
+
+@api_router.post("/courses/{course_id}/enroll")
+async def enroll_in_course_alias(course_id: str, request: Request):
+    """Alias for /enrollments - for frontend compatibility"""
+    enrollment_data = {"course_id": course_id}
+    return await enroll_course(request, enrollment_data)
+
+@api_router.get("/courses/{course_id}/lessons")
+async def get_course_lessons(course_id: str):
+    """Get all lessons for a course - for frontend compatibility"""
+    try:
+        # Get all modules for this course
+        modules = await db.modules.find({"course_id": course_id}, {"_id": 0, "module_id": 1}).to_list(None)
+        if not modules:
+            return []
+        
+        module_ids = [m["module_id"] for m in modules]
+        
+        # Get all lessons for these modules
+        lessons = await db.lessons.find(
+            {"module_id": {"$in": module_ids}},
+            {"_id": 0}
+        ).sort("order", 1).limit(200).to_list(None)
+        
+        return lessons
+    except Exception as e:
+        logging.error(f"Error fetching course lessons: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 # Admin endpoints
 @api_router.get("/admin/stats")
 async def get_admin_stats(request: Request):
