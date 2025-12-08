@@ -8,6 +8,7 @@ function SobreAnapp() {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
   const [activeTab, setActiveTab] = useState('fabricante');
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
