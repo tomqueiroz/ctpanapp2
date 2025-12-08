@@ -386,7 +386,7 @@ function ConhecaCTP() {
                 <ul className="space-y-2">
                   {[
                     "Certificado reconhecido pela ANAPP",
-                    "160 horas de conteúdo prático",
+                    "160 horas de curso com muitas dicas e as melhores práticas",
                     "Acesso vitalício à plataforma",
                     "Suporte completo durante o curso"
                   ].map((item, index) => (
