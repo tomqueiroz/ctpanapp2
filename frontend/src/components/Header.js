@@ -39,19 +39,19 @@ function Header({ user = null }) {
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => navigate('/conheca-ctp')} 
+            onClick={() => navigateToPage('/conheca-ctp')} 
             className="text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
           >
             Conheça o CTP
           </button>
           <button 
-            onClick={() => navigate('/sobre-anapp')} 
+            onClick={() => navigateToPage('/sobre-anapp')} 
             className="text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
           >
             Sobre a ANAPP
           </button>
           <button 
-            onClick={() => navigate('/cursos')} 
+            onClick={() => navigateToPage('/cursos')} 
             className="text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
           >
             Cursos e Certificações
