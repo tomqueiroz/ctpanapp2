@@ -30,20 +30,53 @@ function ChapterView({ user = { name: 'Aluno' } }) {
     { id: 12, titulo: 'Certificação Final', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png' }
   ];
 
-  const chapterData = {
-    numero: 1,
-    titulo: 'Cálculos',
-    subtitulo: 'Fundamentos essenciais para o profissional de sucesso',
-    descricao: 'O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.',
-    duracao: '4 horas',
-    recursosDisponiveis: 6,
-    modulos: [
-      { titulo: 'Química da Água', duracao: '45 min' },
-      { titulo: 'Pesos e Medidas', duracao: '30 min' },
-      { titulo: 'Sistema Internacional (SI)', duracao: '40 min' },
-      { titulo: 'pH e Alcalinidade', duracao: '50 min' }
-    ]
+  // Dados específicos de cada capítulo
+  const chaptersData = {
+    1: {
+      numero: 1,
+      titulo: 'Cálculos',
+      subtitulo: 'Fundamentos essenciais para o profissional de sucesso',
+      descricao: 'O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.',
+      duracao: '4 horas',
+      recursosDisponiveis: 6,
+      modulos: [
+        { titulo: 'Química da Água', duracao: '45 min' },
+        { titulo: 'Pesos e Medidas', duracao: '30 min' },
+        { titulo: 'Sistema Internacional (SI)', duracao: '40 min' },
+        { titulo: 'pH e Alcalinidade', duracao: '50 min' }
+      ]
+    },
+    3: {
+      numero: 3,
+      titulo: 'Desinfecção e Produtos Químicos',
+      subtitulo: 'Cloro, pH e Segurança na Manutenção',
+      descricao: 'Tipos de cloro, dosagens, certificações de produtos e segurança na aplicação.',
+      duracao: '5 horas',
+      recursosDisponiveis: 6,
+      modulos: [
+        { titulo: 'O Cloro', duracao: '60 min' },
+        { titulo: 'Tipos de Cloro', duracao: '45 min' },
+        { titulo: 'pH e Equilíbrio', duracao: '50 min' },
+        { titulo: 'Produtos Certificados', duracao: '40 min' }
+      ]
+    },
+    4: {
+      numero: 4,
+      titulo: 'Equilíbrio Químico da Água',
+      subtitulo: 'Alcalinidade, pH e Dureza - O Triângulo do Equilíbrio',
+      descricao: 'Aprenda a manter o equilíbrio químico perfeito: alcalinidade total, pH e dureza cálcica.',
+      duracao: '5 horas',
+      recursosDisponiveis: 6,
+      modulos: [
+        { titulo: 'Alcalinidade Total', duracao: '50 min' },
+        { titulo: 'pH', duracao: '60 min' },
+        { titulo: 'Dureza de Cálcio', duracao: '45 min' },
+        { titulo: 'Índice de Langelier', duracao: '40 min' }
+      ]
+    }
   };
+
+  const chapterData = chaptersData[currentChapter] || chaptersData[1];
 
   const recursos = [
     {
