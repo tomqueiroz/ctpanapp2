@@ -235,7 +235,7 @@ function CursosECertificacoes() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-[#FF6B00] font-semibold mb-2">SUA NOVA VIDA COMEÇA AQUI</p>
-            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">Transforme Sua Carreira em 8 Semanas</h2>
+            <h2 className="text-3xl font-bold text-[#0072BC] mb-4">Transforme Sua Carreira em 12 Meses</h2>
             <p className="text-lg text-gray-600">Milhares de profissionais já mudaram de vida com nossa certificação. Agora é a sua vez de conquistar independência financeira e reconhecimento profissional.</p>
           </div>
 
