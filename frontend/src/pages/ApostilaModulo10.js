@@ -218,7 +218,7 @@ function ApostilaModulo10({ user = { name: 'Aluno' } }) {
                 <tr className="bg-[#0072BC] text-white">
                   <th className="p-3 text-left">Proporção Área Circundante/Água</th>
                   <th className="p-3 text-center">Prof. até 1,50m (m²/pessoa)</th>
-                  <th className="p-3 text-center">Prof. > 1,50m (m²/pessoa)</th>
+                  <th className="p-3 text-center">Prof. &gt; 1,50m (m²/pessoa)</th>
                 </tr>
               </thead>
               <tbody>
