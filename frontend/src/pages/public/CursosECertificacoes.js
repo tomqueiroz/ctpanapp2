@@ -116,7 +116,7 @@ function CursosECertificacoes() {
   const faqs = [
     {
       pergunta: "Qual a carga horária do Programa CTP?",
-      resposta: "O Programa CTP possui carga horária total de 60 horas, distribuídas em aulas teóricas e práticas, além de atividades complementares que podem ser realizadas no seu próprio ritmo."
+      resposta: "O Programa CTP possui carga horária total de 160 horas, distribuídas em aulas teóricas com muitas dicas e as melhores práticas, além de atividades complementares que podem ser realizadas no seu próprio ritmo."
     },
     {
       pergunta: "Preciso ter conhecimento prévio para fazer o curso?",
