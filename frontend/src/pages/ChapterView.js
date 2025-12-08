@@ -78,17 +78,21 @@ function ChapterView({ user = { name: 'Aluno' } }) {
 
   const chapterData = chaptersData[currentChapter] || chaptersData[1];
 
+  // Recursos disponíveis por capítulo
+  const apostilasDisponiveis = [1, 3, 4]; // Capítulos com apostila
+  const hasApostila = apostilasDisponiveis.includes(currentChapter);
+  
   const recursos = [
-    {
+    ...(hasApostila ? [{
       tipo: 'apostila',
       titulo: 'Apostila Completa do Módulo',
       descricao: 'Material teórico completo com exercícios e download PDF',
       tamanho: 'Versão Interativa',
       icone: FileText,
       cor: 'from-red-500 to-red-600',
-      url: '/dashboard/apostila/modulo-1',
+      url: `/dashboard/apostila/modulo-${currentChapter}`,
       internal: true
-    },
+    }] : []),
     {
       tipo: 'video',
       titulo: 'Videoaula Módulo 1',
