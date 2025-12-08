@@ -434,6 +434,53 @@ function ChapterView({ user = { name: 'Aluno' } }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {recursos.map((recurso, index) => {
                   const Icon = recurso.icone;
+                  
+                  // Renderização especial para áudio
+                  if (recurso.isAudio) {
+                    return (
+                      <div
+                        key={index}
+                        className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-lg transition-all"
+                      >
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${recurso.cor} flex items-center justify-center flex-shrink-0`}>
+                            <Icon className="text-white" size={24} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-medium text-gray-900 mb-1">
+                              {recurso.titulo}
+                            </h3>
+                            <p className="text-sm font-light text-gray-600 mb-2">{recurso.descricao}</p>
+                            <span className="text-xs font-light text-gray-500">
+                              {recurso.duracao}
+                            </span>
+                          </div>
+                        </div>
+                        
+                        {/* Player de Áudio */}
+                        <audio 
+                          controls 
+                          className="w-full mb-3"
+                          style={{ height: '40px' }}
+                        >
+                          <source src={recurso.url} type="audio/mp4" />
+                          Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        
+                        {/* Botão de Download */}
+                        <a
+                          href={recurso.url}
+                          download="Podcast_Modulo_1_CTP.m4a"
+                          className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2.5 px-4 rounded-lg hover:from-green-600 hover:to-green-700 transition-all font-medium text-sm"
+                        >
+                          <Download size={18} />
+                          Baixar Podcast
+                        </a>
+                      </div>
+                    );
+                  }
+                  
+                  // Renderização padrão para outros recursos
                   const Component = recurso.internal ? 'button' : 'a';
                   const props = recurso.internal
                     ? { onClick: () => navigate(recurso.url) }
