@@ -233,15 +233,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       cor: 'from-[#0072BC] to-[#005a9e]',
       url: 'https://youtu.be/fP3fInaBxNY'
     },
-    {
+    ...(currentChapter === 1 ? [{
       tipo: 'podcast',
-      titulo: 'Podcast do Capítulo',
-      descricao: 'Ouça enquanto realiza outras atividades',
-      duracao: '12 minutos',
+      titulo: 'Dominando a Matemática da Piscina',
+      descricao: 'Do Volume (o CPF da Piscina) - Ouça ou faça download',
+      duracao: 'Áudio completo',
       icone: Headphones,
       cor: 'from-green-500 to-green-600',
-      url: 'https://creators.spotify.com/pod/show/wellington-queiroz91/episodes/Captulo-1-A-Importncia-das-Medidas-e-o-Sistema-Universal-e356ehd'
-    },
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/a5mjilbl_Dominando_a_Matem%C3%A1tica_da_Piscina__Do_Volume_%28o_CPF_da_Piscina%29.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
