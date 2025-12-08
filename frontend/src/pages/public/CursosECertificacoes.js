@@ -631,6 +631,7 @@ function CursosECertificacoes() {
       {/* Formulário de Inscrição */}
       <section id="inscricao" className="bg-red-100 py-20 border-4 border-red-500">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-6xl text-red-600 font-bold text-center">TEST - FORMULÁRIO AQUI</h1>
           <div className="text-center mb-12">
             <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
               INSCREVA-SE
