@@ -400,13 +400,21 @@ function Homepage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => navigate('/cursos')}
+              onClick={() => {
+                navigate('/cursos');
+                setTimeout(() => window.scrollTo(0, 0), 100);
+              }}
               className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
             >
               Conhecer Planos
             </button>
             <button
-              onClick={() => navigate('/login')}
+              onClick={() => {
+                navigate('/cursos');
+                setTimeout(() => {
+                  document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+              }}
               className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg"
             >
               Inscreva-se Agora
