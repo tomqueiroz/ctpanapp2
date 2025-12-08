@@ -51,7 +51,7 @@ function Homepage() {
     {
       icon: Video,
       title: 'Vídeo-aulas de alta qualidade',
-      description: 'Conteúdo gravado por especialistas do setor, com demonstrações práticas e explicações detalhadas.'
+      description: 'Conteúdo gravado por especialistas do setor, com muitas dicas e as melhores práticas e explicações detalhadas.'
     },
     {
       icon: FileText,
