@@ -163,7 +163,10 @@ function Homepage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
-                onClick={() => navigate('/conheca-ctp')}
+                onClick={() => {
+                  navigate('/conheca-ctp');
+                  setTimeout(() => window.scrollTo(0, 0), 100);
+                }}
                 className="bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
                 Conheça o Curso
