@@ -28,11 +28,11 @@ print('User ID: ' + userId);
 ## Step 2: Test Backend API
 ```bash
 # Test auth endpoint
-curl -X GET "https://aqua-skills-2.preview.emergentagent.com/api/auth/me" \
+curl -X GET "https://poolmaster-4.preview.emergentagent.com/api/auth/me" \
   -H "Authorization: Bearer YOUR_SESSION_TOKEN"
 
 # Test protected endpoints
-curl -X GET "https://aqua-skills-2.preview.emergentagent.com/api/courses" \
+curl -X GET "https://poolmaster-4.preview.emergentagent.com/api/courses" \
   -H "Authorization: Bearer YOUR_SESSION_TOKEN"
 ```
 
@@ -48,7 +48,7 @@ await page.context.add_cookies([{
     "secure": true,
     "sameSite": "None"
 }]);
-await page.goto("https://aqua-skills-2.preview.emergentagent.com/dashboard");
+await page.goto("https://poolmaster-4.preview.emergentagent.com/dashboard");
 ```
 
 ## Quick Debug
