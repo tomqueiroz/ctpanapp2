@@ -55,6 +55,38 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
               <Home size={18} className="mr-1" />
               Meus Cursos
             </button>
+            
+            {/* Modules Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setModulesDropdownOpen(!modulesDropdownOpen)}
+                className="flex items-center text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
+              >
+                <BookOpen size={18} className="mr-1" />
+                Módulos
+                <ChevronDown size={16} className="ml-1" />
+              </button>
+              
+              {modulesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                  <div className="max-h-96 overflow-y-auto">
+                    {modules.map((module) => (
+                      <button
+                        key={module.id}
+                        onClick={() => {
+                          navigate(`/dashboard/chapter/${module.id}`);
+                          setModulesDropdownOpen(false);
+                        }}
+                        className="w-full text-left px-4 py-2.5 hover:bg-blue-50 transition-colors text-sm text-gray-700 hover:text-[#0072BC] font-light"
+                      >
+                        {module.titulo}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <button
               onClick={() => navigate('/dashboard')}
               className="flex items-center text-white hover:text-[#FF6B00] font-light text-sm transition-colors"
