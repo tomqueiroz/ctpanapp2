@@ -7,7 +7,7 @@ from datetime import datetime
 import time
 
 class CTPBackendTester:
-    def __init__(self, base_url="https://ctp-academy.preview.emergentagent.com"):
+    def __init__(self, base_url="https://piscinar.preview.emergentagent.com"):
         self.base_url = base_url
         self.api_url = f"{base_url}/api"
         self.session_token = None
