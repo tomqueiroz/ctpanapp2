@@ -243,7 +243,7 @@ function SobreAnapp() {
               <div className="absolute -inset-4 bg-gradient-to-br from-[#0072BC]/20 to-[#FF6B00]/20 rounded-3xl blur-2xl"></div>
               <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
                 <img
-                  src={`${API_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/joqpm6cm_anapp.png')}`}
+                  src={`${API_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/7rqqvaru_anapp.png')}`}
                   alt="Fundação da ANAPP"
                   className="w-full rounded-xl"
                   onError={(e) => {
