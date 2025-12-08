@@ -20,11 +20,6 @@ function ConhecaCTP() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Helper function to get proxied image URL
-  const getProxiedImageUrl = (originalUrl) => {
-    return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
-  };
-
   const modulos = [
     { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png" },
     { numero: 2, titulo: "Segurança no Manuseio de Produtos", descricao: "Protocolos de segurança e EPIs obrigatórios", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png" },
