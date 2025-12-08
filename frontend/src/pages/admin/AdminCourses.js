@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { Plus, Edit, Trash2 } from 'lucide-react';
 import axios from 'axios';
 
