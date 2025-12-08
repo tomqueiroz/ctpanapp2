@@ -10,8 +10,6 @@ function ChapterView({ user = { name: 'Aluno' } }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentChapter = chapterId ? parseInt(chapterId) : 1;
   const API_URL = process.env.REACT_APP_BACKEND_URL;
-  
-  console.log('🔴 ChapterView RENDERIZANDO - Título:', 'Cálculos TESTE-12345');
 
   const getProxiedImageUrl = (originalUrl) => {
     return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
