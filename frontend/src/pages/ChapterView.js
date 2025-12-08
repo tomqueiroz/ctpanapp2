@@ -49,11 +49,12 @@ function ChapterView({ user = { name: 'Aluno' } }) {
     {
       tipo: 'apostila',
       titulo: 'Apostila Completa do Módulo',
-      descricao: 'Material teórico completo com exercícios',
-      tamanho: '6MB',
+      descricao: 'Material teórico completo com exercícios e download PDF',
+      tamanho: 'Versão Interativa',
       icone: FileText,
       cor: 'from-red-500 to-red-600',
-      url: 'https://heyzine.com/flip-book/6b5e7efd0f.html'
+      url: '/dashboard/apostila/modulo-1',
+      internal: true
     },
     {
       tipo: 'video',
