@@ -71,7 +71,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Manutenção preventiva, diagnóstico de problemas e soluções práticas',
       duracao: '14 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=pool%20equipment%20operation%2C%20safety%20gear%20for%20pool%20maintenance%2C%20warning%20signs%2C%20emergency%20procedures%2C%20pool%20pump%20system%20operation%2C%20technical%20safety%20equipment&width=400&height=300&seq=6&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png'
     },
     {
       id: 7,
@@ -81,7 +81,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Problemas comuns, diagnóstico avançado e soluções específicas',
       duracao: '15 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=preventive%20pool%20maintenance%2C%20routine%20checks%2C%20equipment%20inspection%2C%20filter%20cleaning%2C%20professional%20pool%20technician%20performing%20maintenance%20tasks%2C%20modern%20pool%20equipment&width=400&height=300&seq=7&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png'
     },
     {
       id: 8,
@@ -91,7 +91,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Elaboração de relatórios, registro de ocorrências e documentação técnica',
       duracao: '12 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=advanced%20pool%20equipment%2C%20automated%20systems%2C%20smart%20pool%20controllers%2C%20modern%20filtration%20systems%2C%20high-tech%20pool%20maintenance%20devices%2C%20professional%20pool%20technology&width=400&height=300&seq=8&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png'
     },
     {
       id: 9,
@@ -101,7 +101,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Comunicação efetiva, gestão de expectativas e resolução de conflitos',
       duracao: '13 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=special%20pool%20treatments%2C%20algae%20removal%2C%20stain%20treatment%2C%20water%20clarification%2C%20professional%20pool%20cleaning%20techniques%2C%20specialized%20pool%20maintenance&width=400&height=300&seq=9&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png'
     },
     {
       id: 10,
@@ -111,7 +111,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Planejamento de serviços, cronograma de manutenção e gestão de recursos',
       duracao: '10 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=pool%20problem%20diagnosis%2C%20water%20testing%20equipment%2C%20troubleshooting%20tools%2C%20professional%20inspection%2C%20pool%20maintenance%20analysis%2C%20technical%20assessment&width=400&height=300&seq=10&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png'
     },
     {
       id: 11,
