@@ -252,7 +252,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
     }] : []),
     {
       tipo: 'video',
-      titulo: 'Videoaula Módulo 1',
+      titulo: `Videoaula Módulo ${currentChapter}`,
       descricao: 'Apresentação visual dos conceitos principais',
       duracao: '2 minutos',
       icone: Video,
