@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Check, TrendingUp, Users, Award, DollarSign, MessageCircle, Phone, Mail, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { Check, TrendingUp, Users, Award, DollarSign, MessageCircle, Phone, Mail, MapPin, ChevronDown, ChevronUp, CheckCircle2 } from 'lucide-react';
 
 function CursosECertificacoes() {
   const navigate = useNavigate();
