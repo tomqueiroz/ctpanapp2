@@ -16,6 +16,32 @@ function ChapterView({ user = { name: 'Aluno' } }) {
     window.scrollTo(0, 0);
   }, [chapterId]);
 
+  // Track chapter access
+  useEffect(() => {
+    if (currentChapter) {
+      // Save last accessed chapter
+      localStorage.setItem('lastAccessedChapter', currentChapter.toString());
+      
+      // Update chapter access history
+      const history = JSON.parse(localStorage.getItem('chapterHistory') || '{}');
+      history[currentChapter] = {
+        lastAccessed: new Date().toISOString(),
+        accessCount: (history[currentChapter]?.accessCount || 0) + 1
+      };
+      localStorage.setItem('chapterHistory', JSON.stringify(history));
+      
+      // Track time spent on chapter
+      const startTime = Date.now();
+      
+      return () => {
+        const timeSpent = Math.floor((Date.now() - startTime) / 1000); // in seconds
+        const timeTracking = JSON.parse(localStorage.getItem('chapterTimeTracking') || '{}');
+        timeTracking[currentChapter] = (timeTracking[currentChapter] || 0) + timeSpent;
+        localStorage.setItem('chapterTimeTracking', JSON.stringify(timeTracking));
+      };
+    }
+  }, [currentChapter]);
+
   const getProxiedImageUrl = (originalUrl) => {
     return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
   };
