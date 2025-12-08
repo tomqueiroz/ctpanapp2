@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Home, TrendingUp, LogOut, User, Menu, X } from 'lucide-react';
+import { Home, TrendingUp, LogOut, User, Menu, X, BookOpen, ChevronDown } from 'lucide-react';
 
 function LoggedInHeader({ user = { name: 'Aluno' } }) {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [modulesDropdownOpen, setModulesDropdownOpen] = useState(false);
+
+  const modules = [
+    { id: 1, titulo: 'Módulo 1 - Cálculos' },
+    { id: 2, titulo: 'Módulo 2 - Volume e Capacidade' },
+    { id: 3, titulo: 'Módulo 3 - Desinfecção e Produtos Químicos' },
+    { id: 4, titulo: 'Módulo 4 - Equilíbrio Químico da Água' },
+    { id: 5, titulo: 'Módulo 5 - Dosagem e Aplicação' },
+    { id: 6, titulo: 'Módulo 6 - Filtração e Circulação' },
+    { id: 7, titulo: 'Módulo 7 - Manutenção' },
+    { id: 8, titulo: 'Módulo 8 - Segurança e Normas' },
+    { id: 9, titulo: 'Módulo 9 - Problemas e Soluções' },
+    { id: 10, titulo: 'Módulo 10 - Atendimento ao Cliente' },
+    { id: 11, titulo: 'Módulo 11 - Sustentabilidade' },
+    { id: 12, titulo: 'Módulo 12 - Certificação Final' }
+  ];
 
   const handleLogout = () => {
     // TODO: Implementar logout quando tiver autenticação
