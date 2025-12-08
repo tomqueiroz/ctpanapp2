@@ -491,7 +491,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
               </button>
 
               <div className="mb-8">
-                <p className="text-sm font-light text-blue-100 mb-2">Módulo 1 de 12</p>
+                <p className="text-sm font-light text-blue-100 mb-2">Módulo {currentChapter} de 12</p>
                 <h1 className="text-3xl md:text-4xl font-light mb-3">{chapterData.titulo}</h1>
                 <p className="text-lg font-light text-blue-100">{chapterData.subtitulo}</p>
               </div>
