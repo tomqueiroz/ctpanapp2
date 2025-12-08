@@ -223,7 +223,7 @@ function ApostilaModulo10({ user = { name: 'Aluno' } }) {
               </thead>
               <tbody>
                 <tr className="border-b">
-                  <td className="p-3">< 1</td>
+                  <td className="p-3">&lt; 1</td>
                   <td className="p-3 text-center font-bold">2,0</td>
                   <td className="p-3 text-center font-bold">4,0</td>
                 </tr>
