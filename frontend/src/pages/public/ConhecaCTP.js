@@ -47,19 +47,19 @@ function ConhecaCTP() {
       name: "Roberto Almeida",
       location: "São Paulo, SP",
       text: "O CTP mudou completamente minha carreira. Agora tenho minha própria empresa com mais de 30 clientes fixos.",
-      image: "https://readdy.ai/api/search-image?query=professional%20male%20portrait%20smiling&width=100&height=100&seq=1"
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=faces"
     },
     {
       name: "Fernanda Costa",
       location: "Florianópolis, SC",
       text: "A metodologia é excelente! Mesmo sem experiência prévia, consegui aprender tudo de forma clara.",
-      image: "https://readdy.ai/api/search-image?query=professional%20female%20portrait%20confident&width=100&height=100&seq=2"
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces"
     },
     {
       name: "Carlos Eduardo Santos",
       location: "Belo Horizonte, MG",
       text: "Certificar toda a minha equipe foi a melhor decisão. Aumentamos nossos preços em 30%.",
-      image: "https://readdy.ai/api/search-image?query=professional%20male%20business%20owner&width=100&height=100&seq=3"
+      image: "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=100&h=100&fit=crop&crop=faces"
     }
   ];
 
