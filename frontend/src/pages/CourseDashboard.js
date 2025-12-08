@@ -41,7 +41,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Tratamento físico, tratamento químico e sistemas de filtração',
       duracao: '15 horas',
       status: 'completed',
-      imagem: 'https://readdy.ai/api/search-image?query=pool%20cleaning%20chemicals%2C%20water%20treatment%20process%2C%20chlorine%20application%2C%20pool%20disinfection%20equipment%2C%20professional%20cleaning%20of%20swimming%20pool%2C%20water%20purification%20system%2C%20technical%20maintenance&width=400&height=300&seq=3&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png'
     },
     {
       id: 4,
