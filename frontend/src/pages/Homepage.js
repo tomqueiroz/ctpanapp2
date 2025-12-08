@@ -44,7 +44,8 @@ function Homepage() {
     { icon: Laptop, title: '100% Online', description: 'Estude no seu ritmo, pelo celular ou computador, 24h por dia' },
     { icon: Target, title: 'Muitas dicas e as melhores práticas', description: 'Aprenda com exemplos reais do dia a dia' },
     { icon: MessageCircle, title: 'Suporte direto', description: 'Tire dúvidas pelo WhatsApp com professores especialistas' },
-    { icon: Users, title: 'Comunidade VIP', description: 'Networking com profissionais de todo o Brasil' }
+    { icon: Users, title: 'Comunidade VIP', description: 'Networking com profissionais de todo o Brasil' },
+    { icon: Clock, title: 'Você estuda no seu ritmo', description: 'Dependendo de sua dedicação, é possível tirar seu certificado em duas semanas ou até 12 meses' }
   ];
 
   const platformFeatures = [
