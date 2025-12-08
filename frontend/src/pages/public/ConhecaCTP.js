@@ -43,9 +43,9 @@ function ConhecaCTP() {
   ];
 
   const testimonialImages = [
-    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=100&h=100&fit=crop&crop=faces"
+    "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+    "https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
   ];
 
   const testimonials = [
