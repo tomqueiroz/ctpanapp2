@@ -17,15 +17,15 @@ function ChapterView({ user = { name: 'Aluno' } }) {
 
   const chapters = [
     { id: 1, titulo: 'Cálculos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png' },
-    { id: 2, titulo: 'Segurança no Manuseio de Produtos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png' },
-    { id: 3, titulo: 'Tipos de Tratamentos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png' },
-    { id: 4, titulo: 'Controle e Análise da Água', status: 'in-progress', progresso: 65, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png' },
-    { id: 5, titulo: 'Tratamentos Alternativos', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png' },
-    { id: 6, titulo: 'Manutenção e Resolução', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png' },
-    { id: 7, titulo: 'Solução de Problemas', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png' },
-    { id: 8, titulo: 'Relatórios e Documentação', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png' },
-    { id: 9, titulo: 'Atendimento ao Cliente', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png' },
-    { id: 10, titulo: 'Gestão de Projetos', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png' },
+    { id: 2, titulo: 'Volume e Capacidade', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png' },
+    { id: 3, titulo: 'Desinfecção e Produtos Químicos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png' },
+    { id: 4, titulo: 'Equilíbrio Químico da Água', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png' },
+    { id: 5, titulo: 'Dosagem e Aplicação', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png' },
+    { id: 6, titulo: 'Filtração e Circulação', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png' },
+    { id: 7, titulo: 'Manutenção', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png' },
+    { id: 8, titulo: 'Segurança e Normas', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png' },
+    { id: 9, titulo: 'Problemas e Soluções', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png' },
+    { id: 10, titulo: 'Atendimento ao Cliente', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png' },
     { id: 11, titulo: 'Sustentabilidade', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png' },
     { id: 12, titulo: 'Certificação Final', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png' }
   ];
