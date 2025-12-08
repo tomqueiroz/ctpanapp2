@@ -23,7 +23,7 @@ function Navbar({ user = null }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/dashboard" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="https://customer-assets.emergentagent.com/job_piscinaprof/artifacts/3qf7sb2y_logo%20ctp%20fdo%20transp.png" 
               alt="CTP Logo" 
