@@ -31,7 +31,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Protocolos de segurança, EPIs obrigatórios e armazenamento correto',
       duracao: '12 horas',
       status: 'completed',
-      imagem: 'https://readdy.ai/api/search-image?query=microscopic%20view%20of%20water%20contaminants%2C%20bacteria%20in%20pool%20water%2C%20algae%20growth%2C%20water%20testing%20for%20contaminants%2C%20professional%20laboratory%20equipment%20for%20water%20analysis%2C%20clean%20scientific%20environment&width=400&height=300&seq=2&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png'
     },
     {
       id: 3,
