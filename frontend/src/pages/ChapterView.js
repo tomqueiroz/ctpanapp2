@@ -293,6 +293,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/ojiric9w_Piscinas_Seguras__O_Guia_Completo_Contra_Afogamentos%2C_Qu%C3%ADmicos_.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 7 ? [{
+      tipo: 'podcast',
+      titulo: 'Manual do Especialista',
+      descricao: 'Solução de Problemas Comuns em Piscinas - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/xbpz6dpc_Manual_do_Especialista__Solu%C3%A7%C3%A3o_de_Problemas_Comuns_em_Piscinas.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
