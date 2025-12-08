@@ -16,9 +16,9 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
     {
       id: 1,
       numero: 'I',
-      titulo: 'Introdução ao Tratamento de Piscinas',
+      titulo: 'Cálculos',
       subtitulo: 'A Importância das Medidas e o Sistema Internacional',
-      descricao: 'Conceitos básicos de manutenção, fundamentos de limpeza e segurança dos usuários',
+      descricao: 'O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.',
       duracao: '12 horas',
       status: 'completed',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png'
