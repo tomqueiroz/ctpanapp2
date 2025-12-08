@@ -134,7 +134,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
                         isActive ? 'ring-2 ring-white' : ''
                       }`}>
                         <img
-                          src={chapter.imagem}
+                          src={getProxiedImageUrl(chapter.imagem)}
                           alt={chapter.titulo}
                           className="w-full h-full object-cover"
                           onError={(e) => {
