@@ -291,7 +291,7 @@ function ConhecaCTP() {
                     <Star key={i} className="text-[#FF6B00] fill-current" size={16} />
                   ))}
                 </div>
-                <p className="text-gray-600 font-light leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-gray-600 font-light leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
               </div>
             ))}
           </div>
