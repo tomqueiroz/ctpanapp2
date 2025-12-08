@@ -235,7 +235,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
               {/* Imagem */}
               <div className="relative h-48 bg-gray-200 overflow-hidden">
                 <img
-                  src={chapter.imagem}
+                  src={getProxiedImageUrl(chapter.imagem)}
                   alt={chapter.titulo}
                   className="w-full h-full object-cover"
                   onError={(e) => {
