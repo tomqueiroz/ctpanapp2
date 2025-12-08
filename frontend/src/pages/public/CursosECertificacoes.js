@@ -16,62 +16,74 @@ function CursosECertificacoes() {
     {
       numero: "I",
       titulo: "Cálculos",
-      descricao: "O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc."
+      descricao: "O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png"
     },
     {
       numero: "II",
       titulo: "Contaminação",
-      descricao: "Capítulo específico sobre os possíveis contaminantes em uma piscina ou spa, microbiologia, sintomas, desinfecção e etc."
+      descricao: "Capítulo específico sobre os possíveis contaminantes em uma piscina ou spa, microbiologia, sintomas, desinfecção e etc.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png"
     },
     {
       numero: "III",
       titulo: "Descontaminação",
-      descricao: "Apresentamos os métodos para a desinfecção da piscina ou spa, tipos de produtos, funções, apresentações, equipamentos e suas funcionalidades."
+      descricao: "Apresentamos os métodos para a desinfecção da piscina ou spa, tipos de produtos, funções, apresentações, equipamentos e suas funcionalidades.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png"
     },
     {
       numero: "IV",
       titulo: "Balanceamento",
-      descricao: "Tão importante quando a escolha do método de tratamento é o balanceamento da água, pH, alcalinidade, níveis e problemas encontrados."
+      descricao: "Tão importante quando a escolha do método de tratamento é o balanceamento da água, pH, alcalinidade, níveis e problemas encontrados.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png"
     },
     {
       numero: "V",
       titulo: "Testes químicos",
-      descricao: "Equipamentos utilizados para a realização de testes de níveis na água de piscina ou spa, métodos utilizados, manutenção de equipamentos e etc."
+      descricao: "Equipamentos utilizados para a realização de testes de níveis na água de piscina ou spa, métodos utilizados, manutenção de equipamentos e etc.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png"
     },
     {
       numero: "VI",
       titulo: "Operação e Segurança",
-      descricao: "Primordial para o profissional, apresentamos toda a operação da piscina como processo de filtração, drenagem, limpeza física, adição de produtos químicos e muito mais."
+      descricao: "Primordial para o profissional, apresentamos toda a operação da piscina como processo de filtração, drenagem, limpeza física, adição de produtos químicos e muito mais.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png"
     },
     {
       numero: "VII",
       titulo: "Solução de problemas",
-      descricao: "Principais problemas encontrados no ambiente da piscina ou spa, problemas na água, equipamentos e suas soluções."
+      descricao: "Principais problemas encontrados no ambiente da piscina ou spa, problemas na água, equipamentos e suas soluções.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png"
     },
     {
       numero: "VIII",
       titulo: "Relatórios",
-      descricao: "Procedimento para criação de relatórios de visitas para os tratadores, ocorrências, manutenção e etc. Este procedimento assegura ao profissional a credibilidade de suas atividades."
+      descricao: "Procedimento para criação de relatórios de visitas para os tratadores, ocorrências, manutenção e etc. Este procedimento assegura ao profissional a credibilidade de suas atividades.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png"
     },
     {
       numero: "IX",
       titulo: "Manutenção preventiva",
-      descricao: "Imprescindível para a piscina ou spa, garantindo a longa duração dos equipamentos utilizados, bem como, evitar acidentes como choques elétricos entre outros."
+      descricao: "Imprescindível para a piscina ou spa, garantindo a longa duração dos equipamentos utilizados, bem como, evitar acidentes como choques elétricos entre outros.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png"
     },
     {
       numero: "X",
       titulo: "ABNT NBR 10339:2018",
-      descricao: "Conteúdo especial sobre as atenções do profissional conforme orientação fornecida pela norma, conceitos de piscina, temperaturas, equipamentos, segurança e muito mais."
+      descricao: "Conteúdo especial sobre as atenções do profissional conforme orientação fornecida pela norma, conceitos de piscina, temperaturas, equipamentos, segurança e muito mais.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png"
     },
     {
       numero: "XI",
       titulo: "Circulação de água",
-      descricao: "Para garantir uma boa qualidade da água, item fundamental são as rotinas de circulação e filtragem constantes a água da piscina ou spa. O dimensionamento, funcionalidades e segurança são apresentados neste capítulo."
+      descricao: "Para garantir uma boa qualidade da água, item fundamental são as rotinas de circulação e filtragem constantes a água da piscina ou spa. O dimensionamento, funcionalidades e segurança são apresentados neste capítulo.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png"
     },
     {
       numero: "XII",
       titulo: "Aquecimento",
-      descricao: "Neste capítulo você conhecerá os processos e equipamentos utilizados para aquecer uma piscina ou spa."
+      descricao: "Neste capítulo você conhecerá os processos e equipamentos utilizados para aquecer uma piscina ou spa.",
+      imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png"
     }
   ];
 
