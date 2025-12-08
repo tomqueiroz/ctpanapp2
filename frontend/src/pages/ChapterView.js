@@ -313,6 +313,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/5ng6igvv_Registros_Detalhados_e_NBR_10339__A_Base_Estrat%C3%A9gica_da_Seguran.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 9 ? [{
+      tipo: 'podcast',
+      titulo: 'Guia Definitivo da Manutenção',
+      descricao: 'Como Prevenir Problemas em Piscinas e Spas - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/htf4ktml_Guia_Definitivo_da_Manuten%C3%A7%C3%A3o_de_Piscinas_e_Spas__Como_Prevenir.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
