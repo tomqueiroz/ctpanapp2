@@ -953,10 +953,35 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
               </div>
             </div>
 
-            {/* Tabela 4 - Fórmulas Rápidas */}
+            {/* Tabela 4 - Parâmetros Ideais da Água */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-cyan-600 to-cyan-700 px-6 py-4">
+                <h3 className="text-lg font-semibold text-white">Tabela 4 - Parâmetros Ideais da Água</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Parâmetro</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Faixa Ideal</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Unidade</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="px-6 py-4 text-sm">Cloro Livre</td><td className="px-6 py-4 text-sm font-semibold text-cyan-600">1 a 3</td><td className="px-6 py-4 text-sm">PPM</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">pH</td><td className="px-6 py-4 text-sm font-semibold text-cyan-600">7,2 a 7,6</td><td className="px-6 py-4 text-sm">-</td></tr>
+                    <tr><td className="px-6 py-4 text-sm">Alcalinidade Total</td><td className="px-6 py-4 text-sm font-semibold text-cyan-600">80 a 120</td><td className="px-6 py-4 text-sm">PPM</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Ácido Cianúrico</td><td className="px-6 py-4 text-sm font-semibold text-cyan-600">30 a 50</td><td className="px-6 py-4 text-sm">PPM</td></tr>
+                    <tr><td className="px-6 py-4 text-sm">Dureza Cálcica</td><td className="px-6 py-4 text-sm font-semibold text-cyan-600">200 a 400</td><td className="px-6 py-4 text-sm">PPM</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Tabela 5 - Fórmulas Rápidas */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
               <div className="bg-gradient-to-r from-[#FF6B00] to-[#e55d00] px-6 py-4">
-                <h3 className="text-lg font-semibold text-white">Tabela 4 - Fórmulas Rápidas</h3>
+                <h3 className="text-lg font-semibold text-white">Tabela 5 - Fórmulas Rápidas</h3>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
@@ -970,6 +995,29 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
                     <tr><td className="px-6 py-4 text-sm font-medium">Retangular</td><td className="px-6 py-4 text-sm font-mono">Comprimento × Largura × Profundidade</td></tr>
                     <tr className="bg-gray-50"><td className="px-6 py-4 text-sm font-medium">Circular</td><td className="px-6 py-4 text-sm font-mono">3,14 × Raio × Raio × Profundidade</td></tr>
                     <tr><td className="px-6 py-4 text-sm font-medium">Reposição de Água</td><td className="px-6 py-4 text-sm font-mono">Área × Diferença de Altura</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Tabela 6 - Tempo de Filtração */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 px-6 py-4">
+                <h3 className="text-lg font-semibold text-white">Tabela 6 - Tempo de Filtração</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Temperatura da Água</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">Horas de Filtração por Dia</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="px-6 py-4 text-sm">Até 21°C</td><td className="px-6 py-4 text-sm font-semibold text-indigo-600">6 a 8 horas</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">21°C a 24°C</td><td className="px-6 py-4 text-sm font-semibold text-indigo-600">8 a 10 horas</td></tr>
+                    <tr><td className="px-6 py-4 text-sm">24°C a 27°C</td><td className="px-6 py-4 text-sm font-semibold text-indigo-600">10 a 12 horas</td></tr>
+                    <tr className="bg-gray-50"><td className="px-6 py-4 text-sm">Acima de 27°C</td><td className="px-6 py-4 text-sm font-semibold text-indigo-600">12 a 14 horas</td></tr>
                   </tbody>
                 </table>
               </div>
