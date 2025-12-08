@@ -7,7 +7,7 @@ function CourseSidebar() {
   const currentChapter = chapterId ? parseInt(chapterId) : 1;
 
   const chapters = [
-    { id: 1, numero: 'I', titulo: 'Introdução ao Tratamento de Piscinas', status: 'completed' },
+    { id: 1, numero: 'I', titulo: 'Cálculos', status: 'completed' },
     { id: 2, numero: 'II', titulo: 'Segurança no Manuseio de Produtos', status: 'completed' },
     { id: 3, numero: 'III', titulo: 'Tipos de Tratamentos', status: 'completed' },
     { id: 4, numero: 'IV', titulo: 'Controle e Análise da Água', status: 'in-progress' },
