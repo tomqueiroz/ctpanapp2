@@ -257,7 +257,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       duracao: '2 minutos',
       icone: Video,
       cor: 'from-[#0072BC] to-[#005a9e]',
-      url: 'https://youtu.be/fP3fInaBxNY'
+      url: currentChapter === 4 ? 'https://youtu.be/Wu8TCzwXNHc' : 'https://youtu.be/fP3fInaBxNY'
     },
     ...(currentChapter === 1 ? [{
       tipo: 'podcast',
