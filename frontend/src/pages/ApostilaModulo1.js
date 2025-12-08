@@ -1040,6 +1040,76 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
           </div>
         </section>
 
+        {/* Visão Geral dos 12 Capítulos */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-6 text-center">📚 Visão Geral dos 12 Capítulos</h2>
+          <p className="text-center text-gray-600 mb-8">
+            Esta apostila contém 12 capítulos completos. Veja o que você vai aprender:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">✅ Capítulo 1 - Cálculos e Medidas</h3>
+              <p className="text-sm text-blue-800">Sistema Internacional, conversões, volume de piscinas</p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 2 - Volume e Capacidade</h3>
+              <p className="text-sm text-gray-700">Formatos especiais: ovais, em L, formato rim, multinível</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 3 - Química e PPM</h3>
+              <p className="text-sm text-gray-700">Partes Por Milhão, concentrações, química da água</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 4 - Produtos Químicos</h3>
+              <p className="text-sm text-gray-700">Cloro, algicidas, clarificantes, floculantes e mais</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 5 - Dosagem e Aplicação</h3>
+              <p className="text-sm text-gray-700">Calcular dosagens, quando e como aplicar produtos</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 6 - Equilíbrio da Água</h3>
+              <p className="text-sm text-gray-700">pH, alcalinidade, dureza cálcica - o triângulo do equilíbrio</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 7 - Filtração e Circulação</h3>
+              <p className="text-sm text-gray-700">Bombas, filtros, skimmers, manutenção de equipamentos</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 8 - Manutenção</h3>
+              <p className="text-sm text-gray-700">Rotinas diárias, semanais e mensais - preventiva e corretiva</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 9 - Segurança e Normas</h3>
+              <p className="text-sm text-gray-700">ABNT NBR 10.339/2018, EPIs, primeiros socorros</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 10 - Problemas e Soluções</h3>
+              <p className="text-sm text-gray-700">Água verde, turva, algas, manchas - diagnóstico e solução</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 11 - Atendimento ao Cliente</h3>
+              <p className="text-sm text-gray-700">Comunicação, relatórios, fidelização de clientes</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Capítulo 12 - Sustentabilidade</h3>
+              <p className="text-sm text-gray-700">Economizar água, energia, práticas ecológicas</p>
+            </div>
+          </div>
+        </section>
+
         {/* Próximo Capítulo */}
         <section className="mb-8">
           <div className="bg-gradient-to-r from-[#FF6B00] to-[#e55d00] rounded-xl p-8 text-white text-center">
