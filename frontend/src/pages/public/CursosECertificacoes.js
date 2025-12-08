@@ -330,9 +330,9 @@ function CursosECertificacoes() {
           <h3 className="text-2xl font-bold text-center text-[#0072BC] mb-12">Histórias Reais de Transformação</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-[#FF6B00] mb-2">+300%</div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Aumento de Renda</h4>
-              <p className="text-gray-600">Profissionais certificados ganham em média 300% mais</p>
+              <div className="text-5xl font-bold text-[#FF6B00] mb-2">ANAPP</div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">Certificação Reconhecida</h4>
+              <p className="text-gray-600">Aumente o valor da sua mão de obra com certificação profissional</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-[#FF6B00] mb-2">95%</div>
