@@ -259,16 +259,24 @@ function Homepage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => navigate('/conheca-ctp')}
+              onClick={() => {
+                navigate('/conheca-ctp');
+                setTimeout(() => window.scrollTo(0, 0), 100);
+              }}
               className="bg-white text-[#0072BC] py-4 px-8 rounded-full font-medium hover:bg-blue-50 transition-all shadow-lg"
             >
               Ver apresentação do curso
             </button>
             <button
-              onClick={() => navigate('/login')}
+              onClick={() => {
+                navigate('/conheca-ctp');
+                setTimeout(() => {
+                  document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+              }}
               className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg"
             >
-              Quero me inscrever agora
+              Fazer Inscrição
             </button>
           </div>
         </div>
