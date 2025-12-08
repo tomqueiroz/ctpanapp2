@@ -53,7 +53,7 @@ function Footer({ user = null }) {
                 </li>
                 <li>
                   <button 
-                    onClick={() => navigate('/sobre-anapp')} 
+                    onClick={() => navigateToPage('/sobre-anapp')} 
                     className="text-blue-100 hover:text-[#FF6B00] transition font-light text-sm"
                   >
                     Sobre a ANAPP
