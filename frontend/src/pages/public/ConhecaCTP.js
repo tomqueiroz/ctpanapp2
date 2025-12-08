@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Award, BookOpen, CheckCircle2, Clock, Users, Video, FileText, TrendingUp, Shield, Target, ChevronRight, Star } from 'lucide-react';
+import { Award, BookOpen, CheckCircle2, Clock, Users, Video, FileText, TrendingUp, Shield, Target, ChevronRight, Star, DollarSign } from 'lucide-react';
 
 function ConhecaCTP() {
   const navigate = useNavigate();
