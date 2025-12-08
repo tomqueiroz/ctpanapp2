@@ -253,6 +253,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/7ctixszw_O__Supervil%C3%A3o__da_Piscina__Crypto%2C_Bact%C3%A9rias_e_o_Protocolo_de_E.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 3 ? [{
+      tipo: 'podcast',
+      titulo: 'Cloro, Ozônio e UV',
+      descricao: 'O Guia Completo da Desinfecção de Piscinas - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/rf43be9x_Cloro%2C_Oz%C3%B4nio_e_UV__O_Guia_Completo_da_Desinfec%C3%A7%C3%A3o_de_Piscinas_.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
