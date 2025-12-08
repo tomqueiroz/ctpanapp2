@@ -296,7 +296,7 @@ function SobreAnapp() {
                   className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20 hover:border-[#FF6B00] transition-all hover:bg-white/20"
                 >
                   <div className="flex items-center justify-between mb-6">
-                    <div className="text-white text-5xl font-light">{milestone.year}</div>
+                    <div className="!text-white text-5xl font-light">{milestone.year}</div>
                     <div className="w-12 h-12 bg-[#FF6B00] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="text-white" size={24} />
                     </div>
