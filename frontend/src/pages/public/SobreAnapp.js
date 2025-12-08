@@ -217,27 +217,43 @@ function SobreAnapp() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
-                Fundada em <span className="font-medium text-[#0072BC]">20 de novembro de 1990</span> por empresários visionários do segmento de lazer, a ANAPP nasceu com o propósito de promover o desenvolvimento e o fortalecimento do setor através da união de empresários e profissionais envolvidos no universo das piscinas.
-              </p>
-              <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
-                Ao longo de mais de três décadas, a ANAPP tem sido a voz do setor, representando <span className="font-medium">fabricantes, lojistas, construtores, engenheiros, arquitetos, paisagistas e tratadores de piscina</span>, além de todos os agentes fundamentais da cadeia produtiva.
-              </p>
-              <p className="text-lg text-gray-700 font-light leading-relaxed">
-                A associação representa todos os setores ligados à área, como piscinas de vinil, fibra e alvenaria, além de acessórios, Spas, saunas, aquecedores, bombas, filtros, iluminação e tratamento de água.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-8 shadow-sm border-l-4 border-[#0072BC]">
+                <p className="text-lg text-gray-700 font-light leading-relaxed">
+                  Fundada em <span className="font-semibold text-[#0072BC]">20 de novembro de 1990</span> por empresários visionários do segmento de lazer, a ANAPP nasceu com o propósito de promover o desenvolvimento e o fortalecimento do setor através da união de empresários e profissionais envolvidos no universo das piscinas.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-8 shadow-sm">
+                <p className="text-lg text-gray-700 font-light leading-relaxed">
+                  Ao longo de mais de três décadas, a ANAPP tem sido a voz do setor, representando <span className="font-medium text-[#0072BC]">fabricantes, lojistas, construtores, engenheiros, arquitetos, paisagistas e tratadores de piscina</span>, além de todos os agentes fundamentais da cadeia produtiva.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-xl p-8 shadow-lg">
+                <p className="text-lg text-white font-light leading-relaxed">
+                  A associação representa todos os setores ligados à área, como piscinas de vinil, fibra e alvenaria, além de acessórios, Spas, saunas, aquecedores, bombas, filtros, iluminação e tratamento de água.
+                </p>
+              </div>
             </div>
+            
             <div className="relative">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20swimming%20pool%20industry%20association%20meeting%20business%20professionals&width=800&height=600&seq=2"
-                alt="Fundação da ANAPP"
-                className="w-full rounded-2xl shadow-2xl"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=ANAPP';
-                }}
-              />
+              <div className="absolute -inset-4 bg-gradient-to-br from-[#0072BC]/20 to-[#FF6B00]/20 rounded-3xl blur-2xl"></div>
+              <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                <img
+                  src={`${process.env.REACT_APP_BACKEND_URL}/api/proxy-image?url=${encodeURIComponent('https://customer-assets.emergentagent.com/job_aqua-skills-2/artifacts/joqpm6cm_anapp.png')}`}
+                  alt="Fundação da ANAPP"
+                  className="w-full rounded-xl"
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/800x600/0072BC/FFFFFF?text=ANAPP';
+                  }}
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-[#FF6B00] text-white p-6 rounded-2xl shadow-xl hidden lg:block">
+                <p className="text-sm font-light mb-1">Desde</p>
+                <p className="text-4xl font-bold">1990</p>
+              </div>
             </div>
           </div>
         </div>
