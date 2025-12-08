@@ -273,6 +273,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/kz4k19dl_O_Guia_Essencial_do_Equil%C3%ADbrio_Qu%C3%ADmico_da_Piscina__AT%2C_pH%2C_Dure.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 5 ? [{
+      tipo: 'podcast',
+      titulo: 'Os Segredos da Água Cristalina',
+      descricao: 'Precisão nos Testes e a Química Perfeita - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/csynyd56_Os_Segredos_da_%C3%81gua_Cristalina__Precis%C3%A3o_nos_Testes_e_a_Qu%C3%ADmica.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
