@@ -581,6 +581,260 @@ function SobreAnapp() {
         </div>
       </section>
 
+      {/* Diretoria - White Background */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              NOSSA EQUIPE
+            </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Diretoria Executiva e <span className="text-[#0072BC] font-medium">Conselho Fiscal</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              Conheça os profissionais que lideram a ANAPP
+            </p>
+          </div>
+
+          {/* Diretoria Executiva */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-light text-[#1f2937] mb-8 text-center">
+              Diretoria <span className="text-[#0072BC] font-medium">Executiva</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: "João Marcelo Caetano Garcia Silva", position: "Presidente", company: "Suall Indústria e Comércio Ltda" },
+                { name: "Rodrigo Sorrilha Pinheiro", position: "Vice-Presidente", company: "Fluidra Brasil Indústria e Comércio Ltda" },
+                { name: "Hugo Lisboa", position: "Diretor Financeiro", company: "Genco Química Industrial" },
+                { name: "Elizabete Inagaki Anan", position: "Diretora Técnica", company: "Vida e Sol Comércio" },
+                { name: "Luiz Henrique Marques", position: "Diretor de Comunicação", company: "Comarx Equipamentos e Serviços EIRELI" },
+                { name: "Carlos Eduardo Heise Filho", position: "Diretor Secretário", company: "Panozon Ambiental S/A" }
+              ].map((member, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border-l-4 border-[#0072BC] hover:shadow-lg transition-all"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-full flex items-center justify-center text-white font-medium">
+                      {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-sm text-[#FF6B00] font-medium">{member.position}</p>
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-medium text-[#1f2937] mb-2">{member.name}</h4>
+                  <p className="text-sm text-gray-600 font-light">{member.company}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Conselho Fiscal */}
+          <div>
+            <h3 className="text-2xl font-light text-[#1f2937] mb-8 text-center">
+              Conselho <span className="text-[#0072BC] font-medium">Fiscal</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              {[
+                { name: "Gilmar Pretto", company: "Morro Grande Ind e Comércio de Fibras Ltda - FIBRATEC" },
+                { name: "Victor Nomellini", company: "SIBRAPE Ind e Comércio de Equipamentos Aquáticos" },
+                { name: "José Donizete Rossini", company: "GOLD RP Comércio de Produtos e Serviços" }
+              ].map((member, index) => (
+                <div 
+                  key={index}
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-lg transition-all"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-[#0072BC] font-medium text-sm">
+                      {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-xs text-gray-500 font-medium">Conselheiro Fiscal</p>
+                    </div>
+                  </div>
+                  <h4 className="text-base font-medium text-[#1f2937] mb-2">{member.name}</h4>
+                  <p className="text-sm text-gray-600 font-light">{member.company}</p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Conselho Fiscal Substituto */}
+            <div className="bg-gray-50 rounded-2xl p-6">
+              <h4 className="text-lg font-medium text-[#1f2937] mb-4 text-center">Conselheiros Fiscais Substitutos</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { name: "Alexandre de Souza Xavier", company: "BAUMINAS Hidroazul Indústria e Comércio LTDA" },
+                  { name: "Ricardo Rodrigues Nogueira", company: "SICAR Indústria e Comércio de Produtos para Piscinas LTDA" }
+                ].map((member, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle2 className="text-[#0072BC] mr-3 flex-shrink-0 mt-1" size={20} />
+                    <div>
+                      <p className="font-medium text-[#1f2937] text-sm">{member.name}</p>
+                      <p className="text-xs text-gray-600 font-light">{member.company}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Parceiros - Gray Background */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#0072BC] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              PARCERIAS E PATROCÍNIOS
+            </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Parceiros <span className="text-[#0072BC] font-medium">Estratégicos</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              Empresas e instituições que colaboram com a ANAPP
+            </p>
+          </div>
+
+          {/* Carousel de Parceiros */}
+          <div className="relative overflow-hidden bg-white rounded-2xl py-12 px-6 shadow-sm mb-12">
+            <div className="flex items-center justify-center gap-12 flex-wrap">
+              {['FRANCAL', 'ABNT', 'SEBRAE', 'SENAI', 'APSP', 'FIESP'].map((partner, index) => (
+                <div 
+                  key={index}
+                  className="w-32 h-24 bg-gray-50 rounded-xl flex items-center justify-center hover:shadow-lg transition-all border border-gray-200 hover:border-[#0072BC]"
+                >
+                  <span className="text-xl font-bold text-[#0072BC]">{partner}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Seja um Patrocinador */}
+          <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-12 text-white">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-light mb-6 text-center">
+                Seja um <span className="font-medium">Patrocinador ANAPP</span>
+              </h3>
+              <p className="text-lg text-blue-100 font-light mb-8 text-center leading-relaxed">
+                Junte-se à ANAPP como patrocinador e faça parte de iniciativas que transformam o setor
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                {[
+                  { title: "Educação Profissional", desc: "Apoio a programas de certificação" },
+                  { title: "Desenvolvimento Social", desc: "Projetos de inclusão profissional" },
+                  { title: "Excelência Técnica", desc: "Fomento à pesquisa e inovação" },
+                  { title: "Visibilidade Premium", desc: "Destaque em eventos e publicações" }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <Star className="text-[#FF6B00] fill-current mr-3 flex-shrink-0 mt-1" size={20} />
+                    <div>
+                      <p className="font-medium mb-1">{item.title}</p>
+                      <p className="text-sm text-blue-100 font-light">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <a
+                  href="https://www.anapp.org.br/contato"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg"
+                >
+                  Saiba Mais Sobre Patrocínios
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EXPOLAZER Event - White Background */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              EVENTO
+            </div>
+            <h2 className="text-5xl font-light text-[#1f2937] mb-4">
+              <span className="font-medium text-[#0072BC]">EXPOLAZER</span>
+            </h2>
+            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+              A maior feira internacional de piscinas, spas, decoração e wellness da América Latina
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-8 text-white mb-6">
+                <h3 className="text-3xl font-light mb-4">
+                  25ª Edição - <span className="font-medium">EXPOLAZER 2026</span>
+                </h3>
+                <p className="text-lg text-blue-100 font-light mb-6 leading-relaxed">
+                  Em parceria com a FRANCAL, a ANAPP idealizou a EXPOLAZER, que chegou à sua 24ª edição em 2024 com recorde de público.
+                </p>
+                <div className="flex items-center mb-4">
+                  <Calendar className="text-[#FF6B00] mr-3" size={24} />
+                  <div>
+                    <p className="font-medium text-lg">11 a 14 de agosto de 2026</p>
+                    <p className="text-sm text-blue-100 font-light">Distrito Anhembi, São Paulo</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { number: "300+", label: "Expositores" },
+                  { number: "30.000+", label: "Visitantes" },
+                  { number: "15+", label: "Países" },
+                  { number: "25.000m²", label: "Área" }
+                ].map((stat, index) => (
+                  <div key={index} className="bg-gray-50 rounded-xl p-6 text-center border-l-4 border-[#FF6B00]">
+                    <p className="text-3xl font-light text-[#0072BC] mb-2">{stat.number}</p>
+                    <p className="text-sm text-gray-600 font-light">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-[#FF6B00]/20 to-[#0072BC]/20 rounded-3xl blur-2xl"></div>
+              <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Large%20professional%20trade%20show%20exhibition%20hall%20swimming%20pools%20displays%20modern%20convention%20center&width=800&height=600&seq=1"
+                  alt="EXPOLAZER"
+                  className="w-full rounded-xl"
+                  onError={(e) => {
+                    e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%230072BC" width="800" height="600"/%3E%3Ctext fill="%23ffffff" font-family="Arial" font-size="32" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3EEXPOLAZER 2026%3C/text%3E%3C/svg%3E';
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://www.anapp.org.br/contato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg mr-4"
+            >
+              Informações para Expositores
+            </a>
+            <a
+              href="https://www.anapp.org.br/contato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg"
+            >
+              Credenciamento
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Contato - White */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
