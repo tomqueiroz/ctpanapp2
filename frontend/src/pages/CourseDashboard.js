@@ -6,6 +6,11 @@ import { CheckCircle2, Lock, PlayCircle, Calendar, Award, TrendingUp } from 'luc
 
 function CourseDashboard({ user = { name: 'Aluno' } }) {
   const navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
+
+  const getProxiedImageUrl = (originalUrl) => {
+    return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
+  };
 
   const chapters = [
     {
