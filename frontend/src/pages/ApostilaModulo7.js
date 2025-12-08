@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
 import Footer from '../components/Footer';
-import { Download, BookOpen, CheckCircle2, AlertTriangle, Lightbulb, Wrench, Settings, Tool, ArrowRight, Shield } from 'lucide-react';
+import { Download, BookOpen, CheckCircle2, AlertTriangle, Lightbulb, Wrench, Settings, ArrowRight, Shield } from 'lucide-react';
 import { generateApostilaPDF } from '../utils/pdfGenerator';
 
 function ApostilaModulo7({ user = { name: 'Aluno' } }) {
