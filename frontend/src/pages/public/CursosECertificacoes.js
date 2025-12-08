@@ -593,8 +593,140 @@ function CursosECertificacoes() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] text-white">
+      {/* Formulário de Inscrição */}
+      <section id="inscricao" className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-[#FF6B00] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              INSCREVA-SE
+            </div>
+            <h2 className="text-4xl font-light text-[#1f2937] mb-4">
+              Garanta Sua Vaga no <span className="text-[#0072BC] font-medium">CTP ANAPP</span>
+            </h2>
+            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+              Preencha o formulário abaixo e inicie sua jornada de certificação profissional
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Nome Completo *
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Digite seu nome completo"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#0072BC] focus:outline-none transition-all"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    E-mail *
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="seu@email.com"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#0072BC] focus:outline-none transition-all"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Telefone (DDD + Número) *
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="(11) 99999-9999"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#0072BC] focus:outline-none transition-all"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    CPF
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="000.000.000-00"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#0072BC] focus:outline-none transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Nome da Empresa (opcional)
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Sua empresa"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#0072BC] focus:outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-[#0072BC]">
+                <h3 className="text-lg font-medium text-[#0072BC] mb-3">Investimento do Curso</h3>
+                <div className="flex items-end gap-2 mb-4">
+                  <span className="text-4xl font-light text-[#0072BC]">R$ 1.497,00</span>
+                  <span className="text-gray-600 font-light mb-2">à vista</span>
+                </div>
+                <p className="text-sm text-gray-600 font-light mb-4">
+                  Ou parcelado em até 12x no cartão de crédito
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Certificado reconhecido pela ANAPP",
+                    "160 horas de conteúdo prático",
+                    "Acesso vitalício à plataforma",
+                    "Suporte completo durante o curso"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-700">
+                      <CheckCircle2 className="text-green-500 mr-2 flex-shrink-0" size={16} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  type="submit"
+                  className="flex-1 bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Formulário enviado! Você será redirecionado para o pagamento.');
+                  }}
+                >
+                  <CheckCircle2 size={20} />
+                  Confirmar Inscrição
+                </button>
+                <a
+                  href="https://www.cursoanapp.org.br/inscricao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl text-center flex items-center justify-center gap-2"
+                >
+                  <DollarSign size={20} />
+                  Ir para Pagamento
+                </a>
+              </div>
+
+              <p className="text-xs text-gray-500 text-center font-light">
+                Ao confirmar, você será redirecionado para a página de pagamento seguro. Seus dados estão protegidos.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA - Black */}
+      <section className="py-20 bg-gradient-to-br from-[#0072BC] to-[#005a9e] text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Não Deixe Essa Oportunidade Passar!</h2>
           <p className="text-xl mb-8">Sua nova vida profissional está a apenas um clique de distância</p>
