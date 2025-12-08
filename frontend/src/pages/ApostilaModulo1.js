@@ -1080,7 +1080,7 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
               <div className="space-y-2 text-sm">
                 <p><strong>Site:</strong> www.anapp.org.br</p>
                 <p><strong>Curso Online:</strong> www.ctpanapp.online</p>
-                <p><strong>E-mail:</strong> cursos@anapp.org.br</p>
+                <p><strong>E-mail:</strong> contato@anapp.org.br</p>
               </div>
             </div>
 
