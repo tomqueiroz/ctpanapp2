@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
 import Footer from '../components/Footer';
 import { Download, BookOpen, CheckCircle2, AlertTriangle, Lightbulb, Calculator, ArrowRight } from 'lucide-react';
+import { generateApostilaPDF } from '../utils/pdfGenerator';
 
 function ApostilaModulo1({ user = { name: 'Aluno' } }) {
   const navigate = useNavigate();
