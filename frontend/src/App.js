@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import CourseDashboard from './pages/CourseDashboard';
 import CourseCatalog from './pages/CourseCatalog';
 import ChapterView from './pages/ChapterView';
+import ApostilaModulo1 from './pages/ApostilaModulo1';
 import CourseDetail from './pages/CourseDetail';
 import LessonViewer from './pages/LessonViewer';
 import MagazineLibrary from './pages/MagazineLibrary';
