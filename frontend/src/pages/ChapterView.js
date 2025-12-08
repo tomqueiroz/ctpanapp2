@@ -263,6 +263,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/rf43be9x_Cloro%2C_Oz%C3%B4nio_e_UV__O_Guia_Completo_da_Desinfec%C3%A7%C3%A3o_de_Piscinas_.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 4 ? [{
+      tipo: 'podcast',
+      titulo: 'O Guia Essencial do Equilíbrio Químico',
+      descricao: 'AT, pH, Dureza e muito mais - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/kz4k19dl_O_Guia_Essencial_do_Equil%C3%ADbrio_Qu%C3%ADmico_da_Piscina__AT%2C_pH%2C_Dure.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
