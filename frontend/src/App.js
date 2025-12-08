@@ -8,6 +8,7 @@ import CourseDashboard from './pages/CourseDashboard';
 import CourseCatalog from './pages/CourseCatalog';
 import ChapterView from './pages/ChapterView';
 import ApostilaModulo1 from './pages/ApostilaModulo1';
+import ApostilaModulo2 from './pages/ApostilaModulo2';
 import ApostilaModulo3 from './pages/ApostilaModulo3';
 import ApostilaModulo4 from './pages/ApostilaModulo4';
 import CourseDetail from './pages/CourseDetail';
