@@ -303,6 +303,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/xbpz6dpc_Manual_do_Especialista__Solu%C3%A7%C3%A3o_de_Problemas_Comuns_em_Piscinas.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 8 ? [{
+      tipo: 'podcast',
+      titulo: 'Registros Detalhados e NBR 10339',
+      descricao: 'A Base Estratégica da Segurança - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/5ng6igvv_Registros_Detalhados_e_NBR_10339__A_Base_Estrat%C3%A9gica_da_Seguran.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
