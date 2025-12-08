@@ -270,7 +270,7 @@ function ConhecaCTP() {
               >
                 <div className="flex items-center mb-6">
                   <img 
-                    src={testimonial.image}
+                    src={getProxiedImageUrl(testimonial.image)}
                     alt={testimonial.name}
                     className="w-16 h-16 rounded-full object-cover mr-4"
                     onError={(e) => {
