@@ -39,7 +39,8 @@ function ConhecaCTP() {
     { icon: Award, title: "Certificação ANAPP", description: "Reconhecida em todo o Brasil" },
     { icon: Clock, title: "160 Horas", description: "De curso com muitas dicas e as melhores práticas" },
     { icon: Video, title: "100% Online", description: "Estude no seu ritmo" },
-    { icon: Users, title: "+5.000 Alunos", description: "Já certificados" }
+    { icon: Users, title: "+5.000 Alunos", description: "Já certificados" },
+    { icon: Target, title: "Flexibilidade Total", description: "Tire seu certificado em 2 semanas ou em até 12 meses, você decide" }
   ];
 
   const testimonialImages = [
