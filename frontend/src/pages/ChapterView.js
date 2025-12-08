@@ -323,6 +323,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/htf4ktml_Guia_Definitivo_da_Manuten%C3%A7%C3%A3o_de_Piscinas_e_Spas__Como_Prevenir.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 10 ? [{
+      tipo: 'podcast',
+      titulo: 'ABNT NBR 10339',
+      descricao: 'O Guia Completo da Segurança em Piscinas - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/fnz522b5_ABNT_NBR_10339__O_Guia_Completo_da_Seguran%C3%A7a_em_Piscinas_%E2%80%93_Do_R.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
