@@ -8,14 +8,21 @@ function Header({ user = null }) {
 
   const handleLogin = () => {
     navigate('/login');
+    window.scrollTo(0, 0);
   };
 
   const handleNavigation = (path) => {
     if (user) {
       navigate(path);
+      window.scrollTo(0, 0);
     } else {
       handleLogin();
     }
+  };
+
+  const navigateToPage = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
   };
 
   return (
