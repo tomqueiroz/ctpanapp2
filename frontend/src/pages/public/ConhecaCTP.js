@@ -217,14 +217,14 @@ function ConhecaCTP() {
                 ))}
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
               <img 
                 src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/wlsjloh6_logo%20ctp%20fdo%20transp.png"
                 alt="CTP Logo"
                 className="w-full max-w-sm mx-auto mb-6"
               />
               <div className="text-center">
-                <p className="text-white font-light text-lg mb-6">
+                <p className="text-gray-700 font-light text-lg mb-6">
                   Junte-se aos mais de 5.000 profissionais certificados
                 </p>
                 <button
