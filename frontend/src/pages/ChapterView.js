@@ -243,6 +243,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/a5mjilbl_Dominando_a_Matem%C3%A1tica_da_Piscina__Do_Volume_%28o_CPF_da_Piscina%29.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 2 ? [{
+      tipo: 'podcast',
+      titulo: 'O "Supervilão" da Piscina',
+      descricao: 'Crypto, Bactérias e o Protocolo de Emergência - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/7ctixszw_O__Supervil%C3%A3o__da_Piscina__Crypto%2C_Bact%C3%A9rias_e_o_Protocolo_de_E.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
