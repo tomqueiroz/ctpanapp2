@@ -210,16 +210,21 @@ function CursosECertificacoes() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <button
-              onClick={() => navigate('/sobre-ctp')}
+              onClick={() => {
+                navigate('/conheca-ctp');
+                setTimeout(() => window.scrollTo(0, 0), 100);
+              }}
               className="bg-[#0072BC] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
             >
               Conheça o Programa
             </button>
             <button
-              onClick={() => navigate('/contato')}
+              onClick={() => {
+                document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-[#FF6B00] text-white py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
             >
-              Garanta Sua Vaga
+              Comece Agora
             </button>
           </div>
         </div>
