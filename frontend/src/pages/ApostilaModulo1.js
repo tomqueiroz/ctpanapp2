@@ -483,6 +483,319 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
               </div>
             </div>
           </div>
+
+          {/* Profundidade Variável */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Piscinas com Profundidade Variável</h3>
+            <p className="text-gray-700 mb-4">
+              Muitas piscinas não têm o fundo plano. Elas são mais rasas em uma parte e mais fundas em outra.
+            </p>
+            
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <p className="text-sm font-semibold text-gray-700 mb-4">Fórmula:</p>
+              <div className="bg-white rounded-lg p-4 border border-gray-200">
+                <p className="font-mono text-sm text-[#0072BC]">
+                  Profundidade Média = (Parte Rasa + Parte Funda) ÷ 2
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 rounded-xl p-6 border border-purple-200">
+              <h4 className="font-semibold text-gray-900 mb-3">📝 Exemplo - Profundidade Variável:</h4>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>Situação:</strong> Piscina com 1 metro na parte rasa e 2 metros na parte funda</p>
+                <div>
+                  <p className="font-semibold">Cálculo da profundidade média:</p>
+                  <p className="font-mono text-sm bg-white rounded px-3 py-2 mt-1">
+                    Profundidade Média = (1m + 2m) ÷ 2 = 1,5 metros
+                  </p>
+                </div>
+                <div className="bg-blue-100 rounded-lg p-3 border-2 border-blue-400">
+                  <p className="font-semibold text-blue-800">
+                    💡 Agora use esta profundidade média na fórmula do volume!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Piscinas Irregulares */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Piscinas Irregulares ou com Múltiplos Níveis</h3>
+            <p className="text-gray-700 mb-4">
+              Para piscinas com formato irregular ou diferentes níveis, divida em seções simples, calcule cada uma separadamente e some os resultados.
+            </p>
+
+            <div className="bg-orange-50 rounded-xl p-6 border border-orange-200">
+              <h4 className="font-semibold text-gray-900 mb-3">📝 Exemplo - Spa com 2 Profundidades:</h4>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>Situação:</strong> Um spa com duas seções circulares:</p>
+                <div>
+                  <p className="font-semibold mb-2">Seção 1:</p>
+                  <ul className="space-y-1 ml-4 mb-2">
+                    <li>• Diâmetro: 3,00 metros (raio = 1,5m)</li>
+                    <li>• Profundidade: 1 metro</li>
+                  </ul>
+                  <p className="font-mono text-sm bg-white rounded px-3 py-2">
+                    Volume 1 = 3,14 × 1,5 × 1,5 × 1 = 7,065 m³
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold mb-2">Seção 2:</p>
+                  <ul className="space-y-1 ml-4 mb-2">
+                    <li>• Diâmetro: 2,40 metros (raio = 1,2m)</li>
+                    <li>• Profundidade: 0,5 metro</li>
+                  </ul>
+                  <p className="font-mono text-sm bg-white rounded px-3 py-2">
+                    Volume 2 = 3,14 × 1,2 × 1,2 × 0,5 = 2,26 m³
+                  </p>
+                </div>
+                <div className="bg-green-100 rounded-lg p-3 border-2 border-green-400">
+                  <p className="font-semibold text-green-800">
+                    ✓ Volume Total: 7,065 + 2,26 = 9,325 m³ (ou 9.325 litros)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6 mt-4">
+              <div className="flex items-start gap-3">
+                <Lightbulb className="text-green-600 flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">💡 MACETE PROFISSIONAL:</h4>
+                  <p className="text-gray-700">
+                    Tire fotos da piscina e desenhe sobre elas as divisões para facilitar seu cálculo. 
+                    Seus clientes ficarão impressionados com sua precisão!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Parte 3: Reposição de Água */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+            Parte 3: Calculando Reposição de Água
+          </h2>
+          
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Você já conhece agora os cálculos para determinar a área de sua piscina e seu volume ideal de água. 
+            Agora veremos como você deve calcular e determinar a <strong>quantidade de água a ser adicionada</strong> caso 
+            sua linha d'água esteja baixa.
+          </p>
+
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Quando o Nível da Água Está Baixo</h3>
+            
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <p className="text-sm font-semibold text-gray-700 mb-4">Fórmula:</p>
+              <div className="bg-white rounded-lg p-4 border border-gray-200">
+                <p className="font-mono text-sm text-[#0072BC]">
+                  Volume a Repor = Área da Superfície (m²) × Diferença de Altura (m)
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+              <h4 className="font-semibold text-gray-900 mb-3">📝 Exemplo - Reposição de Água:</h4>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>Situação:</strong> Piscina de 8m × 4m (área = 32m²)</p>
+                <ul className="space-y-1 ml-4">
+                  <li>• Profundidade ideal: 1,40 metros</li>
+                  <li>• Profundidade medida: 1,25 metros</li>
+                  <li>• Diferença: 1,40 - 1,25 = 0,15 metros (ou 15 cm)</li>
+                </ul>
+                <div>
+                  <p className="font-semibold">Conversão:</p>
+                  <p className="font-mono text-sm bg-white rounded px-3 py-2 mt-1">
+                    15 centímetros = 0,15 metros
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold">Cálculo do volume a repor:</p>
+                  <p className="font-mono text-sm bg-white rounded px-3 py-2 mt-1">
+                    Volume = 32m² × 0,15m = 4,8 m³
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold">Conversão para litros:</p>
+                  <p className="font-mono text-sm bg-white rounded px-3 py-2 mt-1">
+                    4,8 m³ × 1.000 = 4.800 litros a serem adicionados
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-6 mb-4">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="text-red-600 flex-shrink-0 mt-1" size={24} />
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">⚠️ CONSELHO PROFISSIONAL:</h4>
+                <p className="text-gray-700 mb-3">
+                  Em dias muito quentes, uma piscina pode perder até 0,5cm por dia por evaporação. 
+                  Evite repor água constantemente – isso altera o balanço químico!
+                </p>
+                <p className="text-gray-700 mb-2">
+                  Se a piscina perde água constantemente de forma anormal, pode haver:
+                </p>
+                <ul className="space-y-1 ml-4 text-gray-700">
+                  <li>• Vazamento em encanamentos</li>
+                  <li>• Rachaduras na estrutura</li>
+                  <li>• Uso excessivo de usuários</li>
+                </ul>
+                <p className="text-gray-700 mt-2">
+                  <strong>Investigue antes de simplesmente adicionar mais água!</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Exercícios Práticos */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Exercícios Práticos para Você Treinar</h2>
+          <p className="text-gray-700 mb-6">
+            Agora é hora de colocar a mão na massa (ou melhor, na calculadora)! Tente resolver estes problemas:
+          </p>
+
+          <div className="space-y-6">
+            {/* Exercício 1 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-[#0072BC] mb-4">✏️ Exercício 1 - Conversão Simples:</h3>
+              <p className="text-gray-700 mb-4">Converta as seguintes medidas:</p>
+              <ol className="space-y-2 text-gray-700 ml-6 mb-6 list-decimal">
+                <li>3,5 litros = _______ mililitros</li>
+                <li>2.500 gramas = _______ quilogramas</li>
+                <li>25 centímetros = _______ metros</li>
+                <li>35 m³ = _______ litros</li>
+              </ol>
+              <details className="bg-gray-50 rounded-lg p-4">
+                <summary className="font-semibold text-gray-900 cursor-pointer">Ver Respostas</summary>
+                <div className="mt-3 space-y-2 text-gray-700">
+                  <p>1. <strong>3.500 mL</strong> (multiplique por 1.000)</p>
+                  <p>2. <strong>2,5 kg</strong> (divida por 1.000)</p>
+                  <p>3. <strong>0,25 m</strong> (divida por 100)</p>
+                  <p>4. <strong>35.000 litros</strong> (multiplique por 1.000)</p>
+                </div>
+              </details>
+            </div>
+
+            {/* Exercício 2 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-[#0072BC] mb-4">✏️ Exercício 2 - Volume de Piscina Retangular:</h3>
+              <p className="text-gray-700 mb-4">Calcule o volume em litros de uma piscina com:</p>
+              <ul className="space-y-1 ml-4 mb-4 text-gray-700">
+                <li>• Comprimento: 10 metros</li>
+                <li>• Largura: 5 metros</li>
+                <li>• Profundidade: 1,5 metros</li>
+              </ul>
+              <details className="bg-gray-50 rounded-lg p-4">
+                <summary className="font-semibold text-gray-900 cursor-pointer">Ver Resposta</summary>
+                <div className="mt-3 text-gray-700">
+                  <p className="font-mono">10 × 5 × 1,5 = 75 m³ = <strong>75.000 litros</strong></p>
+                </div>
+              </details>
+            </div>
+
+            {/* Exercício 3 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-[#0072BC] mb-4">✏️ Exercício 3 - Piscina Circular:</h3>
+              <p className="text-gray-700 mb-4">Calcule o volume de uma piscina circular com:</p>
+              <ul className="space-y-1 ml-4 mb-4 text-gray-700">
+                <li>• Diâmetro: 4 metros</li>
+                <li>• Profundidade: 1,2 metros</li>
+              </ul>
+              <details className="bg-gray-50 rounded-lg p-4">
+                <summary className="font-semibold text-gray-900 cursor-pointer">Ver Resolução</summary>
+                <div className="mt-3 space-y-2 text-gray-700">
+                  <p>1. Raio = 4 ÷ 2 = <strong>2 metros</strong></p>
+                  <p>2. Área = 3,14 × 2 × 2 = <strong>12,56 m²</strong></p>
+                  <p>3. Volume = 12,56 × 1,2 = <strong>15,07 m³</strong></p>
+                  <p>4. Em litros = <strong>15.070 litros</strong></p>
+                </div>
+              </details>
+            </div>
+
+            {/* Exercício 4 */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-[#0072BC] mb-4">✏️ Exercício 4 - Reposição de Água:</h3>
+              <p className="text-gray-700 mb-4">
+                Uma piscina de 40 m² de área está com o nível 20 cm abaixo do ideal. 
+                Quantos litros precisam ser adicionados?
+              </p>
+              <details className="bg-gray-50 rounded-lg p-4">
+                <summary className="font-semibold text-gray-900 cursor-pointer">Ver Resolução</summary>
+                <div className="mt-3 space-y-2 text-gray-700">
+                  <p>1. Converter: 20 cm = <strong>0,20 m</strong></p>
+                  <p>2. Volume = 40 × 0,20 = <strong>8 m³</strong></p>
+                  <p>3. Em litros = <strong>8.000 litros</strong></p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        {/* 7 Erros Fatais */}
+        <section className="mb-12">
+          <div className="bg-gradient-to-br from-red-600 to-red-800 rounded-xl p-8 text-white">
+            <h2 className="text-2xl font-semibold mb-6 text-center">⚠️ OS 7 ERROS FATAIS DE MEDIÇÃO</h2>
+            <p className="text-center text-red-100 mb-8">EVITE ESTAS ARMADILHAS!</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/10 rounded-lg p-6">
+                <p className="font-semibold mb-2">1. Confundir miligramas com gramas</p>
+                <p className="text-sm text-red-100">
+                  Diferença de 1.000x! Pode transformar um tratamento suave em um desastre químico.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <p className="font-semibold mb-2">2. Estimar o volume "no olho"</p>
+                <p className="text-sm text-red-100">
+                  É como adivinhar o peso de uma pessoa olhando para ela. Raramente dá certo!
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <p className="font-semibold mb-2">3. Ignorar a profundidade média</p>
+                <p className="text-sm text-red-100">
+                  Piscinas com fundo inclinado podem enganar até profissionais experientes.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <p className="font-semibold mb-2">4. Confiar em "medidas de colher"</p>
+                <p className="text-sm text-red-100">
+                  Uma colher de sopa não é uma unidade de medida padronizada! Use ferramentas apropriadas.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <p className="font-semibold mb-2">5. Esquecer-se da linha d'água</p>
+                <p className="text-sm text-red-100">
+                  Piscinas não são preenchidas até a borda. Considere sempre 10-15cm abaixo da borda.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6">
+                <p className="font-semibold mb-2">6. Não compensar para diferentes concentrações</p>
+                <p className="text-sm text-red-100">
+                  Dois produtos com o mesmo nome podem ter concentrações diferentes. Leia os rótulos!
+                </p>
+              </div>
+            </div>
+            <div className="bg-white/10 rounded-lg p-6 mt-6">
+              <p className="font-semibold mb-2 text-center">7. Não registrar os cálculos</p>
+              <p className="text-sm text-red-100 text-center">
+                Sem histórico, você precisará "reinventar a roda" a cada visita.
+              </p>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-xl font-semibold">💭 PENSAMENTO FINAL:</p>
+              <p className="text-lg italic mt-2">
+                "Medir duas vezes, tratar uma". Este pequeno investimento de tempo nos cálculos 
+                vai economizar horas de trabalho corretivo depois!
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Resumo */}
