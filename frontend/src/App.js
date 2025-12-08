@@ -59,6 +59,14 @@ function AppRouter() {
       <Route path="/dashboard/apostila/modulo-2" element={<ApostilaModulo2 />} />
       <Route path="/dashboard/apostila/modulo-3" element={<ApostilaModulo3 />} />
       <Route path="/dashboard/apostila/modulo-4" element={<ApostilaModulo4 />} />
+      <Route path="/dashboard/apostila/modulo-5" element={<ApostilaModulo5 />} />
+      <Route path="/dashboard/apostila/modulo-6" element={<ApostilaModulo6 />} />
+      <Route path="/dashboard/apostila/modulo-7" element={<ApostilaModulo7 />} />
+      <Route path="/dashboard/apostila/modulo-8" element={<ApostilaModulo8 />} />
+      <Route path="/dashboard/apostila/modulo-9" element={<ApostilaModulo9 />} />
+      <Route path="/dashboard/apostila/modulo-10" element={<ApostilaModulo10 />} />
+      <Route path="/dashboard/apostila/modulo-11" element={<ApostilaModulo11 />} />
+      <Route path="/dashboard/apostila/modulo-12" element={<ApostilaModulo12 />} />
       <Route path="/courses" element={<ProtectedRoute><CourseCatalog /></ProtectedRoute>} />
       <Route path="/courses/:courseId" element={<ProtectedRoute><CourseDetail /></ProtectedRoute>} />
       <Route path="/courses/:courseId/learn/:lessonId" element={<ProtectedRoute><LessonViewer /></ProtectedRoute>} />
