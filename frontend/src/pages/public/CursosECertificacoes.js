@@ -435,7 +435,7 @@ function CursosECertificacoes() {
                       e.target.src = `https://via.placeholder.com/400x300/0072BC/FFFFFF?text=Capítulo+${capitulo.numero}`;
                     }}
                   />
-                  <div className="absolute top-4 left-4 w-12 h-12 bg-[#0072BC] text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">
+                  <div className="absolute top-4 left-4 w-12 h-12 bg-[#FF6B00] text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">
                     {capitulo.numero}
                   </div>
                 </div>
