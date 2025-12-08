@@ -44,6 +44,7 @@ function AppRouter() {
       {/* Páginas protegidas */}
       <Route path="/dashboard" element={<CourseDashboard />} />
       <Route path="/dashboard/chapter/:chapterId" element={<ChapterView />} />
+      <Route path="/dashboard/apostila/modulo-1" element={<ApostilaModulo1 />} />
       <Route path="/courses" element={<ProtectedRoute><CourseCatalog /></ProtectedRoute>} />
       <Route path="/courses/:courseId" element={<ProtectedRoute><CourseDetail /></ProtectedRoute>} />
       <Route path="/courses/:courseId/learn/:lessonId" element={<ProtectedRoute><LessonViewer /></ProtectedRoute>} />
