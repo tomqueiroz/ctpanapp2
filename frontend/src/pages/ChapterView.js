@@ -9,20 +9,25 @@ function ChapterView({ user = { name: 'Aluno' } }) {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentChapter = chapterId ? parseInt(chapterId) : 1;
+  const API_URL = process.env.REACT_APP_BACKEND_URL;
+
+  const getProxiedImageUrl = (originalUrl) => {
+    return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
+  };
 
   const chapters = [
-    { id: 1, titulo: 'Introdução ao Tratamento de Piscinas', status: 'completed', progresso: 100, imagem: 'https://readdy.ai/api/search-image?query=pool%20water%20testing%20equipment%20professional&width=100&height=80&seq=1' },
-    { id: 2, titulo: 'Segurança no Manuseio de Produtos', status: 'completed', progresso: 100, imagem: 'https://readdy.ai/api/search-image?query=safety%20equipment%20pool%20maintenance&width=100&height=80&seq=2' },
-    { id: 3, titulo: 'Tipos de Tratamentos', status: 'completed', progresso: 100, imagem: 'https://readdy.ai/api/search-image?query=pool%20water%20treatment%20chemicals&width=100&height=80&seq=3' },
-    { id: 4, titulo: 'Controle e Análise da Água', status: 'in-progress', progresso: 65, imagem: 'https://readdy.ai/api/search-image?query=water%20quality%20analysis%20laboratory&width=100&height=80&seq=4' },
-    { id: 5, titulo: 'Tratamentos Alternativos', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=alternative%20pool%20treatment%20systems&width=100&height=80&seq=5' },
-    { id: 6, titulo: 'Manutenção e Resolução', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=pool%20maintenance%20repair&width=100&height=80&seq=6' },
-    { id: 7, titulo: 'Solução de Problemas', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=troubleshooting%20pool%20problems&width=100&height=80&seq=7' },
-    { id: 8, titulo: 'Relatórios e Documentação', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=documentation%20reports%20professional&width=100&height=80&seq=8' },
-    { id: 9, titulo: 'Atendimento ao Cliente', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=customer%20service%20professional&width=100&height=80&seq=9' },
-    { id: 10, titulo: 'Gestão de Projetos', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=project%20management%20planning&width=100&height=80&seq=10' },
-    { id: 11, titulo: 'Sustentabilidade', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=sustainability%20eco%20friendly&width=100&height=80&seq=11' },
-    { id: 12, titulo: 'Certificação Final', status: 'locked', progresso: 0, imagem: 'https://readdy.ai/api/search-image?query=certificate%20graduation%20achievement&width=100&height=80&seq=12' }
+    { id: 1, titulo: 'Introdução ao Tratamento de Piscinas', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png' },
+    { id: 2, titulo: 'Segurança no Manuseio de Produtos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png' },
+    { id: 3, titulo: 'Tipos de Tratamentos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png' },
+    { id: 4, titulo: 'Controle e Análise da Água', status: 'in-progress', progresso: 65, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png' },
+    { id: 5, titulo: 'Tratamentos Alternativos', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png' },
+    { id: 6, titulo: 'Manutenção e Resolução', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/svos7h8v_Capitulo%206.png' },
+    { id: 7, titulo: 'Solução de Problemas', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/8x5drcve_Capitulo%207.png' },
+    { id: 8, titulo: 'Relatórios e Documentação', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/cf7z8z1q_Capitulo%208.png' },
+    { id: 9, titulo: 'Atendimento ao Cliente', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/ncywo7ov_Capitulo%209.png' },
+    { id: 10, titulo: 'Gestão de Projetos', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/bmg950w8_Capitulo%2010.png' },
+    { id: 11, titulo: 'Sustentabilidade', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png' },
+    { id: 12, titulo: 'Certificação Final', status: 'locked', progresso: 0, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png' }
   ];
 
   const chapterData = {
