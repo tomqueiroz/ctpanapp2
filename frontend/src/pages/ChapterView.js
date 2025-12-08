@@ -236,7 +236,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
   const chapterData = chaptersData[currentChapter] || chaptersData[1];
 
   // Recursos disponíveis por capítulo
-  const apostilasDisponiveis = [1, 2, 3, 4]; // Capítulos com apostila
+  const apostilasDisponiveis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // Capítulos com apostila
   const hasApostila = apostilasDisponiveis.includes(currentChapter);
   
   const recursos = [
