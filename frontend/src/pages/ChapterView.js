@@ -521,6 +521,73 @@ function ChapterView({ user = { name: 'Aluno' } }) {
               </div>
             </section>
 
+            {/* Navegação Rápida - Todos os 12 Capítulos */}
+            <section className="mb-16">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 border border-gray-200">
+                <div className="flex items-center gap-3 mb-6">
+                  <BookOpen className="text-[#0072BC]" size={28} />
+                  <h2 className="text-2xl font-light text-gray-900">Navegação Rápida - Todos os Módulos</h2>
+                </div>
+                
+                <p className="text-gray-600 font-light mb-8">
+                  Acesse rapidamente qualquer um dos 12 módulos do curso CTP
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {chapters.map((chapter) => {
+                    const isCompleted = chapter.status === 'completed';
+                    const isLocked = chapter.status === 'locked';
+                    const isCurrent = chapter.id === currentChapter;
+                    
+                    return (
+                      <button
+                        key={chapter.id}
+                        onClick={() => !isLocked && navigate(`/dashboard/chapter/${chapter.id}`)}
+                        disabled={isLocked}
+                        className={`text-left p-4 rounded-xl border-2 transition-all ${
+                          isCurrent
+                            ? 'bg-[#0072BC] border-[#0072BC] text-white shadow-lg'
+                            : isCompleted
+                            ? 'bg-white border-green-200 hover:border-green-400 hover:shadow-md'
+                            : isLocked
+                            ? 'bg-gray-100 border-gray-200 opacity-50 cursor-not-allowed'
+                            : 'bg-white border-gray-200 hover:border-[#0072BC] hover:shadow-md'
+                        }`}
+                      >
+                        <div className="flex items-start justify-between mb-2">
+                          <span className={`text-sm font-semibold ${
+                            isCurrent ? 'text-blue-100' : 'text-gray-500'
+                          }`}>
+                            Módulo {chapter.id}
+                          </span>
+                          {isCompleted && !isCurrent && (
+                            <CheckCircle2 className="text-green-500" size={18} />
+                          )}
+                          {isCurrent && (
+                            <span className="text-xs bg-white/20 text-white px-2 py-1 rounded">Atual</span>
+                          )}
+                          {isLocked && (
+                            <Lock className="text-gray-400" size={18} />
+                          )}
+                        </div>
+                        <h3 className={`font-medium text-sm mb-1 ${
+                          isCurrent ? 'text-white' : 'text-gray-900'
+                        }`}>
+                          {chapter.titulo}
+                        </h3>
+                        {!isLocked && !isCurrent && (
+                          <div className="flex items-center gap-1 text-xs text-[#0072BC] mt-2">
+                            <span>Acessar</span>
+                            <ChevronRight size={14} />
+                          </div>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+
             {/* Seção 4: Próximo Módulo */}
             <section>
               <div className="flex items-center gap-3 mb-8">
