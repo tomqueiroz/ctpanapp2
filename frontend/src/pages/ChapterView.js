@@ -333,6 +333,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/fnz522b5_ABNT_NBR_10339__O_Guia_Completo_da_Seguran%C3%A7a_em_Piscinas_%E2%80%93_Do_R.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 11 ? [{
+      tipo: 'podcast',
+      titulo: 'Segurança e Circulação Perfeita',
+      descricao: 'Desvendando a Engenharia Hídrica - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/pjaeye17_Seguran%C3%A7a_e_Circula%C3%A7%C3%A3o_Perfeita__Desvendando_a_Engenharia_H%C3%ADdri.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
