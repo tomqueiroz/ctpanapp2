@@ -435,7 +435,9 @@ function ConhecaCTP() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => navigate('/login')}
+              onClick={() => {
+                document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl"
             >
               Inscreva-se Agora
