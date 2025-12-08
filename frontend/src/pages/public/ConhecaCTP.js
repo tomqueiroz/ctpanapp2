@@ -47,24 +47,30 @@ function ConhecaCTP() {
     { icon: Users, title: "+5.000 Alunos", description: "Já certificados" }
   ];
 
+  const testimonialImages = [
+    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=100&h=100&fit=crop&crop=faces"
+  ];
+
   const testimonials = [
     {
       name: "Roberto Almeida",
       location: "São Paulo, SP",
       text: "O CTP mudou completamente minha carreira. Agora tenho minha própria empresa com mais de 30 clientes fixos.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=faces"
+      image: testimonialImages[0]
     },
     {
       name: "Fernanda Costa",
       location: "Florianópolis, SC",
       text: "A metodologia é excelente! Mesmo sem experiência prévia, consegui aprender tudo de forma clara.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces"
+      image: testimonialImages[1]
     },
     {
       name: "Carlos Eduardo Santos",
       location: "Belo Horizonte, MG",
       text: "Certificar toda a minha equipe foi a melhor decisão. Aumentamos nossos preços em 30%.",
-      image: "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?w=100&h=100&fit=crop&crop=faces"
+      image: testimonialImages[2]
     }
   ];
 
