@@ -96,7 +96,7 @@ function ConhecaCTP() {
               Conheça o <span className="font-medium">Curso CTP</span>
             </h1>
             <p className="text-xl text-blue-100 font-light mb-8 leading-relaxed">
-              O Curso Técnico em Piscinas mais completo do Brasil. 12 módulos práticos, 160 horas de conteúdo e certificação ANAPP reconhecida nacionalmente.
+              O Curso Técnico em Piscinas mais completo do Brasil. 12 módulos com muitas dicas e as melhores práticas, 160 horas de conteúdo e certificação ANAPP reconhecida nacionalmente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
