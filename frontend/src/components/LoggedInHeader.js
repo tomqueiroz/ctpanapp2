@@ -33,7 +33,7 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <button onClick={() => navigate('/dashboard')} className="flex items-center">
+            <button onClick={() => navigate('/')} className="flex items-center">
               <img 
                 src="https://customer-assets.emergentagent.com/job_poolcurso/artifacts/1t3erzmd_logo%20ctp%20branco.png" 
                 alt="CTP ANAPP Logo" 
