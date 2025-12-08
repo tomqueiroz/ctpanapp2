@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
 import Footer from '../components/Footer';
@@ -8,6 +8,11 @@ import { generateApostilaPDF } from '../utils/pdfGenerator';
 function ApostilaModulo1({ user = { name: 'Aluno' } }) {
   const navigate = useNavigate();
   const [downloading, setDownloading] = useState(false);
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleDownloadPDF = async () => {
     setDownloading(true);
