@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
 import Footer from '../components/Footer';
@@ -10,6 +10,11 @@ function ChapterView({ user = { name: 'Aluno' } }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentChapter = chapterId ? parseInt(chapterId) : 1;
   const API_URL = process.env.REACT_APP_BACKEND_URL;
+
+  // Scroll to top when chapter changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [chapterId]);
 
   const getProxiedImageUrl = (originalUrl) => {
     return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
