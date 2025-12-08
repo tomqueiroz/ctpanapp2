@@ -57,12 +57,12 @@ function ChapterView({ user = { name: 'Aluno' } }) {
     },
     {
       tipo: 'video',
-      titulo: 'Videoaula Introdutória',
+      titulo: 'Videoaula Módulo 1',
       descricao: 'Apresentação visual dos conceitos principais',
       duracao: '2 minutos',
       icone: Video,
       cor: 'from-[#0072BC] to-[#005a9e]',
-      url: 'https://youtu.be/PuLMcD3h2h0'
+      url: 'https://youtu.be/fP3fInaBxNY'
     },
     {
       tipo: 'podcast',
