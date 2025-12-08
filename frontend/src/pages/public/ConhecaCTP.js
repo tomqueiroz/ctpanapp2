@@ -267,9 +267,10 @@ function ConhecaCTP() {
                   <img 
                     src={getProxiedImageUrl(testimonial.image)}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4"
+                    className="w-16 h-16 rounded-full object-cover mr-4 bg-gray-200"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/100/0072BC/FFFFFF?text=' + testimonial.name.charAt(0);
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.marginLeft = '0';
                     }}
                   />
                   <div>
