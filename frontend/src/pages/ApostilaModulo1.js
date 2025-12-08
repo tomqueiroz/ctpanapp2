@@ -12,70 +12,13 @@ function ApostilaModulo1({ user = { name: 'Aluno' } }) {
   const handleDownloadPDF = async () => {
     setDownloading(true);
     
-    try {
-      const html2pdf = (await import('html2pdf.js')).default;
-      const element = document.getElementById('apostila-content');
-      
-      const opt = {
-        margin: [0.8, 0.5, 0.8, 0.5],
-        filename: 'Apostila-CTP-Modulo-1-Calculos.pdf',
-        image: { type: 'jpeg', quality: 0.95 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { 
-          unit: 'in', 
-          format: 'letter', 
-          orientation: 'portrait',
-          compress: true
-        },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-      };
-
-      // Gerar o PDF
-      const pdf = await html2pdf().set(opt).from(element).toPdf().get('pdf');
-      
-      const totalPages = pdf.internal.getNumberOfPages();
-      
-      // Adicionar cabeçalho e rodapé em cada página
-      for (let i = 1; i <= totalPages; i++) {
-        pdf.setPage(i);
-        
-        // Cabeçalho
-        pdf.setFontSize(10);
-        pdf.setTextColor(0, 114, 188); // Azul CTP
-        pdf.setFont('helvetica', 'bold');
-        pdf.text('CTP ANAPP', 0.5, 0.5);
-        pdf.setFont('helvetica', 'normal');
-        pdf.setFontSize(8);
-        pdf.setTextColor(100, 100, 100);
-        pdf.text('Módulo 1 - Cálculos', 0.5, 0.65);
-        
-        // Linha do cabeçalho
-        pdf.setDrawColor(0, 114, 188);
-        pdf.setLineWidth(0.01);
-        pdf.line(0.5, 0.75, 8, 0.75);
-        
-        // Rodapé
-        pdf.setFontSize(8);
-        pdf.setTextColor(150, 150, 150);
-        pdf.setFont('helvetica', 'italic');
-        pdf.text('Proibida a reprodução - Direitos Autorais Aplicáveis', 0.5, 10.7);
-        
-        // Numeração da página
-        pdf.setFont('helvetica', 'normal');
-        pdf.text(`Página ${i} de ${totalPages}`, 7.2, 10.7);
-        
-        // Linha do rodapé
-        pdf.setDrawColor(200, 200, 200);
-        pdf.line(0.5, 10.55, 8, 10.55);
-      }
-      
-      pdf.save('Apostila-CTP-Modulo-1-Calculos.pdf');
-    } catch (error) {
-      console.error('Erro ao gerar PDF:', error);
-      alert('Erro ao gerar PDF. Tente novamente.');
-    } finally {
-      setDownloading(false);
+    const result = await generateApostilaPDF('apostila-content', 1, 'Calculos');
+    
+    if (!result.success) {
+      alert(`Erro ao gerar PDF: ${result.error}`);
     }
+    
+    setDownloading(false);
   };
 
   return (
