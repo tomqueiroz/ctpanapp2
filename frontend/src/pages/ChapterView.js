@@ -265,13 +265,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {recursos.map((recurso, index) => {
                   const Icon = recurso.icone;
+                  const Component = recurso.internal ? 'button' : 'a';
+                  const props = recurso.internal
+                    ? { onClick: () => navigate(recurso.url) }
+                    : { href: recurso.url, target: '_blank', rel: 'noopener noreferrer' };
+                  
                   return (
-                    <a
+                    <Component
                       key={index}
-                      href={recurso.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-lg transition-all"
+                      {...props}
+                      className="group bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-lg transition-all text-left w-full"
                     >
                       <div className="flex items-start gap-4">
                         <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${recurso.cor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
@@ -290,7 +293,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
                         </div>
                         <ChevronRight className="text-gray-400 group-hover:text-[#0072BC] transition-colors" size={20} />
                       </div>
-                    </a>
+                    </Component>
                   );
                 })}
               </div>
