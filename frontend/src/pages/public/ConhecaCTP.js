@@ -234,7 +234,9 @@ function ConhecaCTP() {
                   Junte-se aos mais de 5.000 profissionais certificados
                 </p>
                 <button
-                  onClick={() => navigate('/login')}
+                  onClick={() => {
+                    document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg w-full"
                 >
                   Comece Agora
