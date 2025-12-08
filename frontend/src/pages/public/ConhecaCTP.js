@@ -21,7 +21,7 @@ function ConhecaCTP() {
   }, []);
 
   const modulos = [
-    { numero: 1, titulo: "Introdução ao Tratamento de Piscinas", descricao: "A Importância das Medidas e o Sistema Internacional", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png" },
+    { numero: 1, titulo: "Cálculos", descricao: "O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png" },
     { numero: 2, titulo: "Segurança no Manuseio de Produtos", descricao: "Protocolos de segurança e EPIs obrigatórios", carga: "12h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png" },
     { numero: 3, titulo: "Tipos de Tratamentos", descricao: "Tratamento físico, químico e sistemas de filtração", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png" },
     { numero: 4, titulo: "Controle e Análise da Água", descricao: "Parâmetros químicos e instrumentos de medição", carga: "15h", imagem: "https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png" },
