@@ -517,7 +517,12 @@ function Homepage() {
                 })}
               </div>
               <button
-                onClick={() => navigate('/conheca-ctp')}
+                onClick={() => {
+                  navigate('/conheca-ctp');
+                  setTimeout(() => {
+                    document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 500);
+                }}
                 className="bg-[#0072BC] text-white py-4 px-8 rounded-full font-medium hover:bg-[#005a9e] transition-all shadow-lg"
               >
                 Quero Meu Certificado
