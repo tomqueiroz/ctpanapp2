@@ -42,7 +42,7 @@ function Homepage() {
 
   const features = [
     { icon: Laptop, title: '100% Online', description: 'Estude no seu ritmo, pelo celular ou computador, 24h por dia' },
-    { icon: Target, title: 'Aulas práticas', description: 'Aprenda fazendo com exemplos reais do dia a dia' },
+    { icon: Target, title: 'Muitas dicas e as melhores práticas', description: 'Aprenda com exemplos reais do dia a dia' },
     { icon: MessageCircle, title: 'Suporte direto', description: 'Tire dúvidas pelo WhatsApp com professores especialistas' },
     { icon: Users, title: 'Comunidade VIP', description: 'Networking com profissionais de todo o Brasil' }
   ];
