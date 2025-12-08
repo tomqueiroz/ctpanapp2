@@ -129,7 +129,13 @@ function Header({ user = null }) {
               Área do Aluno
             </button>
             <button
-              onClick={() => { handleLogin(); setMobileMenuOpen(false); }}
+              onClick={() => { 
+                navigateToPage('/conheca-ctp'); 
+                setMobileMenuOpen(false);
+                setTimeout(() => {
+                  document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+              }}
               className="w-full bg-[#FF6B00] text-white py-3 px-6 rounded-full font-medium hover:bg-[#e55d00] transition-all mt-2"
             >
               Inscreva-se
