@@ -51,7 +51,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Parâmetros químicos, instrumentos de medição e ajustes',
       duracao: '15 horas',
       status: 'in-progress',
-      imagem: 'https://readdy.ai/api/search-image?query=pH%20testing%20of%20pool%20water%2C%20water%20balance%20chemicals%2C%20alkalinity%20adjustment%2C%20calcium%20hardness%20testing%2C%20professional%20water%20testing%20kit%20with%20color%20chart%2C%20technical%20pool%20water%20analysis&width=400&height=300&seq=4&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png'
     },
     {
       id: 5,
