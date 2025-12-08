@@ -21,7 +21,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Conceitos básicos de manutenção, fundamentos de limpeza e segurança dos usuários',
       duracao: '12 horas',
       status: 'completed',
-      imagem: 'https://readdy.ai/api/search-image?query=professional%20calculator%2C%20mathematical%20formulas%2C%20pool%20dimensions%20measurements%2C%20technical%20drawings%20of%20swimming%20pools%2C%20water%20volume%20calculations%2C%20precise%20engineering%20tools%2C%20clean%20professional%20environment&width=400&height=300&seq=1&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png'
     },
     {
       id: 2,
