@@ -71,7 +71,12 @@ function Header({ user = null }) {
             Área do Aluno
           </button>
           <button
-            onClick={handleLogin}
+            onClick={() => {
+              navigateToPage('/conheca-ctp');
+              setTimeout(() => {
+                document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+              }, 500);
+            }}
             className="bg-[#FF6B00] text-white py-2.5 px-6 rounded-full font-medium text-sm hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl active:scale-95"
             data-testid="header-login-button"
           >
