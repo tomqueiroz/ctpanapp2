@@ -128,7 +128,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       numero: 'XII',
       titulo: 'Certificação Final',
       subtitulo: 'Tendências e Inovações',
-      descricao: 'Revisão geral, avaliação teórica e projeto prático',
+      descricao: 'Revisão geral, avaliação teórica e aplicação das melhores práticas',
       duracao: '10 horas',
       status: 'locked',
       imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png'
