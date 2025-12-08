@@ -748,7 +748,9 @@ function CursosECertificacoes() {
           </div>
 
           <button
-            onClick={() => navigate('/contato')}
+            onClick={() => {
+              document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="bg-[#FF6B00] text-white py-4 px-12 rounded-lg font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg"
           >
             Comece Sua Transformação Agora
