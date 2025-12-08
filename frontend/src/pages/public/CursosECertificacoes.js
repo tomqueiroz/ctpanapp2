@@ -300,7 +300,7 @@ function CursosECertificacoes() {
               <ul className="space-y-3">
                 <li className="flex items-start text-gray-700">
                   <Check className="text-green-500 mr-2 shrink-0" size={20} />
-                  Renda média 300% maior
+                  Aumente o valor da sua mão de obra com a certificação reconhecida pela ANAPP
                 </li>
                 <li className="flex items-start text-gray-700">
                   <Check className="text-green-500 mr-2 shrink-0" size={20} />
