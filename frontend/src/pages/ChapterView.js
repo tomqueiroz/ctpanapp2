@@ -343,6 +343,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/pjaeye17_Seguran%C3%A7a_e_Circula%C3%A7%C3%A3o_Perfeita__Desvendando_a_Engenharia_H%C3%ADdri.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 12 ? [{
+      tipo: 'podcast',
+      titulo: 'Aquecimento de Piscinas',
+      descricao: 'COP, Capas Térmicas e a Ciência por Trás - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/zaejmtxl_Aquecimento_de_Piscinas__COP%2C_Capas_T%C3%A9rmicas_e_a_Ci%C3%AAncia_por_Tr.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
