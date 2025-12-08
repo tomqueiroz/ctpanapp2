@@ -9,6 +9,11 @@ function ConhecaCTP() {
   const [scrollY, setScrollY] = useState(0);
   const API_URL = process.env.REACT_APP_BACKEND_URL;
 
+  // Helper function to get proxied image URL
+  const getProxiedImageUrl = (originalUrl) => {
+    return `${API_URL}/api/proxy-image?url=${encodeURIComponent(originalUrl)}`;
+  };
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
