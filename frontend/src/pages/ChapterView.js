@@ -16,7 +16,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
   };
 
   const chapters = [
-    { id: 1, titulo: 'Introdução ao Tratamento de Piscinas', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png' },
+    { id: 1, titulo: 'Cálculos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/kjc951x6_Capitulo%201.png' },
     { id: 2, titulo: 'Segurança no Manuseio de Produtos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/st7v82pv_Capitulo%202.png' },
     { id: 3, titulo: 'Tipos de Tratamentos', status: 'completed', progresso: 100, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/blgghqom_Capitulo%203.png' },
     { id: 4, titulo: 'Controle e Análise da Água', status: 'in-progress', progresso: 65, imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/gp10g6y5_Capitulo%204.png' },
