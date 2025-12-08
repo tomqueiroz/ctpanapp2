@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LoggedInHeader from '../components/LoggedInHeader';
 import Footer from '../components/Footer';
-import { FileText, Video, Headphones, PenTool, BookOpen, Award, ChevronRight, Menu, X, TrendingUp, Target, Rocket, CheckCircle, PlayCircle, Lock, Download, ExternalLink } from 'lucide-react';
+import { FileText, Video, Headphones, PenTool, BookOpen, Award, ChevronRight, Menu, X, TrendingUp, Target, Rocket, CheckCircle, CheckCircle2, PlayCircle, Lock, Download, ExternalLink } from 'lucide-react';
 
 function ChapterView({ user = { name: 'Aluno' } }) {
   const { chapterId } = useParams();
