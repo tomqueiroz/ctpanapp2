@@ -22,8 +22,8 @@ function Homepage() {
   const benefits = [
     {
       icon: DollarSign,
-      title: 'Aumente sua renda',
-      description: 'Nossos alunos relatam aumento de 50% a 200% na renda após a certificação. Atenda clientes premium e cobre mais pelo seu trabalho.',
+      title: 'Aumente o valor da sua mão de obra',
+      description: 'Com a certificação reconhecida pela ANAPP, atenda clientes premium e cobre mais pelo seu trabalho qualificado.',
       color: 'from-green-500 to-green-600'
     },
     {
