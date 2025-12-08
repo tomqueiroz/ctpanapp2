@@ -565,14 +565,62 @@ function SobreAnapp() {
               ))}
             </div>
 
-            <a
-              href="https://www.anapp.org.br/contato"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg text-center"
-            >
-              Quero me Associar
-            </a>
+            {/* Formulário de Associação */}
+            <form className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Nome Completo *"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="E-mail *"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-all"
+                  required
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <input
+                  type="tel"
+                  placeholder="Telefone *"
+                  className="px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-all"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="CNPJ/CPF"
+                  className="px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-all"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Nome da Empresa"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-all"
+                />
+              </div>
+              <div>
+                <textarea
+                  placeholder="Mensagem (opcional)"
+                  rows="3"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-all resize-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert('Formulário enviado! Em breve entraremos em contato.');
+                }}
+              >
+                Enviar Solicitação de Associação
+              </button>
+            </form>
           </div>
 
           <p className="text-center text-blue-100 font-light text-sm mt-8">
