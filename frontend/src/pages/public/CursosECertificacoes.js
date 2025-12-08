@@ -415,15 +415,23 @@ function CursosECertificacoes() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capitulos.map((capitulo, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:shadow-md transition">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#0072BC] text-white rounded-lg flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+              <div key={index} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all group">
+                <div className="relative h-48 bg-gray-200 overflow-hidden">
+                  <img
+                    src={getProxiedImageUrl(capitulo.imagem)}
+                    alt={capitulo.titulo}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      e.target.src = `https://via.placeholder.com/400x300/0072BC/FFFFFF?text=Capítulo+${capitulo.numero}`;
+                    }}
+                  />
+                  <div className="absolute top-4 left-4 w-12 h-12 bg-[#0072BC] text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">
                     {capitulo.numero}
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{capitulo.titulo}</h3>
-                    <p className="text-gray-600 text-sm">{capitulo.descricao}</p>
-                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{capitulo.titulo}</h3>
+                  <p className="text-gray-600 text-sm">{capitulo.descricao}</p>
                 </div>
               </div>
             ))}
