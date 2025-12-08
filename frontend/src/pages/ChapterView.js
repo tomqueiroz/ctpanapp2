@@ -37,13 +37,27 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       titulo: 'Cálculos',
       subtitulo: 'Fundamentos essenciais para o profissional de sucesso',
       descricao: 'O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.',
-      duracao: '4 horas',
+      duracao: '12 horas',
       recursosDisponiveis: 6,
       modulos: [
-        { titulo: 'Química da Água', duracao: '45 min' },
-        { titulo: 'Pesos e Medidas', duracao: '30 min' },
-        { titulo: 'Sistema Internacional (SI)', duracao: '40 min' },
-        { titulo: 'pH e Alcalinidade', duracao: '50 min' }
+        { titulo: 'Sistema Internacional', duracao: '45 min' },
+        { titulo: 'Conversões', duracao: '50 min' },
+        { titulo: 'Cálculo de Volume', duracao: '60 min' },
+        { titulo: 'Reposição de Água', duracao: '40 min' }
+      ]
+    },
+    2: {
+      numero: 2,
+      titulo: 'Volume e Capacidade',
+      subtitulo: 'Cálculos Avançados',
+      descricao: 'Formatos especiais: ovais, em L, formato rim, multinível e cálculos complexos.',
+      duracao: '12 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Piscinas Ovais', duracao: '45 min' },
+        { titulo: 'Formato em L', duracao: '50 min' },
+        { titulo: 'Formato Rim', duracao: '45 min' },
+        { titulo: 'Piscinas Multinível', duracao: '55 min' }
       ]
     },
     3: {
@@ -51,13 +65,13 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       titulo: 'Desinfecção e Produtos Químicos',
       subtitulo: 'Cloro, pH e Segurança na Manutenção',
       descricao: 'Tipos de cloro, dosagens, certificações de produtos e segurança na aplicação.',
-      duracao: '5 horas',
+      duracao: '15 horas',
       recursosDisponiveis: 6,
       modulos: [
         { titulo: 'O Cloro', duracao: '60 min' },
-        { titulo: 'Tipos de Cloro', duracao: '45 min' },
-        { titulo: 'pH e Equilíbrio', duracao: '50 min' },
-        { titulo: 'Produtos Certificados', duracao: '40 min' }
+        { titulo: 'Tipos de Cloro', duracao: '50 min' },
+        { titulo: 'Certificações', duracao: '45 min' },
+        { titulo: 'Armazenamento', duracao: '40 min' }
       ]
     },
     4: {
@@ -65,13 +79,125 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       titulo: 'Equilíbrio Químico da Água',
       subtitulo: 'Alcalinidade, pH e Dureza - O Triângulo do Equilíbrio',
       descricao: 'Aprenda a manter o equilíbrio químico perfeito: alcalinidade total, pH e dureza cálcica.',
-      duracao: '5 horas',
+      duracao: '15 horas',
       recursosDisponiveis: 6,
       modulos: [
         { titulo: 'Alcalinidade Total', duracao: '50 min' },
         { titulo: 'pH', duracao: '60 min' },
-        { titulo: 'Dureza de Cálcio', duracao: '45 min' },
-        { titulo: 'Índice de Langelier', duracao: '40 min' }
+        { titulo: 'Dureza de Cálcio', duracao: '50 min' },
+        { titulo: 'Índice de Langelier', duracao: '45 min' }
+      ]
+    },
+    5: {
+      numero: 5,
+      titulo: 'Dosagem e Aplicação',
+      subtitulo: 'Cálculos Práticos',
+      descricao: 'Como calcular e aplicar produtos corretamente. Técnicas de aplicação segura.',
+      duracao: '12 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Cálculo de Dosagens', duracao: '60 min' },
+        { titulo: 'Métodos de Aplicação', duracao: '50 min' },
+        { titulo: 'Segurança', duracao: '45 min' },
+        { titulo: 'Cronogramas', duracao: '40 min' }
+      ]
+    },
+    6: {
+      numero: 6,
+      titulo: 'Filtração e Circulação',
+      subtitulo: 'Bombas e Filtros',
+      descricao: 'Sistemas de filtração, bombas, skimmers e manutenção de equipamentos.',
+      duracao: '14 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Tipos de Filtros', duracao: '55 min' },
+        { titulo: 'Bombas', duracao: '50 min' },
+        { titulo: 'Manutenção', duracao: '60 min' },
+        { titulo: 'Troubleshooting', duracao: '45 min' }
+      ]
+    },
+    7: {
+      numero: 7,
+      titulo: 'Manutenção',
+      subtitulo: 'Rotinas Diárias',
+      descricao: 'Manutenção preventiva e corretiva, rotinas semanais e mensais.',
+      duracao: '15 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Rotina Diária', duracao: '50 min' },
+        { titulo: 'Rotina Semanal', duracao: '55 min' },
+        { titulo: 'Rotina Mensal', duracao: '60 min' },
+        { titulo: 'Preventiva', duracao: '50 min' }
+      ]
+    },
+    8: {
+      numero: 8,
+      titulo: 'Segurança e Normas',
+      subtitulo: 'ABNT e EPIs',
+      descricao: 'Normas ABNT, equipamentos de proteção e primeiros socorros.',
+      duracao: '12 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'ABNT NBR 10.339', duracao: '60 min' },
+        { titulo: 'EPIs', duracao: '45 min' },
+        { titulo: 'Primeiros Socorros', duracao: '55 min' },
+        { titulo: 'Emergências', duracao: '40 min' }
+      ]
+    },
+    9: {
+      numero: 9,
+      titulo: 'Problemas e Soluções',
+      subtitulo: 'Diagnóstico',
+      descricao: 'Água verde, turva, algas, manchas - diagnóstico e solução.',
+      duracao: '13 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Água Verde', duracao: '50 min' },
+        { titulo: 'Água Turva', duracao: '50 min' },
+        { titulo: 'Algas', duracao: '55 min' },
+        { titulo: 'Manchas', duracao: '45 min' }
+      ]
+    },
+    10: {
+      numero: 10,
+      titulo: 'Atendimento ao Cliente',
+      subtitulo: 'Comunicação',
+      descricao: 'Comunicação efetiva, relatórios e fidelização de clientes.',
+      duracao: '10 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Comunicação', duracao: '45 min' },
+        { titulo: 'Relatórios', duracao: '50 min' },
+        { titulo: 'Fidelização', duracao: '45 min' },
+        { titulo: 'Conflitos', duracao: '40 min' }
+      ]
+    },
+    11: {
+      numero: 11,
+      titulo: 'Sustentabilidade',
+      subtitulo: 'Práticas Ecológicas',
+      descricao: 'Economizar água, energia e práticas sustentáveis.',
+      duracao: '10 horas',
+      recursosDisponiveis: 5,
+      modulos: [
+        { titulo: 'Economia de Água', duracao: '50 min' },
+        { titulo: 'Economia de Energia', duracao: '45 min' },
+        { titulo: 'Produtos Ecológicos', duracao: '50 min' },
+        { titulo: 'Gestão Ambiental', duracao: '40 min' }
+      ]
+    },
+    12: {
+      numero: 12,
+      titulo: 'Certificação Final',
+      subtitulo: 'Avaliação',
+      descricao: 'Revisão geral e avaliação final para certificação ANAPP.',
+      duracao: '10 horas',
+      recursosDisponiveis: 4,
+      modulos: [
+        { titulo: 'Revisão Geral', duracao: '90 min' },
+        { titulo: 'Avaliação Teórica', duracao: '120 min' },
+        { titulo: 'Avaliação Prática', duracao: '90 min' },
+        { titulo: 'Certificação', duracao: '30 min' }
       ]
     }
   };
