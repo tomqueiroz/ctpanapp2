@@ -121,7 +121,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Economia de recursos, práticas sustentáveis e gestão ambiental',
       duracao: '10 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=pool%20business%20management%2C%20customer%20service%2C%20professional%20documentation%2C%20pool%20maintenance%20scheduling%2C%20business%20planning%2C%20modern%20office%20environment&width=400&height=300&seq=11&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/vaus0cvy_Capitulo%2011.png'
     },
     {
       id: 12,
@@ -131,7 +131,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Revisão geral, avaliação teórica e projeto prático',
       duracao: '10 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=pool%20industry%20trends%2C%20innovative%20technologies%2C%20sustainable%20solutions%2C%20smart%20pool%20systems%2C%20modern%20pool%20designs%2C%20futuristic%20pool%20maintenance&width=400&height=300&seq=12&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/jzwlf6q9_Capitulo%2012.png'
     }
   ];
 
