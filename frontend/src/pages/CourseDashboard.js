@@ -61,7 +61,7 @@ function CourseDashboard({ user = { name: 'Aluno' } }) {
       descricao: 'Sistemas de ozônio, tratamento UV e tecnologias emergentes',
       duracao: '12 horas',
       status: 'locked',
-      imagem: 'https://readdy.ai/api/search-image?query=chemical%20test%20strips%2C%20reagent%20drops%2C%20colorimetric%20analysis%2C%20electronic%20water%20testers%2C%20laboratory%20equipment%20for%20pool%20water%20analysis%2C%20professional%20testing%20procedures&width=400&height=300&seq=5&orientation=landscape'
+      imagem: 'https://customer-assets.emergentagent.com/job_poolcurso/artifacts/tb6dxgt5_Capitulo%205.png'
     },
     {
       id: 6,
