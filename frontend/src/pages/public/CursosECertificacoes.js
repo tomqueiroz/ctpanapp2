@@ -468,7 +468,7 @@ function CursosECertificacoes() {
                     <p className="text-sm text-gray-600">{depoimento.cargo}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{depoimento.texto}"</p>
+                <p className="text-gray-700 italic">&ldquo;{depoimento.texto}&rdquo;</p>
               </div>
             ))}
           </div>
