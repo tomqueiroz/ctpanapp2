@@ -169,7 +169,12 @@ function Homepage() {
                 Conheça o Curso
               </button>
               <button
-                onClick={() => navigate('/login')}
+                onClick={() => {
+                  navigate('/conheca-ctp');
+                  setTimeout(() => {
+                    document.getElementById('inscricao')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 500);
+                }}
                 className="bg-[#FF6B00] text-white py-4 px-8 rounded-full font-medium hover:bg-[#e55d00] transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
                 Inscreva-se Agora
