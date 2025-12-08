@@ -283,6 +283,16 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/csynyd56_Os_Segredos_da_%C3%81gua_Cristalina__Precis%C3%A3o_nos_Testes_e_a_Qu%C3%ADmica.m4a',
       isAudio: true
     }] : []),
+    ...(currentChapter === 6 ? [{
+      tipo: 'podcast',
+      titulo: 'Piscinas Seguras',
+      descricao: 'O Guia Completo Contra Afogamentos e Químicos - Ouça ou faça download',
+      duracao: 'Áudio completo',
+      icone: Headphones,
+      cor: 'from-green-500 to-green-600',
+      url: 'https://customer-assets.emergentagent.com/job_ctp-academy/artifacts/ojiric9w_Piscinas_Seguras__O_Guia_Completo_Contra_Afogamentos%2C_Qu%C3%ADmicos_.m4a',
+      isAudio: true
+    }] : []),
     {
       tipo: 'exercicios',
       titulo: 'Exercícios Interativos',
