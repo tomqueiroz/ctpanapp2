@@ -32,7 +32,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
 
   const chapterData = {
     numero: 1,
-    titulo: 'Cálculos',
+    titulo: 'Cálculos TESTE-12345',
     subtitulo: 'Fundamentos essenciais para o profissional de sucesso',
     descricao: 'O aluno será inserido aos cálculos essenciais para as atividades em um ambiente de piscina ou spa, volume, área, conversão e etc.',
     duracao: '4 horas',
