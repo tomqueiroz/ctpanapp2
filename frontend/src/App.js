@@ -48,6 +48,7 @@ function AppRouter() {
       <Route path="/dashboard" element={<CourseDashboard />} />
       <Route path="/dashboard/chapter/:chapterId" element={<ChapterView />} />
       <Route path="/dashboard/apostila/modulo-1" element={<ApostilaModulo1 />} />
+      <Route path="/dashboard/apostila/modulo-2" element={<ApostilaModulo2 />} />
       <Route path="/dashboard/apostila/modulo-3" element={<ApostilaModulo3 />} />
       <Route path="/dashboard/apostila/modulo-4" element={<ApostilaModulo4 />} />
       <Route path="/courses" element={<ProtectedRoute><CourseCatalog /></ProtectedRoute>} />
