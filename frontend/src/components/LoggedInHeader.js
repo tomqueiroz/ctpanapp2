@@ -134,9 +134,32 @@ function LoggedInHeader({ user = { name: 'Aluno' } }) {
               <Home size={18} className="mr-2" />
               Meus Cursos
             </button>
+            
+            {/* Mobile Modules List */}
+            <div className="border-t border-white/20 pt-3">
+              <div className="flex items-center mb-2 text-white font-light text-sm">
+                <BookOpen size={18} className="mr-2" />
+                Módulos do Curso
+              </div>
+              <div className="pl-4 space-y-1 max-h-64 overflow-y-auto">
+                {modules.map((module) => (
+                  <button
+                    key={module.id}
+                    onClick={() => {
+                      navigate(`/dashboard/chapter/${module.id}`);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full text-left py-2 text-white/90 hover:text-[#FF6B00] font-light text-sm"
+                  >
+                    {module.titulo}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
             <button
               onClick={() => { navigate('/dashboard'); setMobileMenuOpen(false); }}
-              className="flex items-center w-full text-left py-2 text-white hover:text-[#FF6B00] font-light"
+              className="flex items-center w-full text-left py-2 text-white hover:text-[#FF6B00] font-light border-t border-white/20 pt-3"
             >
               <TrendingUp size={18} className="mr-2" />
               Meu Progresso
