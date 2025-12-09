@@ -144,7 +144,12 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
             </div>
             <div className="text-right">
               <div className="text-3xl font-bold">{score}</div>
-              <div className="text-xs text-blue-100">pontos</div>
+              <div className="text-xs text-blue-100">pontos (módulo)</div>
+              {totalAccumulatedScore > 0 && (
+                <div className="text-sm text-blue-200 mt-1">
+                  Total: {totalAccumulatedScore} pts
+                </div>
+              )}
             </div>
           </div>
 
