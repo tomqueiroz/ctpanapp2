@@ -125,19 +125,37 @@ function ConhecaCTP() {
       {/* Benefits Section - White */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="text-white" size={28} />
+          <div className="flex flex-col items-center gap-6">
+            {/* Primeira linha: 3 ícones */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+              {benefits.slice(0, 3).map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Icon className="text-white" size={28} />
+                    </div>
+                    <h3 className="text-lg font-medium text-[#1f2937] mb-1">{benefit.title}</h3>
+                    <p className="text-sm text-gray-600 font-light">{benefit.description}</p>
                   </div>
-                  <h3 className="text-lg font-medium text-[#1f2937] mb-1">{benefit.title}</h3>
-                  <p className="text-sm text-gray-600 font-light">{benefit.description}</p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            {/* Segunda linha: 2 ícones */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+              {benefits.slice(3, 5).map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <div key={index + 3} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Icon className="text-white" size={28} />
+                    </div>
+                    <h3 className="text-lg font-medium text-[#1f2937] mb-1">{benefit.title}</h3>
+                    <p className="text-sm text-gray-600 font-light">{benefit.description}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
