@@ -8,8 +8,9 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [quizComplete, setQuizComplete] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(60);
   const [timerActive, setTimerActive] = useState(true);
+  const [totalAccumulatedScore, setTotalAccumulatedScore] = useState(0);
 
   useEffect(() => {
     if (isOpen && timerActive && !showResult && !quizComplete) {
