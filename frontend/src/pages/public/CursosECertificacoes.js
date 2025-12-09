@@ -708,9 +708,19 @@ function CursosECertificacoes() {
 
               <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-[#0072BC]">
                 <h3 className="text-lg font-medium text-[#0072BC] mb-3">Investimento do Curso</h3>
-                <div className="flex items-end gap-2 mb-4">
-                  <span className="text-4xl font-light text-[#0072BC]">R$ 1.497,00</span>
-                  <span className="text-gray-600 font-light mb-2">à vista</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-white rounded-lg p-4 border-2 border-[#0072BC]">
+                    <p className="text-sm text-gray-600 font-medium mb-2">Associados ANAPP</p>
+                    <div className="flex items-end gap-2">
+                      <span className="text-3xl font-bold text-[#0072BC]">R$ 299,00</span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 border-2 border-gray-300">
+                    <p className="text-sm text-gray-600 font-medium mb-2">Não Associados</p>
+                    <div className="flex items-end gap-2">
+                      <span className="text-3xl font-bold text-gray-700">R$ 598,00</span>
+                    </div>
+                  </div>
                 </div>
                 <p className="text-sm text-gray-600 font-light mb-4">
                   Ou parcelado em até 12x no cartão de crédito
