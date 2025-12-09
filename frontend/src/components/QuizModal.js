@@ -291,7 +291,13 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
 
               <div className="bg-gradient-to-r from-[#0072BC] to-[#005a9e] text-white rounded-xl p-8 mb-8">
                 <div className="text-5xl font-bold mb-2">{score}</div>
-                <div className="text-blue-100">Pontos Totais</div>
+                <div className="text-blue-100 mb-4">Pontos neste Módulo</div>
+                {totalAccumulatedScore > 0 && (
+                  <div className="border-t border-blue-300 pt-4 mt-4">
+                    <div className="text-3xl font-bold mb-1">{totalAccumulatedScore}</div>
+                    <div className="text-blue-100 text-sm">🏆 Pontuação Total Acumulada (Todos os Módulos)</div>
+                  </div>
+                )}
               </div>
 
               {getWeakTopics().length > 0 && (
