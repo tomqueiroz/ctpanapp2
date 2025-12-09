@@ -12,13 +12,22 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
   const [timerActive, setTimerActive] = useState(true);
   const [totalAccumulatedScore, setTotalAccumulatedScore] = useState(0);
 
+  // Carregar pontuação acumulada ao abrir
+  useEffect(() => {
+    if (isOpen) {
+      const savedScores = JSON.parse(localStorage.getItem('quizScores') || '{}');
+      const total = Object.values(savedScores).reduce((sum, score) => sum + score, 0);
+      setTotalAccumulatedScore(total);
+    }
+  }, [isOpen]);
+
   useEffect(() => {
     if (isOpen && timerActive && !showResult && !quizComplete) {
       const timer = setInterval(() => {
         setTimeLeft((prev) => {
           if (prev <= 1) {
             handleTimeout();
-            return 30;
+            return 60;
           }
           return prev - 1;
         });
