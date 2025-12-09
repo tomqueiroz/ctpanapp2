@@ -865,6 +865,14 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       </div>
 
       <Footer user={user} />
+
+      {/* Quiz Modal */}
+      <QuizModal
+        isOpen={quizOpen}
+        onClose={() => setQuizOpen(false)}
+        quizData={quizData[currentChapter]}
+        moduleNumber={currentChapter}
+      />
     </div>
   );
 }
