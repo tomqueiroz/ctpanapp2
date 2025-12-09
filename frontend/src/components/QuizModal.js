@@ -93,7 +93,7 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
     setScore(0);
     setAnswers([]);
     setQuizComplete(false);
-    setTimeLeft(30);
+    setTimeLeft(60);
     setTimerActive(true);
   };
 
