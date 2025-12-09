@@ -488,7 +488,7 @@ function CursosECertificacoes() {
             <div className="bg-gradient-to-br from-[#0072BC] to-[#005a9e] rounded-2xl p-8 md:p-12 text-white text-center">
               <h3 className="text-2xl font-bold mb-4">Investimento</h3>
               <p className="text-xl mb-6">Oferta Especial!</p>
-              <p className="text-lg mb-8">Associe-se gratuitamente à ANAPP e ganhe 50% de desconto no curso. Uma economia de R$ 301,00!</p>
+              <p className="text-lg mb-8">Associe-se gratuitamente à ANAPP e ganhe 50% de desconto no curso. Uma economia de R$ 299,00!</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur rounded-xl p-6">
