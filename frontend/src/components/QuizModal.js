@@ -241,8 +241,9 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
                       <>
                         <XCircle className="text-yellow-600 flex-shrink-0 mt-1" size={24} />
                         <div>
-                          <h4 className="font-bold text-yellow-900 mb-1">Tempo Esgotado!</h4>
-                          <p className="text-gray-700 text-sm mb-2">{question.explanation}</p>
+                          <h4 className="font-bold text-yellow-900 mb-1">⏰ Tempo Esgotado! +0 pontos</h4>
+                          <p className="text-gray-700 text-sm mb-2">Você não respondeu a tempo. A resposta correta era: <strong>{question.answers[question.correctAnswer]}</strong></p>
+                          <p className="text-gray-700 text-sm">{question.explanation}</p>
                         </div>
                       </>
                     ) : answers[currentQuestion]?.correct ? (
