@@ -72,10 +72,17 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
       setShowResult(false);
-      setTimeLeft(30);
+      setTimeLeft(60);
       setTimerActive(true);
     } else {
       setQuizComplete(true);
+      // Salvar pontuação deste módulo no localStorage
+      const savedScores = JSON.parse(localStorage.getItem('quizScores') || '{}');
+      savedScores[`module_${moduleNumber}`] = score;
+      localStorage.setItem('quizScores', JSON.stringify(savedScores));
+      // Atualizar total acumulado
+      const total = Object.values(savedScores).reduce((sum, s) => sum + s, 0);
+      setTotalAccumulatedScore(total);
     }
   };
 
