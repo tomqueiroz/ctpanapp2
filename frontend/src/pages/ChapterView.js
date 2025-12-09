@@ -10,6 +10,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
   const { chapterId } = useParams();
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [quizOpen, setQuizOpen] = useState(false);
   const currentChapter = chapterId ? parseInt(chapterId) : 1;
   const API_URL = process.env.REACT_APP_BACKEND_URL;
 
