@@ -262,6 +262,7 @@ function ChapterView({ user = { name: 'Aluno' } }) {
            currentChapter === 4 ? 'https://youtu.be/Wu8TCzwXNHc' :
            currentChapter === 5 ? 'https://youtu.be/95OOlZ0cBGI' :
            currentChapter === 6 ? 'https://youtu.be/mVaEecgo_sA' :
+           currentChapter === 7 ? 'https://youtu.be/vRC0OWRGs2I' :
            'https://youtu.be/fP3fInaBxNY'
     },
     ...(currentChapter === 1 ? [{
