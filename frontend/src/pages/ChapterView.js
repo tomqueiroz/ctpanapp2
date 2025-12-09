@@ -393,12 +393,11 @@ function ChapterView({ user = { name: 'Aluno' } }) {
     }] : []),
     {
       tipo: 'exercicios',
-      titulo: 'Exercícios Interativos',
-      descricao: 'Pratique e fixe o conteúdo aprendido',
-      questoes: '15 questões',
+      titulo: 'Quiz Interativo Gamificado',
+      descricao: 'Teste seus conhecimentos e ganhe pontos! Sistema de timer, bônus de velocidade e sugestões personalizadas.',
+      questoes: '5 questões',
       icone: PenTool,
-      cor: 'from-purple-500 to-purple-600',
-      url: 'https://create.kahoot.it/share/ctp-cap-1-exercicio-1/d3c28c39-0fed-46a7-9fa0-ea8978d13406'
+      cor: 'from-purple-500 to-purple-600'
     }
   ];
 
