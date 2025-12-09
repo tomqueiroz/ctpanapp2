@@ -628,6 +628,38 @@ function ChapterView({ user = { name: 'Aluno' } }) {
                     );
                   }
                   
+                  // Renderização especial para quiz interativo
+                  if (recurso.tipo === 'exercicios') {
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => setQuizOpen(true)}
+                        className="group bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#0072BC] hover:shadow-lg transition-all text-left w-full"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${recurso.cor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                            <Icon className="text-white" size={24} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-medium text-gray-900 mb-1 group-hover:text-[#0072BC] transition-colors">
+                              {recurso.titulo}
+                            </h3>
+                            <p className="text-sm font-light text-gray-600 mb-2">{recurso.descricao}</p>
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs font-light text-gray-500">
+                                {recurso.questoes}
+                              </span>
+                              <span className="inline-block bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded-full">
+                                Gamificado
+                              </span>
+                            </div>
+                          </div>
+                          <ChevronRight className="text-gray-400 group-hover:text-[#0072BC] transition-colors" size={20} />
+                        </div>
+                      </button>
+                    );
+                  }
+                  
                   // Renderização padrão para outros recursos
                   const Component = recurso.internal ? 'button' : 'a';
                   const props = recurso.internal
