@@ -38,8 +38,9 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
 
   const handleTimeout = () => {
     const newAnswers = [...answers];
-    newAnswers[currentQuestion] = { correct: false, selected: null, timedOut: true };
+    newAnswers[currentQuestion] = { correct: false, selected: null, timedOut: true, score: 0 };
     setAnswers(newAnswers);
+    // Pontuação é 0 em timeout
     setShowResult(true);
     setTimerActive(false);
   };
