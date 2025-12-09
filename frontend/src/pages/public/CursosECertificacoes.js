@@ -498,7 +498,7 @@ function CursosECertificacoes() {
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-6">
                   <h4 className="text-lg font-semibold mb-2">Não Associado</h4>
-                  <div className="text-4xl font-bold mb-2">R$ 600,00</div>
+                  <div className="text-4xl font-bold mb-2">R$ 598,00</div>
                   <p className="text-sm">Valor integral</p>
                 </div>
               </div>
