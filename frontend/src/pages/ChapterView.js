@@ -260,10 +260,11 @@ function ChapterView({ user = { name: 'Aluno' } }) {
       url: currentChapter === 2 ? 'https://youtu.be/TFALKmgbyRs' :
            currentChapter === 3 ? 'https://youtu.be/_0l7bZ5cY8A' :
            currentChapter === 4 ? 'https://youtu.be/Wu8TCzwXNHc' :
-           currentChapter === 5 ? 'https://youtu.be/95OOlZ0cBGI' :
+           currentChapter === 5 ? 'https://youtu.be/H1ptautsuHk' :
            currentChapter === 6 ? 'https://youtu.be/mVaEecgo_sA' :
            currentChapter === 7 ? 'https://youtu.be/vRC0OWRGs2I' :
-           currentChapter === 8 ? 'https://youtu.be/2SOMGBsZc-Y' :
+           currentChapter === 8 ? 'https://youtu.be/sKrXYVJr7fw' :
+           currentChapter === 9 ? 'https://youtu.be/l7suM6UMwzk' :
            'https://youtu.be/fP3fInaBxNY'
     },
     ...(currentChapter === 1 ? [{
