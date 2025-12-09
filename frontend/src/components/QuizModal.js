@@ -164,7 +164,7 @@ function QuizModal({ isOpen, onClose, quizData, moduleNumber }) {
               <div className="text-sm font-medium">
                 {currentQuestion + 1}/{quizData.questions.length}
               </div>
-              <div className={`text-sm font-bold ${timeLeft <= 10 ? 'text-red-300 animate-pulse' : ''}`}>
+              <div className={`text-sm font-bold ${timeLeft <= 15 ? 'text-red-300 animate-pulse' : ''}`}>
                 ⏱️ {timeLeft}s
               </div>
             </div>
