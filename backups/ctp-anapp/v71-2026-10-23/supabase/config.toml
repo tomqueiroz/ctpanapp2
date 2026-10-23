@@ -1,0 +1,22 @@
+project_id = "egihufoowzfykieozusr"
+
+[functions.generate_certificate]
+verify_jwt = true
+
+[functions.download_certificate_pdf]
+verify_jwt = true
+
+[functions.daily_backup_and_notify]
+verify_jwt = false
+
+[functions.issue_certificate]
+verify_jwt = true
+
+[functions.send_notification_email_2026_05_09]
+verify_jwt = false
+
+[functions.student_registration]
+verify_jwt = false
+
+[functions.rede_webhook]
+verify_jwt = false
