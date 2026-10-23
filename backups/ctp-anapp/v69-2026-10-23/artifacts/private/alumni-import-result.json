@@ -1,0 +1,164 @@
+{
+  "workbook": {
+    "source_rows": 425,
+    "valid_unique_emails": 422,
+    "invalid_rows": [],
+    "duplicate_groups": [
+      [
+        153,
+        285
+      ],
+      [
+        286,
+        335
+      ],
+      [
+        291,
+        365
+      ]
+    ]
+  },
+  "deleted_previous_auth_users": 0,
+  "created_auth_users": 264,
+  "reused_auth_users": 132,
+  "access_granted": 396,
+  "certified_professionals": 213,
+  "errors": [
+    {
+      "source_row": 362,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 388,
+      "email_domain": "hotmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 112,
+      "email_domain": "live.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 81,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 87,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 397,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 72,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 330,
+      "email_domain": "hotmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 19,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 67,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 187,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 264,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 226,
+      "email_domain": "yahoo.com.br",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 316,
+      "email_domain": "hotmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 190,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 9,
+      "email_domain": "clorup.com.br",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 345,
+      "email_domain": "facilitypiscinas.com.br",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 171,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 305,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 5,
+      "email_domain": "pooltec.com.br",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 326,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 335,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 127,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 158,
+      "email_domain": "hotmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 198,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    },
+    {
+      "source_row": 68,
+      "email_domain": "gmail.com",
+      "error": "HTTP 422 em /auth/v1/admin/users: {\"code\":422,\"error_code\":\"email_exists\",\"msg\":\"A user with this email address has already been registered\"}"
+    }
+  ],
+  "verification": {
+    "alumni_whitelist": 422,
+    "profiles_is_alumni": 422,
+    "linked_whitelist": 422,
+    "student_roles_linked": 422
+  }
+}
