@@ -20,6 +20,39 @@ CREATE INDEX IF NOT EXISTS profiles_registration_coupon_code_idx
   ON public.profiles (registration_coupon_code)
   WHERE registration_coupon_code IS NOT NULL;
 
+-- Reclassifica registros históricos que receberam matrícula ativa somente por
+-- serem ex-alunos. Pagamentos aprovados existentes permanecem intactos.
+UPDATE public.profiles p
+SET has_paid = false,
+    updated_at = now()
+WHERE p.is_alumni = true
+  AND NOT EXISTS (
+    SELECT 1
+    FROM public.payments pay
+    WHERE pay.user_id = p.id
+      AND pay.status = 'approved'
+  );
+
+UPDATE public.student_enrollments enrollment
+SET status = CASE
+      WHEN public.lms_user_email_confirmed(enrollment.user_id)
+        THEN 'chapter_zero'
+      ELSE 'email_pending'
+    END,
+    payment_id = NULL,
+    activated_at = NULL,
+    updated_at = now()
+FROM public.profiles p
+WHERE enrollment.user_id = p.id
+  AND p.is_alumni = true
+  AND NOT EXISTS (
+    SELECT 1
+    FROM public.payments pay
+    WHERE pay.user_id = p.id
+      AND pay.status = 'approved'
+  )
+  AND enrollment.status <> 'blocked';
+
 CREATE OR REPLACE FUNCTION public.protect_profile_access_fields()
 RETURNS TRIGGER
 LANGUAGE plpgsql
