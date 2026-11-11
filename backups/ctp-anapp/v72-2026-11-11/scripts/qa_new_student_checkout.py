@@ -374,7 +374,7 @@ def main() -> None:
                     "installments": 2,
                     "idempotency_key": str(uuid.uuid4()),
                     "payment_method": "credit_card",
-                    "coupon_code": "EXPOLAZER2026",
+                    "coupon_code": "ANAPPFRIDAY",
                 },
                 headers={**user_headers, "Origin": SITE_ORIGIN},
             )

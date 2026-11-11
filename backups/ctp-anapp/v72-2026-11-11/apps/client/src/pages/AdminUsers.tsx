@@ -1383,7 +1383,7 @@ export default function AdminUsers() {
                 </Select>
                 <p className="mt-1 text-xs text-gray-500">
                   Novo aluno é o padrão e segue a cobrança normal. Ex-aluno não recebe
-                  gratuidade automática: o checkout exige o cupom EXPOLAZER2026 e um
+                  gratuidade automática: o checkout exige o cupom ANAPPFRIDAY e um
                   pagamento aprovado antes de liberar o curso. Aluno com Cupom Promo
                   mantém acesso pago e deve ter o cupom registrado na ficha.
                 </p>
@@ -1943,7 +1943,7 @@ export default function AdminUsers() {
                       <Input
                         value={editCouponCode}
                         onChange={(event) => setEditCouponCode(event.target.value.toUpperCase())}
-                        placeholder="EXPOLAZER2026"
+                        placeholder="ANAPPFRIDAY"
                         autoCapitalize="characters"
                         spellCheck={false}
                         maxLength={40}

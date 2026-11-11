@@ -867,11 +867,7 @@ Deno.serve(async (req) => {
         discount_amount: originalAmount - coupon.final_price,
         final_amount: coupon.final_price,
         valid_until: coupon.ends_at,
-        message: coupon.code === "EXPOLAZER2026"
-          ? `Cupom válido até ${
-            formatCouponDateTime(coupon.ends_at)
-          }. Brinde (óculos) disponível para retirada exclusiva no estande, enquanto durarem os estoques.`
-          : `Cupom válido até ${formatCouponDateTime(coupon.ends_at)}.`,
+        message: `Cupom válido até ${formatCouponDateTime(coupon.ends_at)}.`,
       });
     }
 

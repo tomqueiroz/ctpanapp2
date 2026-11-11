@@ -365,7 +365,7 @@ export default function Profile() {
                   {!profile.has_paid && (
                     <p className="mt-2 text-xs text-blue-900">
                       Ex-aluno não recebe acesso gratuito automático. Use o cupom
-                      {' EXPOLAZER2026'}
+                      {' ANAPPFRIDAY'}
                       no checkout; o acesso é liberado após pagamento aprovado.
                     </p>
                   )}

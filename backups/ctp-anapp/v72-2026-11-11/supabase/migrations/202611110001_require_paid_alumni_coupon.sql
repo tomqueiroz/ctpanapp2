@@ -215,7 +215,7 @@ BEGIN
     true,
     v_alumni.alumni_type,
     'pre_2026',
-    'EXPOLAZER2026'
+    'ANAPPFRIDAY'
   )
   ON CONFLICT (id) DO UPDATE
   SET email = EXCLUDED.email,
@@ -262,7 +262,7 @@ BEGIN
   RETURN jsonb_build_object(
     'is_alumni', true,
     'alumni_type', v_alumni.alumni_type,
-    'coupon_code', 'EXPOLAZER2026',
+    'coupon_code', 'ANAPPFRIDAY',
     'access_granted_without_payment', false
   );
 END;

@@ -95,7 +95,7 @@ interface FunctionErrorLike {
 
 type CheckoutStep = "plans" | "payment" | "processing" | "success" | "error";
 
-const EXPOLAZER_COUPON = "EXPOLAZER2026";
+const ANAPP_FRIDAY_COUPON = "ANAPPFRIDAY";
 const MAX_STANDARD_INSTALLMENTS = 6;
 const COMMERCIAL_PLAN_PRICES: Readonly<Record<string, number>> = Object.freeze({
   "6e18e621-f7ae-40bd-ad25-3818eaa51ba8": 600,
@@ -183,7 +183,7 @@ export default function Checkout() {
   const [hasCoupon, setHasCoupon] = useState(false);
   const [couponCode, setCouponCode] = useState("");
   const [isAlumni, setIsAlumni] = useState(false);
-  const [alumniCouponCode, setAlumniCouponCode] = useState(EXPOLAZER_COUPON);
+  const [alumniCouponCode, setAlumniCouponCode] = useState(ANAPP_FRIDAY_COUPON);
   const [couponResult, setCouponResult] =
     useState<CouponValidationResult | null>(null);
   const [couponError, setCouponError] = useState("");
@@ -275,7 +275,7 @@ export default function Checkout() {
           "certified_professional",
           "alumni_certified",
         ].includes(userOrigin);
-        const configuredAlumniCoupon = EXPOLAZER_COUPON;
+        const configuredAlumniCoupon = ANAPP_FRIDAY_COUPON;
         const registration = registrationResponse.data;
         if (
           userOrigin === "new_student" &&
@@ -946,7 +946,7 @@ export default function Checkout() {
                             setCouponResult(null);
                             setCouponError("");
                             if (
-                              normalizedCode === EXPOLAZER_COUPON &&
+                              normalizedCode === ANAPP_FRIDAY_COUPON &&
                               !validatingCoupon
                             ) {
                               void validateCoupon(normalizedCode);

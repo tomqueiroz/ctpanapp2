@@ -8,7 +8,7 @@ import {
 import { sendTrackedStudentEmail } from '../_shared/student-email.ts';
 const allowedRoles = new Set(['student', 'admin', 'master_admin']);
 const alumniOrigins = new Set(['alumni', 'certified_professional', 'alumni_certified']);
-const requestedAlumniCoupon = 'EXPOLAZER2026';
+const requestedAlumniCoupon = 'ANAPPFRIDAY';
 const pageSize = 1000;
 const maxPages = 50;
 
