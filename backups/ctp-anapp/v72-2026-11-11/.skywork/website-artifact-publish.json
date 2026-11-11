@@ -1,0 +1,21 @@
+{
+  "artifact_type": "webpage",
+  "base_artifact_version_id": "2095894978848051200",
+  "file_type": "website",
+  "file_url": "https://efa5ea7379e9b209-kqvtr32m33.skywork.website/",
+  "idempotency_key": "website:019fb9b9-b873-7bdc-8fa9-2399c9f61b24:kqvtr32m33",
+  "metadata": {
+    "stripeSetupRequired": false,
+    "websiteOverlays": []
+  },
+  "path": "ctp-anapp-current-audit",
+  "title": "ctp-anapp-current-audit",
+  "version_summary": "Provas alinhadas aos PDFs atuais: 10 questões por capítulo e final, randomização segura e histórico preservado",
+  "website_id": "019fb9b9-b873-7bdc-8fa9-2399c9f61b24",
+  "website_metadata": {
+    "description": "Provas alinhadas aos PDFs atuais: 10 questões por capítulo e final, randomização segura e histórico preservado",
+    "git_commit_id": "c660822d5ad19ac257482a0cd3cc10301223866e",
+    "git_repo_url": "https://gitea.skywork.ai/prod_1637351800506704855/019fb9b9-b873-7bdc-8fa9-2399c9f61b24.git"
+  },
+  "zip_url": "https://skyagent-artifacts.skywork.ai/page/efa5ea7379e9b209-kqvtr32m33/website-019fb9b9-b873-7bdc-8fa9-2399c9f61b24.zip"
+}

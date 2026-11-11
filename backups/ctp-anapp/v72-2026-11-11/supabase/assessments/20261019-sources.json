@@ -1,0 +1,98 @@
+[
+  {
+    "chapter": 1,
+    "same_text": false,
+    "pages": 13,
+    "current_chars": 12031,
+    "uploaded_chars": 15223,
+    "sha256": "fcd43136860c637d27bdcc18bc2cc83e7e8dfba4666021b88c8be2c4be882441"
+  },
+  {
+    "chapter": 2,
+    "same_text": false,
+    "pages": 12,
+    "current_chars": 13388,
+    "uploaded_chars": 20784,
+    "sha256": "8f962e9c95fc5b51f9f3812c93b875387f01b7d27108b56f795f354a8fc4941d"
+  },
+  {
+    "chapter": 3,
+    "same_text": false,
+    "pages": 11,
+    "current_chars": 12818,
+    "uploaded_chars": 19157,
+    "sha256": "07891fe6c40ab1fa72a24337f885adbf9acd848afc72fff216006d83e7c8ca2d"
+  },
+  {
+    "chapter": 4,
+    "same_text": false,
+    "pages": 11,
+    "current_chars": 13470,
+    "uploaded_chars": 25639,
+    "sha256": "ecb989bbc606c6526ba65bad5090de31702a8f90c9b2ef3aa16c04a8a043a77e"
+  },
+  {
+    "chapter": 5,
+    "same_text": false,
+    "pages": 12,
+    "current_chars": 15676,
+    "uploaded_chars": 31124,
+    "sha256": "07ab3cc31f0bbdb7cf1896aa6fce6b8b9681170f45d576aca658bdaf48aec1d2"
+  },
+  {
+    "chapter": 6,
+    "same_text": false,
+    "pages": 13,
+    "current_chars": 15829,
+    "uploaded_chars": 36536,
+    "sha256": "26a53c1d4cc19d69aebf7ce064d191c01c0323d775736b0c653229362743aeda"
+  },
+  {
+    "chapter": 7,
+    "same_text": false,
+    "pages": 12,
+    "current_chars": 15583,
+    "uploaded_chars": 52074,
+    "sha256": "b4812d12fadafb2733b78bd6ea3d94f7055953cb75cf15b1139eed6fe0461156"
+  },
+  {
+    "chapter": 8,
+    "same_text": false,
+    "pages": 12,
+    "current_chars": 15828,
+    "uploaded_chars": 31353,
+    "sha256": "220d31544eb263e191a271dd8969ab3cff54f2ebae0cc18fce67036c3f788cff"
+  },
+  {
+    "chapter": 9,
+    "same_text": false,
+    "pages": 16,
+    "current_chars": 22406,
+    "uploaded_chars": 41136,
+    "sha256": "2d4a928eaa6ab52489f50f176696d196eadcae1493d40a2ef7357b13137e4376"
+  },
+  {
+    "chapter": 10,
+    "same_text": false,
+    "pages": 14,
+    "current_chars": 17342,
+    "uploaded_chars": 28525,
+    "sha256": "cd51c509e88f6085cb3f712ebd6fc435fd604e9c4084e595705ea0607b7b6004"
+  },
+  {
+    "chapter": 11,
+    "same_text": false,
+    "pages": 12,
+    "current_chars": 12751,
+    "uploaded_chars": 23639,
+    "sha256": "e833136b927c76139b48c97424bec9c15000bda16234fb78d116f101c90f6519"
+  },
+  {
+    "chapter": 12,
+    "same_text": false,
+    "pages": 12,
+    "current_chars": 13302,
+    "uploaded_chars": 19856,
+    "sha256": "b94bde7a0dd1d223eff2ce421a982f066d73f9671ace2817d9bc80cbf6cdf2ec"
+  }
+]
