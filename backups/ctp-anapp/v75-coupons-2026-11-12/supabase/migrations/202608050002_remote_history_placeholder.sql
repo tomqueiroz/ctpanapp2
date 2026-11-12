@@ -1,0 +1,3 @@
+-- Esta versão já consta como aplicada no histórico remoto do Supabase.
+-- O arquivo original não acompanhou o pacote recuperado; este marcador
+-- reconcilia o histórico local sem repetir qualquer alteração no banco.
